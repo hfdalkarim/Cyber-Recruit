@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="id" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riset Cybersickness VR · Daftar Subject &amp; Asisten · UGM</title>
+<meta name="description" content="Pendaftaran subject dan asisten penelitian cybersickness pada pengguna virtual reality (EEG, ECG, PPG, IMU). Magister Teknik Biomedis, Universitas Gadjah Mada.">
+<meta name="theme-color" content="#0A1F36">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riset Cybersickness VR · Daftar Subject &amp; Asisten">
+<meta property="og:description" content="Bantu kami mengukur pusing saat memakai VR. Mahasiswa baru 18–25 tahun dan asisten lapangan dicari. Magister Teknik Biomedis UGM.">
+<!-- SETELAH DEPLOY: ganti og:image dengan URL absolut agar pratinjau WhatsApp/sosmed muncul, mis. https://USERNAME.github.io/NAMA-REPO/og-image.png -->
+<meta property="og:image" content="og-image.png">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================================
+   TOKEN
+   ===================================================================== */
+:root{
+  --ink:#0A1F36; --ink-2:#12304F; --ink-3:#1B4168;
+  --gold:#F2B705; --gold-d:#8A6500; --gold-soft:#FFF4CC;
+  --teal:#13A898; --teal-d:#0B7468; --teal-soft:#DDF5F1;
+  --coral:#FF7A6B; --sky:#7CC4FF;
+  --paper:#F3F6F9; --card:#FFFFFF; --line:#D6DFE8; --line-2:#E8EEF4;
+  --text:#14212E; --muted:#556577; --faint:#8696A7;
+  --danger:#B42318; --danger-soft:#FDE8E6; --ok:#157347; --ok-soft:#DCF3E6;
+  --shadow:0 1px 2px rgba(10,31,54,.06),0 8px 24px -12px rgba(10,31,54,.18);
+  --r-s:8px; --r-m:14px; --r-l:22px;
+  --f-head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --gut:clamp(16px,4vw,32px);
+  --hdr:64px;
+}
+:root[data-theme="dark"]{
+  --paper:#08131F; --card:#0F2236; --line:#223A55; --line-2:#1A2F47;
+  --text:#E7EEF6; --muted:#A3B5C8; --faint:#7C90A5;
+  --teal:#2CC9B6; --teal-d:#7FE3D6; --teal-soft:#0F3A3B;
+  --gold-soft:#3A2F08; --gold-d:#F2C94C;
+  --danger:#FF8B7E; --danger-soft:#3A1713; --ok:#6FD79C; --ok-soft:#10301F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+@media (prefers-color-scheme:dark){
+  :root[data-theme="auto"]{
+    --paper:#08131F; --card:#0F2236; --line:#223A55; --line-2:#1A2F47;
+    --text:#E7EEF6; --muted:#A3B5C8; --faint:#7C90A5;
+    --teal:#2CC9B6; --teal-d:#7FE3D6; --teal-soft:#0F3A3B;
+    --gold-soft:#3A2F08; --gold-d:#F2C94C;
+    --danger:#FF8B7E; --danger-soft:#3A1713; --ok:#6FD79C; --ok-soft:#10301F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+
+/* =====================================================================
+   DASAR
+   ===================================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hdr) + 16px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--text);font:400 1.0625rem/1.62 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:var(--teal-d);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+h1,h2,h3,h4{font-family:var(--f-head);line-height:1.1;margin:0;letter-spacing:-.015em;font-weight:700;text-wrap:balance}
+p{margin:0 0 1em;max-width:68ch}
+ul,ol{margin:0 0 1em;padding-left:1.2em}
+li{margin:.25em 0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.muted{color:var(--muted)}
+.hidden,[hidden]{display:none!important}
+.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--ink);padding:10px 14px;border-radius:var(--r-s);z-index:100;font-weight:600}
+.skip:focus{top:12px}
+
+/* =====================================================================
+   TOMBOL
+   ===================================================================== */
+.btn{--bg:var(--ink);--fg:#fff;--bd:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.7em 1.35em;border-radius:999px;border:1.5px solid var(--bd);background:var(--bg);color:var(--fg);font:600 1rem/1 var(--f-body);cursor:pointer;text-decoration:none;transition:transform .15s,background .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px -8px rgba(10,31,54,.5)}
+.btn:active{transform:none}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.gold{--bg:var(--gold);--fg:var(--ink);--bd:var(--gold)}
+.btn.ghost{--bg:transparent;--fg:var(--text);--bd:var(--line)}
+.btn.ghost:hover{--bd:var(--teal)}
+.btn.onink{--bg:transparent;--fg:#fff;--bd:rgba(255,255,255,.4)}
+.btn.onink:hover{--bd:#fff}
+.btn.sm{min-height:40px;padding:.55em 1.05em;font-size:.94rem}
+[data-theme="dark"] .btn:not(.gold):not(.ghost):not(.onink){--bg:var(--teal);--fg:#04201D;--bd:var(--teal)}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"] .btn:not(.gold):not(.ghost):not(.onink){--bg:var(--teal);--fg:#04201D;--bd:var(--teal)}}
+
+/* =====================================================================
+   HEADER
+   ===================================================================== */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 84%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line-2)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:var(--hdr)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);min-width:0}
+.brand img{height:40px;width:auto}
+.brand b{font:700 1.02rem/1.1 var(--f-head);display:block;letter-spacing:-.01em}
+.brand small{display:block;color:var(--muted);font-size:.78rem;line-height:1.2}
+.nav{margin-left:auto;display:flex;gap:4px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-weight:500;font-size:.95rem;padding:.5em .8em;border-radius:999px}
+.nav a:hover{background:var(--line-2)}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer}
+.icon-btn:hover{border-color:var(--teal)}
+@media (max-width:860px){.nav a:not(.keep){display:none}.brand small{display:none}}
+@media (max-width:520px){.top .wrap{gap:10px}.brand{gap:9px}.brand img{height:34px}.brand b{font-size:.9rem;white-space:nowrap}.nav{margin-left:auto}.nav .btn.sm{padding:.5em .95em}}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero{position:relative;background:var(--ink);color:#EAF1F8;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/32px 32px,
+  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/32px 32px}
+.hero::after{content:"";position:absolute;z-index:-1;right:-10%;top:-20%;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(19,168,152,.28),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(44px,8vw,96px)}
+.hero h1{font-size:clamp(2.35rem,5.4vw,4.1rem);line-height:1.02;letter-spacing:-.025em;font-weight:800;color:#fff;margin-bottom:.45em}
+.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:#C7D6E6;max-width:56ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:1.6em 0 1.4em}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:0 0 1.2em;list-style:none;color:#DCE7F2;font-size:.97rem}
+.hero .facts li{margin:0;position:relative;padding-left:18px}
+.hero .facts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero .etik{font-size:.84rem;color:#8FA6BE;max-width:60ch;margin:0}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+.scope{background:#06121F;border:1px solid rgba(255,255,255,.12);border-radius:var(--r-l);padding:14px 14px 12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.scope-top{display:flex;justify-content:space-between;align-items:center;padding:2px 6px 10px;color:#9CB2C8;font-size:.82rem}
+.scope-top b{color:#fff;font-family:var(--f-head);font-weight:700;font-size:.95rem}
+.scope canvas{display:block;width:100%;height:clamp(230px,30vw,300px);border-radius:10px;background:#071827}
+.phase{display:grid;grid-template-columns:5fr 4fr 4fr 4fr 5fr;gap:4px;margin-top:10px}
+.phase span{display:block;padding:7px 6px 6px;border-radius:7px;background:rgba(255,255,255,.06);color:#8FA6BE;font-size:.76rem;line-height:1.25;text-align:center;transition:background .2s,color .2s}
+.phase span b{display:block;font-family:var(--f-head);font-size:.86rem;color:inherit}
+.phase span.on{background:var(--gold);color:var(--ink)}
+.scope-cap{margin:10px 6px 0;font-size:.8rem;color:#7F97AF;max-width:none}
+
+/* =====================================================================
+   SEKSI UMUM
+   ===================================================================== */
+section{scroll-margin-top:calc(var(--hdr) + 8px)}
+.sec{padding-block:clamp(56px,8vw,104px)}
+.sec.tint{background:var(--card);border-block:1px solid var(--line-2)}
+.sec h2{font-size:clamp(1.75rem,3.4vw,2.7rem);margin-bottom:.45em}
+.sec .lead{font-size:1.14rem;color:var(--muted);max-width:62ch;margin-bottom:2em}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+
+/* sensor */
+.sensors{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.sensors li{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);margin:0}
+.sensors b{font:800 1.5rem/1 var(--f-head);letter-spacing:-.02em}
+.sensors li:nth-child(1) b{color:var(--teal)}
+.sensors li:nth-child(2) b{color:var(--gold-d)}
+.sensors li:nth-child(3) b{color:#E0584A}
+.sensors li:nth-child(4) b{color:#2C7FC4}
+[data-theme="dark"] .sensors li:nth-child(3) b{color:var(--coral)}
+[data-theme="dark"] .sensors li:nth-child(4) b{color:var(--sky)}
+.sensors span{color:var(--muted)}
+.who{margin:0;display:grid;gap:0}
+.who dt{font:700 1.15rem/1.2 var(--f-head);margin-top:1.1em}
+.who dt:first-child{margin-top:0}
+.who dd{margin:.35em 0 0;color:var(--muted)}
+.who .bmi{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.who .bmi span{background:var(--line-2);border-radius:999px;padding:.3em .85em;font-size:.92rem;color:var(--text)}
+
+/* fig */
+.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.fig img{width:100%;height:auto;background:#fff}
+.fig figcaption{padding:10px 14px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line-2)}
+.imgmiss{display:grid;place-items:center;text-align:center;gap:6px;min-height:200px;padding:20px;background:repeating-linear-gradient(135deg,var(--line-2) 0 10px,transparent 10px 20px);color:var(--muted);font-size:.9rem;border-radius:inherit}
+.imgmiss code{background:var(--card);border:1px solid var(--line);padding:2px 8px;border-radius:6px;font-size:.88rem;color:var(--text)}
+
+/* alur */
+.steps{list-style:none;margin:0;padding:0;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.steps li{position:relative;padding:0 0 22px 60px;margin:0;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--teal);color:var(--teal-d);font:700 1rem/1 var(--f-head)}
+.steps li.main::before{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.steps h3{font-size:1.18rem;margin-bottom:.25em}
+.steps p{color:var(--muted);margin:0}
+.seg{display:grid;grid-template-columns:5fr 4fr 4fr 4fr 5fr;gap:4px;margin:14px 0 4px;max-width:520px}
+.seg span{text-align:center;background:var(--teal-soft);color:var(--teal-d);border-radius:8px;padding:8px 4px;font-size:.78rem;line-height:1.25}
+.seg span b{display:block;font-family:var(--f-head);font-size:.92rem}
+.seg span.run{background:var(--gold-soft);color:var(--gold-d)}
+
+/* tabs alat */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.tab{border:1.5px solid var(--line);background:transparent;color:var(--text);border-radius:999px;padding:.55em 1.1em;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:42px}
+.tab:hover{border-color:var(--teal)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+[data-theme="dark"] .tab[aria-selected="true"]{background:var(--teal);color:#04201D;border-color:var(--teal)}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"] .tab[aria-selected="true"]{background:var(--teal);color:#04201D;border-color:var(--teal)}}
+.panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,44px);align-items:start}
+@media (max-width:860px){.panel{grid-template-columns:1fr}}
+.panel h3{font-size:1.5rem;margin-bottom:.4em}
+.panel ul{color:var(--muted)}
+
+/* aman */
+.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,28px);align-items:start}
+@media (max-width:860px){.twocol{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:clamp(18px,3vw,28px)}
+.box h3{font-size:1.25rem;margin-bottom:.6em}
+.box ul{margin:0;color:var(--muted)}
+.box.gold{background:var(--gold-soft);border-color:color-mix(in srgb,var(--gold) 55%,transparent)}
+.box.gold h3{color:var(--gold-d)}
+.box .big{font:800 2rem/1 var(--f-head);color:var(--text);margin:.1em 0 .35em}
+
+/* =====================================================================
+   FORM
+   ===================================================================== */
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px}
+@media (max-width:640px){.roles{grid-template-columns:1fr}}
+.role{text-align:left;border:1.5px solid var(--line);border-radius:var(--r-m);background:var(--card);padding:18px 20px;cursor:pointer;color:var(--text);font:inherit;display:grid;gap:4px;transition:border-color .15s,box-shadow .15s}
+.role:hover{border-color:var(--teal)}
+.role b{font:700 1.2rem/1.15 var(--f-head)}
+.role span{color:var(--muted);font-size:.95rem}
+.role[aria-pressed="true"]{border-color:var(--teal);box-shadow:0 0 0 3px color-mix(in srgb,var(--teal) 26%,transparent)}
+.role[aria-pressed="true"] b::after{content:" ✓";color:var(--teal-d)}
+
+.formcard{scroll-margin-top:calc(var(--hdr) + 12px);background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--shadow);display:grid;grid-template-columns:240px minmax(0,1fr);overflow:hidden}
+@media (max-width:900px){.formcard{grid-template-columns:1fr}}
+.rail{background:var(--ink);color:#C7D6E6;padding:26px 22px}
+.rail h3{font-size:1.05rem;color:#fff;margin-bottom:1em}
+.rail ol{list-style:none;margin:0;padding:0;counter-reset:r}
+.rail li{counter-increment:r;position:relative;padding:8px 0 8px 40px;margin:0;font-size:.95rem;color:#8FA6BE}
+.rail li::before{content:counter(r);position:absolute;left:0;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1.5px solid #3A5675;font:600 .82rem/1 var(--f-body)}
+.rail li.done{color:#C7D6E6}
+.rail li.done::before{content:"✓";background:var(--teal);border-color:var(--teal);color:#04201D}
+.rail li.cur{color:#fff;font-weight:600}
+.rail li.cur::before{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media (max-width:900px){
+  .rail{padding:14px 18px}
+  .rail h3,.rail ol{display:none}
+  .rail .mini{display:block}
+}
+.rail .mini{display:none;font-size:.95rem;color:#fff}
+.rail .bar{height:5px;border-radius:5px;background:#274260;margin-top:10px;overflow:hidden}
+.rail .bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.body{padding:clamp(20px,4vw,40px);min-width:0}
+.body h3.st{font-size:clamp(1.4rem,2.6vw,1.85rem);margin-bottom:.35em;outline:none}
+.body .intro{color:var(--muted);margin-bottom:1.4em}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 18px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+
+.field{margin:0 0 18px;border:0;padding:0;min-width:0}
+.field>label,.field>legend{display:block;font-weight:600;margin-bottom:6px;padding:0;font-size:1rem}
+.field .opt{font-weight:400;color:var(--faint);margin-left:.4em;font-size:.9rem}
+.field .hint{margin:6px 0 0;font-size:.9rem;color:var(--muted)}
+.field .err{margin:6px 0 0;font-size:.9rem;color:var(--danger);font-weight:500;min-height:0}
+.field .err:empty{display:none}
+.field.bad input:not([type=checkbox]):not([type=radio]),.field.bad select,.field.bad textarea{border-color:var(--danger)}
+.field.bad .chips,.field.bad .cal{outline:2px solid color-mix(in srgb,var(--danger) 45%,transparent);outline-offset:4px;border-radius:12px}
+input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{width:100%;min-height:48px;padding:.65em .9em;border:1.5px solid var(--line);border-radius:var(--r-s);background:var(--paper);color:var(--text);font:inherit;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px color-mix(in srgb,var(--teal) 25%,transparent)}
+.inp-unit{display:flex;align-items:stretch}
+.inp-unit input{border-top-right-radius:0;border-bottom-right-radius:0;min-width:0}
+.inp-unit span{display:grid;place-items:center;padding:0 14px;border:1.5px solid var(--line);border-left:0;border-radius:0 var(--r-s) var(--r-s) 0;background:var(--line-2);color:var(--muted);font-weight:600}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;width:100%;height:100%}
+.chip span{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:.55em 1.1em;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);color:var(--text);font-weight:500;transition:border-color .12s,background .12s}
+.chip:hover span{border-color:var(--teal)}
+.chip input:checked+span{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);font-weight:600}
+.chip input:checked+span::before{content:"✓";font-weight:800}
+.chip input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.chips.stack{flex-direction:column;align-items:stretch}
+.chips.stack .chip span{border-radius:var(--r-s);width:100%}
+
+.consent{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r-m);background:var(--paper);cursor:pointer}
+.consent input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--teal)}
+.consent:has(input:checked){border-color:var(--teal);background:var(--teal-soft)}
+.field.bad .consent{border-color:var(--danger)}
+
+.callout{border-left:4px solid var(--teal);background:var(--teal-soft);padding:12px 16px;border-radius:0 var(--r-s) var(--r-s) 0;margin:0 0 18px;font-size:.97rem}
+.callout.warn{border-color:var(--gold);background:var(--gold-soft)}
+.callout.priv{border-color:var(--ink-3);background:var(--line-2)}
+.callout p:last-child{margin-bottom:0}
+.callout b{font-weight:600}
+
+/* IC */
+.seg-toggle{display:inline-flex;background:var(--line-2);border-radius:999px;padding:4px;margin-bottom:14px}
+.seg-toggle button{border:0;background:transparent;color:var(--text);padding:.55em 1.2em;border-radius:999px;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:40px}
+.seg-toggle button[aria-pressed="true"]{background:var(--card);box-shadow:var(--shadow);color:var(--teal-d)}
+.ic-short ul{margin:0 0 1em}
+.ic-full details{border-top:1px solid var(--line)}
+.ic-full details:last-child{border-bottom:1px solid var(--line)}
+.ic-full summary,.faq summary{cursor:pointer;list-style:none;padding:14px 4px;font-weight:600;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.ic-full summary::-webkit-details-marker,.faq summary::-webkit-details-marker{display:none}
+.ic-full summary::after,.faq summary::after{content:"+";font:500 1.5rem/1 var(--f-body);color:var(--teal-d);transition:transform .2s}
+.ic-full details[open] summary::after,.faq details[open] summary::after{transform:rotate(45deg)}
+.ic-full .in,.faq .in{padding:0 4px 16px;color:var(--muted)}
+.ic-scroll{max-height:420px;overflow:auto;padding-right:6px;margin-bottom:14px;border-radius:var(--r-s)}
+
+/* BMI */
+.bmi-card{border:1.5px solid var(--line);border-radius:var(--r-m);padding:14px 16px;margin:-2px 0 20px;background:var(--paper)}
+.bmi-card .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.bmi-card b{font:800 1.9rem/1 var(--f-head)}
+.bmi-card .gl{font-weight:600}
+.bmi-scale{position:relative;height:10px;border-radius:10px;margin:12px 0 6px;background:linear-gradient(90deg,#7CC4FF 0 18.75%,#2CC9B6 18.75% 37.5%,#F2B705 37.5% 100%)}
+.bmi-scale i{position:absolute;top:-5px;width:6px;height:20px;border-radius:4px;background:var(--text);transform:translateX(-50%);transition:left .25s;left:-10px}
+.bmi-lab{position:relative;height:1.3em;font-size:.78rem;color:var(--muted)}
+.bmi-lab span{position:absolute;top:0;transform:translateX(-50%)}
+.bmi-lab span:first-child{transform:none}
+.bmi-lab span:last-child{transform:translateX(-100%)}
+
+/* kalender */
+.cal-wrap{display:grid;gap:18px}
+.cal h4{font:700 1.02rem/1 var(--f-head);margin-bottom:8px}
+.cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.cal-g .dow{font-size:.74rem;color:var(--faint);text-align:center;padding-bottom:2px}
+.cal-g .dow.we{color:var(--coral)}
+.cal-d{position:relative;aspect-ratio:1/.86;min-height:42px}
+.cal-d input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;width:100%;height:100%}
+.cal-d span{position:absolute;inset:0;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);font-weight:600;font-size:.95rem;transition:background .12s,border-color .12s}
+.cal-d:hover span{border-color:var(--teal)}
+.cal-d.we span{color:var(--muted)}
+.cal-d input:checked+span{background:var(--teal);border-color:var(--teal);color:#04201D}
+.cal-d input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.cal-d.off{pointer-events:none}
+.cal-d.off span{background:transparent;border-color:transparent;color:var(--faint);opacity:.45;font-weight:400}
+.cal-tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
+.linkbtn{border:0;background:none;color:var(--teal-d);font:600 .92rem/1 var(--f-body);padding:8px 2px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:36px}
+
+/* tinjau */
+.review{margin:0 0 18px;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.review div{display:grid;grid-template-columns:minmax(120px,.8fr) 1.6fr;gap:12px;padding:10px 16px;border-top:1px solid var(--line-2)}
+.review div:first-child{border-top:0}
+.review dt{color:var(--muted);font-size:.93rem}
+.review dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+@media (max-width:560px){.review div{grid-template-columns:1fr;gap:2px}}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line-2);flex-wrap:wrap}
+.actions .right{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.spin{width:18px;height:18px;border-radius:50%;border:2.5px solid currentColor;border-right-color:transparent;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.banner{padding:12px 16px;border-radius:var(--r-s);margin:0 0 16px;font-weight:500}
+.banner.err{background:var(--danger-soft);color:var(--danger)}
+.banner.demo{background:var(--gold-soft);color:var(--gold-d)}
+
+/* hasil */
+.result{text-align:left}
+.result .mark{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--ok-soft);color:var(--ok);margin-bottom:14px}
+.result.stop .mark{background:var(--gold-soft);color:var(--gold-d)}
+.result h3{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:.4em}
+.kode{display:inline-block;font:800 1.7rem/1 var(--f-head);letter-spacing:.04em;background:var(--line-2);border-radius:var(--r-s);padding:.45em .8em;margin:.4em 0 1em}
+.result ol{color:var(--muted)}
+pre.payload{background:#06121F;color:#BFD3E6;border-radius:var(--r-s);padding:14px;overflow:auto;font-size:.8rem;line-height:1.5;max-height:320px}
+
+/* faq + footer */
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-size:1.06rem}
+.faq p{margin:0 0 .7em}
+footer{background:var(--ink);color:#B7C8DA;padding-block:44px 34px;font-size:.95rem}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+footer h4{color:#fff;font-size:1.05rem;line-height:1.3;margin-bottom:.6em}
+footer a{color:#fff}
+footer .logos{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+footer .logos img{height:44px;width:auto}
+footer p{margin-bottom:.6em}
+footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#7F97AF;font-size:.85rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#daftar">Lewati ke formulir pendaftaran</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Riset Cybersickness VR, ke atas">
+      <img src="logo-ugm.png" alt="Logo Universitas Gadjah Mada" width="40" height="40" data-opt>
+      <span><b>Riset Cybersickness VR</b><small>Magister Teknik Biomedis · UGM</small></span>
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#penelitian">Penelitian</a>
+      <a href="#alur">Alur</a>
+      <a href="#alat">Alat</a>
+      <a href="#aman">Keselamatan</a>
+      <a href="#faq">FAQ</a>
+      <a href="#daftar" class="btn gold sm keep">Daftar</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Ganti tema terang/gelap" title="Ganti tema">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================================= HERO ================================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Pusing saat memakai VR? Bantu kami mengukurnya.</h1>
+      <p class="lead">Penelitian Magister Teknik Biomedis UGM merekam sinyal otak, jantung, denyut nadi, dan gerak tubuh saat Anda berjalan, berlari, dan duduk–berdiri, dengan dan tanpa headset VR. Hasilnya dipakai untuk membangun sistem yang mendeteksi cybersickness secara objektif.</p>
+      <div class="cta">
+        <a class="btn gold" href="#daftar-subject" data-go="subject">Daftar sebagai subject</a>
+        <a class="btn onink" href="#daftar-asisten" data-go="asisten">Daftar sebagai asisten</a>
+      </div>
+      <ul class="facts">
+        <li>30 mahasiswa baru usia 18–25 tahun</li>
+        <li>Sekitar 90–100 menit per orang</li>
+        <li>Transport <span data-cfg="kompensasi">Rp30.000</span>, Makan, dan air minum</li>
+      </ul>
+      <p class="etik">Izin etik: No. <span data-cfg="etik-no"></span> (<span data-cfg="etik-lembaga"></span>, <span data-cfg="etik-tgl"></span>).</p>
+    </div>
+
+    <div class="scope" role="img" aria-label="Ilustrasi empat kanal sinyal: EEG, ECG, PPG, dan IMU, yang berubah mengikuti lima segmen berjalan, berlari, dan duduk berdiri.">
+      <div class="scope-top"><b>Empat sinyal, satu waktu</b><span id="phase-now">C1 · Jalan</span></div>
+      <canvas id="scope" aria-hidden="true"></canvas>
+      <div class="phase" id="phase" aria-hidden="true">
+        <span><b>C1</b>Jalan</span><span><b>C2</b>Lari</span><span><b>C3</b>Jalan</span><span><b>C4</b>Lari</span><span><b>C5</b>Duduk–berdiri</span>
+      </div>
+      <p class="scope-cap">Ilustrasi sinyal simulasi, bukan data rekaman.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PENELITIAN ============================== -->
+<section class="sec" id="penelitian">
+  <div class="wrap">
+    <h2>Apa yang direkam, dan untuk apa</h2>
+    <p class="lead">Cybersickness adalah rasa pusing, mual, dan tidak nyaman yang bisa muncul saat memakai VR. Selama ini tingkatnya hanya diukur lewat kuesioner. Kami ingin tahu apakah sinyal tubuh bisa menjawabnya lebih objektif.</p>
+
+    <figure class="fig" style="margin-bottom:clamp(24px,4vw,44px)">
+      <img src="hero-setup.png" alt="Contoh pemasangan: EEG di kepala, modul sensor di dada, dan headset VR" width="1600" height="1000" data-opt loading="lazy">
+      <figcaption>Contoh pemasangan: elektroda EEG di kepala, modul sensor di dada, dan headset VR.</figcaption>
+    </figure>
+
+    <div class="split">
+      <div>
+        <ul class="sensors">
+          <li><b>EEG</b><span>Aktivitas listrik otak lewat 8 elektroda kering di kulit kepala. Klip telinga menjadi referensi.</span></li>
+          <li><b>ECG</b><span>Aktivitas listrik jantung lewat 3 elektroda di dada.</span></li>
+          <li><b>PPG</b><span>Denyut nadi lewat sensor optik pada modul yang menempel di dada.</span></li>
+          <li><b>IMU</b><span>Gerak dan kemiringan tubuh, dari modul dada yang sama.</span></li>
+        </ul>
+        <p style="margin-top:1.2em" class="muted">Keempat sinyal direkam bersamaan dan disinkronkan. Tingkat pusing ditentukan dari kuesioner SSQ yang Anda isi sebelum dan sesudah sesi VR.</p>
+      </div>
+      <dl class="who">
+        <dt>Subject</dt>
+        <dd>30 mahasiswa baru berusia 18–25 tahun, dibagi ke tiga kelompok BMI dengan 10 orang per kelompok. Jenis kelamin diupayakan seimbang.
+          <div class="bmi"><span>Kurus &lt; 18,5</span><span>Normal 18,5–22,9</span><span>BB lebih–obesitas ≥ 23,0</span></div>
+        </dd>
+        <dt>Asisten lapangan</dt>
+        <dd>Pendamping yang memasang alat, mendampingi subject berjalan dan berlari, serta menangani gejala ringan. Bertugas di Yogyakarta dan Boyolali.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================================= ALUR ================================= -->
+<section class="sec tint" id="alur">
+  <div class="wrap">
+    <h2>Satu hari, dua sesi rekaman</h2>
+    <p class="lead">Dari datang sampai pulang sekitar 90–100 menit. Urutan sesi (tanpa VR dan dengan VR) ditentukan peneliti, dengan jeda istirahat sampai Anda siap.</p>
+    <div class="split">
+      <ol class="steps">
+        <li><h3>Penjelasan dan persetujuan</h3><p>Anda mendapat penjelasan lengkap, boleh bertanya, lalu menandatangani Informed Consent. Pendaftaran di halaman ini bukan pengganti tanda tangan itu.</p></li>
+        <li><h3>Ukur dan isi formulir</h3><p>Berat dan tinggi badan diukur langsung. Anda mengisi lembar data diri, skrining kesehatan, dan kuesioner kerentanan mabuk perjalanan (MSSQ).</p></li>
+        <li><h3>Pasang alat</h3><p>Asisten membersihkan kulit kepala dan dada, lalu memasang EEG, ECG, dan modul dada. Gel transparan berbasis air dioles pada sensor PPG sebelum modul menempel.</p></li>
+        <li><h3>Isi SSQ awal</h3><p>Satu lembar gejala (16 butir, skala 0–3) sebelum sesi pertama.</p></li>
+        <li class="main"><h3>Dua sesi rekaman, masing-masing sekitar 22 menit</h3>
+          <p>Diam dan arahan, lalu jalan, lari, jalan, lari, dan duduk–berdiri di kursi. Pada sesi VR Anda memakai headset dan melihat video; peneliti dan asisten mendampingi.</p>
+          <div class="seg" aria-label="Lima segmen per sesi: C1 jalan 5 menit, C2 lari 4 menit, C3 jalan 4 menit, C4 lari 4 menit, C5 duduk berdiri 5 menit">
+            <span><b>C1</b>Jalan · 5′</span><span class="run"><b>C2</b>Lari · 4′</span><span><b>C3</b>Jalan · 4′</span><span class="run"><b>C4</b>Lari · 4′</span><span><b>C5</b>Duduk–berdiri · 5′</span>
+          </div>
+        </li>
+        <li><h3>Isi SSQ akhir</h3><p>Segera setelah sesi dengan VR selesai.</p></li>
+        <li><h3>Lepas alat dan pulang</h3><p>Asisten memeriksa kulit Anda dan membersihkan area pemasangan. Anda menerima kompensasi, Makan, dan air minum.</p></li>
+      </ol>
+      <div>
+        <figure class="fig">
+          <img src="lintasan.png" alt="Denah lintasan: jalan ke kiri, lari ke kanan, jalan ke kiri, lari ke kanan, lalu menuju kursi untuk duduk dan berdiri" width="1600" height="1000" loading="lazy">
+          <figcaption>Skema lintasan lima segmen (tidak berskala). Anda selalu didampingi asisten.</figcaption>
+        </figure>
+        <div id="lokasi" style="margin-top:18px;display:grid;gap:12px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================= ALAT ================================= -->
+<section class="sec" id="alat">
+  <div class="wrap">
+    <h2>Alat yang dipasang di tubuh Anda</h2>
+    <p class="lead">Pemasangan dilakukan oleh tim yang terlatih. Kalau ada yang terasa tidak nyaman, katakan saja; kami berhenti dan menyesuaikan.</p>
+    <div class="tabs" role="tablist" aria-label="Pilih alat">
+      <button class="tab" role="tab" id="t-eeg" aria-controls="p-eeg" aria-selected="true" data-tab="eeg">EEG kepala</button>
+      <button class="tab" role="tab" id="t-ecg" aria-controls="p-ecg" aria-selected="false" data-tab="ecg" tabindex="-1">ECG dada</button>
+      <button class="tab" role="tab" id="t-mod" aria-controls="p-mod" aria-selected="false" data-tab="mod" tabindex="-1">Modul dada</button>
+      <button class="tab" role="tab" id="t-vr" aria-controls="p-vr" aria-selected="false" data-tab="vr" tabindex="-1">Headset VR</button>
+      <button class="tab" role="tab" id="t-gel" aria-controls="p-gel" aria-selected="false" data-tab="gel" tabindex="-1">Gel</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-eeg" aria-labelledby="t-eeg">
+      <figure class="fig"><img src="eeg-8ch.png" alt="Penempatan 8 elektroda EEG kering di kulit kepala dan klip telinga sebagai referensi" width="1200" height="900" loading="lazy"><figcaption>Penempatan 8 elektroda EEG dan klip telinga referensi.</figcaption></figure>
+      <div><h3>EEG 8 kanal</h3>
+        <ul><li>Elektroda kering menekan kulit kepala; rasanya seperti tekanan ringan.</li><li>Klip telinga dipasang sebagai referensi.</li><li>Kulit kepala dibersihkan lebih dulu dengan kapas alkohol.</li><li>Sinyal dicek di layar sebelum rekaman dimulai.</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-ecg" aria-labelledby="t-ecg" hidden>
+      <figure class="fig"><img src="ecg-3elektroda.png" alt="Penempatan 3 elektroda ECG di dada" width="1000" height="800" loading="lazy"><figcaption>Penempatan 3 elektroda ECG di dada.</figcaption></figure>
+      <div><h3>ECG 3 elektroda</h3>
+        <ul><li>Tiga elektroda menempel di dada.</li><li>Area dada dibersihkan dengan kapas alkohol sebelum elektroda dipasang.</li><li>Elektroda memakai gel; beri tahu kami bila kulit Anda sensitif terhadap gel atau plester.</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-mod" aria-labelledby="t-mod" hidden>
+      <figure class="fig"><img src="modul-dada.png" alt="Modul sensor PPG dan IMU di dada dengan strap elastis" width="1000" height="800" loading="lazy"><figcaption>Modul PPG dan IMU di dada dengan strap elastis.</figcaption></figure>
+      <div><h3>Modul PPG dan IMU</h3>
+        <ul><li>Modul kecil menempel di dada dengan strap elastis.</li><li>Jendela sensor PPG diberi gel transparan berbasis air sebelum modul dipasang, lalu dibersihkan setelah sesi.</li><li>Modul ini merekam denyut nadi dan gerak tubuh.</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-vr" aria-labelledby="t-vr" hidden>
+      <figure class="fig"><img src="vr-headset.png" alt="Headset VR dan hand controller" width="1000" height="800" loading="lazy"><figcaption>Headset VR dan hand controller.</figcaption></figure>
+      <div><h3>Headset VR</h3>
+        <ul><li>Dipakai pada sesi dengan VR. Anda melihat video: awalnya diam, lalu bergerak pada segmen terakhir.</li><li>Headset terasa berat di kepala bagi sebagian orang.</li><li>Asisten mendampingi di samping Anda selama berjalan dan berlari.</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-gel" aria-labelledby="t-gel" hidden>
+      <figure class="fig"><img src="gel-ppg.png" alt="Gel transparan berbasis air untuk sensor PPG" width="900" height="700" loading="lazy"><figcaption>Gel transparan berbasis air untuk sensor PPG.</figcaption></figure>
+      <div><h3>Gel dan kulit sensitif</h3>
+        <ul><li>Gel dipakai di jendela sensor PPG dan pada elektroda ECG.</li><li>Sebagian orang merasa sedikit gatal atau perih. Katakan segera, dan kami berhenti.</li><li>Jika Anda alergi atau berkulit sensitif terhadap gel atau plester, jawab &ldquo;Ya&rdquo; pada pertanyaan skrining. Anda tetap bisa mendaftar; peneliti akan memeriksanya lebih dulu.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== KESELAMATAN ============================== -->
+<section class="sec tint" id="aman">
+  <div class="wrap">
+    <h2>Keselamatan, hak Anda, dan kompensasi</h2>
+    <p class="lead">Risikonya ringan hingga sedang. Anda boleh berhenti kapan saja, tanpa alasan dan tanpa sanksi.</p>
+    <div class="twocol">
+      <div class="box">
+        <h3>Yang mungkin Anda rasakan</h3>
+        <ul>
+          <li>Pusing, mual (pada sebagian orang sampai muntah), disorientasi, atau mata lelah saat atau setelah memakai VR. Biasanya mereda dalam beberapa menit setelah VR dilepas.</li>
+          <li>Iritasi ringan pada kulit kepala atau dada akibat elektroda dan gel.</li>
+          <li>Headset terasa berat dan badan lelah setelah berjalan dan berlari.</li>
+          <li>Risiko tersandung atau kehilangan keseimbangan. Kami menekannya dengan area lapang dan pendampingan langsung.</li>
+        </ul>
+        <p class="muted" style="margin:.8em 0 0">Kantong, obat ringan, dan waktu istirahat tersedia di lokasi.</p>
+      </div>
+      <div class="box gold">
+        <h3>Kompensasi</h3>
+        <p class="big" data-cfg="kompensasi">Rp30.000</p>
+        <ul>
+          <li>Uang transport per subject.</li>
+          <li>Makan dan air minum selama kegiatan.</li>
+          <li>Penanganan gejala cybersickness oleh tim.</li>
+          <li>Tetap diberikan walau Anda berhenti di tengah sesi.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Siapa yang belum bisa ikut</h3>
+        <p class="muted">Demi keselamatan Anda dan keabsahan data, kriteria ini berlaku sama untuk semua calon:</p>
+        <ul>
+          <li>Bukan mahasiswa baru, atau berusia di luar 18–25 tahun.</li>
+          <li>Riwayat gangguan vestibular (mis. vertigo), epilepsi atau kejang, atau depresi.</li>
+          <li>Cedera atau trauma kepala dalam 6 bulan terakhir.</li>
+          <li>Sedang hamil, atau sedang menjalani terapi medis/fisik rutin yang relevan.</li>
+          <li>Gangguan penglihatan yang belum terkoreksi.</li>
+          <li>Kuota kelompok BMI Anda sudah penuh: Anda masuk daftar cadangan.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Data Anda</h3>
+        <ul>
+          <li>Data diberi kode dan disimpan aman oleh tim peneliti.</li>
+          <li>Dipakai hanya untuk penelitian dan publikasi ilmiah, tanpa identitas pribadi.</li>
+          <li>Di formulir ini kami tidak meminta nomor rekening, KTP, atau foto.</li>
+          <li>Jawaban yang membuat Anda belum dapat ikut tidak disimpan bersama identitas apa pun.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ DAFTAR ================================ -->
+<section class="sec" id="daftar">
+  <div class="wrap">
+    <h2>Daftar</h2>
+    <p class="lead">Pilih peran Anda. Mengisi formulir meMakan waktu sekitar 5–7 menit.</p>
+    <div id="banner-closed" class="banner err" role="status" hidden></div>
+    <div class="roles" role="group" aria-label="Pilih peran">
+      <button type="button" class="role" data-role="subject" aria-pressed="false" id="daftar-subject">
+        <b>Subject</b><span>Mahasiswa baru 18–25 tahun · sekitar 90–100 menit · transport <span data-cfg="kompensasi">Rp30.000</span> + Makan</span>
+      </button>
+      <button type="button" class="role" data-role="asisten" aria-pressed="false" id="daftar-asisten">
+        <b>Asisten lapangan</b><span>Memasang alat dan mendampingi subject · Yogyakarta &amp; Boyolali · honor sesuai RAB</span>
+      </button>
+    </div>
+    <div id="form-root" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================================== FAQ ================================== -->
+<section class="sec tint" id="faq">
+  <div class="wrap">
+    <h2>Pertanyaan yang sering muncul</h2>
+    <div class="faq" style="max-width:820px">
+      <details><summary>Apakah ini berbahaya?</summary><div class="in"><p>Risikonya ringan hingga sedang, terutama pusing atau mual saat memakai VR yang umumnya mereda setelah headset dilepas. Anda didampingi sepanjang sesi dan boleh berhenti kapan saja.</p></div></details>
+      <details><summary>Mengapa ditanya BMI, epilepsi, dan depresi?</summary><div class="in"><p>BMI dipakai untuk membagi subject ke tiga kelompok yang seimbang. Pertanyaan epilepsi dan depresi hanya penapisan awal untuk keselamatan dan keabsahan data, bukan diagnosis. BMI di formulir ini hanya perkiraan; peneliti mengukur ulang secara langsung.</p></div></details>
+      <details><summary>Mengapa hanya mahasiswa baru berusia 18–25 tahun?</summary><div class="in"><p>Agar kelompok subject seragam. Kriteria ini sama untuk semua pendaftar.</p></div></details>
+      <details><summary>Apakah saya pasti diterima setelah mendaftar?</summary><div class="in"><p>Belum. Pendaftaran ini baru tahap awal. Peneliti akan menghubungi Anda lewat WhatsApp atau email untuk menjadwalkan, lalu skrining dan pengukuran dilakukan langsung. Jika kuota kelompok BMI Anda sudah penuh, Anda masuk daftar cadangan.</p></div></details>
+      <details><summary>Kapan pengambilan data berlangsung?</summary><div class="in"><p id="faq-tgl">Perkiraan pertengahan Desember 2026. Jadwal pasti dikonfirmasi lewat WhatsApp.</p></div></details>
+      <details><summary>Mengapa ada pertanyaan tentang hijab?</summary><div class="in"><p>Pemasangan EEG membutuhkan kontak langsung dengan kulit kepala. Bagi subject berhijab, pemasangan dilakukan oleh asisten perempuan di area tertutup. Peneliti tidak ikut mengawasi dan tidak ada foto atau video.</p></div></details>
+      <details><summary>Bagaimana kalau saya pusing di tengah sesi?</summary><div class="in"><p>Katakan kepada asisten. Sesi dihentikan, Anda beristirahat, dan tim menyiapkan kantong serta obat ringan. Kompensasi tetap diberikan.</p></div></details>
+      <details><summary>Apakah mendaftar berarti saya sudah menyetujui Informed Consent?</summary><div class="in"><p>Tidak. Persetujuan resmi berupa tanda tangan Informed Consent dilakukan pada hari pelaksanaan setelah Anda mendapat penjelasan langsung.</p></div></details>
+      <details><summary>Ke mana saya bertanya?</summary><div class="in"><p>Hubungi peneliti utama, <span data-cfg="kontak-nama"></span>, lewat <a data-cfg="kontak-email-link" href="#"></a><span data-cfg="kontak-wa-wrap"></span>.</p></div></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logos">
+        <img src="logo-ugm.png" alt="Universitas Gadjah Mada" data-opt>
+        <img src="logo-prodi.png" alt="Magister Teknik Biomedis" data-opt>
+      </div>
+      <h4>Klasifikasi Cybersickness Berbasis Machine Learning menggunakan Sinyal Multimodal EEG-ECG-PPG-IMU yang Tersinkronisasi pada Pengguna Virtual Reality</h4>
+      <p>Peneliti utama: <span data-cfg="kontak-nama"></span> (25/572851/PMU/12529), Mahasiswa Magister Teknik Biomedis, Sekolah Pascasarjana, Universitas Gadjah Mada.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p><a data-cfg="kontak-email-link" href="#"></a></p>
+      <p><span data-cfg="kontak-wa-wrap"></span></p>
+      <p>Kelaikan etik No. <span data-cfg="etik-no"></span><br><span data-cfg="etik-lembaga"></span>, <span data-cfg="etik-tgl"></span></p>
+    </div>
+    <p class="fine">Pendaftaran di halaman ini bukan Informed Consent. Persetujuan resmi ditandatangani pada hari pelaksanaan. Jangan mengirim data yang tidak diminta formulir ini.</p>
+  </div>
+</footer>
+
+<!-- ============================== TEMPLATE ============================== -->
+<template id="tpl-ic">
+  <div class="field" data-block>
+    <div class="seg-toggle" role="group" aria-label="Versi informasi penelitian">
+      <button type="button" data-ic="Ringkas" aria-pressed="true">Versi ringkas</button>
+      <button type="button" data-ic="Lengkap" aria-pressed="false">Versi lengkap</button>
+    </div>
+    <div class="ic-short">
+      <ul>
+        <li><b>Tujuan.</b> Mengembangkan sistem klasifikasi cybersickness (pusing atau tidak) dari sinyal EEG, ECG, PPG, dan IMU yang direkam bersamaan pada pengguna VR.</li>
+        <li><b>Peserta.</b> 30 mahasiswa baru berusia 18–25 tahun, dalam tiga kelompok BMI (10 orang per kelompok).</li>
+        <li><b>Yang dilakukan.</b> Ukur berat dan tinggi badan, isi formulir, lalu pasang EEG 8 kanal di kepala serta ECG 3 elektroda dan modul PPG/IMU di dada. Dua sesi rekaman sekitar 22 menit (tanpa VR dan dengan VR): jalan, lari, jalan, lari, duduk–berdiri. SSQ diisi sebelum sesi pertama dan segera setelah sesi VR. Total sekitar 90–100 menit.</li>
+        <li><b>Risiko.</b> Pusing, mual, disorientasi, atau mata lelah akibat VR; iritasi ringan akibat elektroda atau gel; headset terasa berat; lelah; risiko tersandung (Anda didampingi).</li>
+        <li><b>Hak.</b> Sukarela. Berhenti kapan saja tanpa alasan dan tanpa sanksi, termasuk terhadap status akademik. Kompensasi tetap diberikan.</li>
+        <li><b>Kompensasi.</b> Uang transport <span data-cfg="kompensasi">Rp30.000</span>, Makan, air minum, dan penanganan gejala bila muncul.</li>
+        <li><b>Data.</b> Diberi kode, dijaga kerahasiaannya, dan dipakai hanya untuk penelitian dan publikasi ilmiah tanpa identitas pribadi.</li>
+      </ul>
+    </div>
+    <div class="ic-full" hidden>
+      <div class="ic-scroll" tabindex="0" role="region" aria-label="Penjelasan sebelum persetujuan, versi lengkap">
+        <details open><summary>1. Tujuan penelitian</summary><div class="in"><p>Mengembangkan sistem klasifikasi cybersickness (kondisi pusing atau tidak pusing) berbasis machine learning menggunakan sinyal multimodal EEG (elektroensefalogram), ECG (elektrokardiogram), PPG (fotopletismografi), dan IMU (Inertial Measurement Unit) yang direkam secara tersinkronisasi pada pengguna virtual reality (VR).</p></div></details>
+        <details><summary>2. Kriteria dan jumlah partisipan</summary><div class="in">
+          <p>Penelitian melibatkan 30 partisipan dari mahasiswa baru berusia 18–25 tahun. Partisipan dikelompokkan berdasarkan BMI yang diukur langsung oleh peneliti ke dalam tiga kelompok dengan jumlah sama (10 orang per kelompok): kurus (BMI &lt; 18,5 kg/m²), normal (18,5–22,9 kg/m²), dan berat badan lebih hingga obesitas (≥ 23,0 kg/m²). Jenis kelamin dicatat dan diupayakan seimbang pada setiap kelompok.</p>
+          <p>Anda dapat mengikuti penelitian ini bila berstatus mahasiswa baru berusia 18–25 tahun, bersedia mengikuti seluruh sesi, tidak memiliki gangguan penglihatan yang belum terkoreksi, sehat secara umum, serta menjawab &ldquo;Tidak ada&rdquo; pada pertanyaan skrining epilepsi/kejang dan depresi. Anda tidak dapat diikutsertakan bila memiliki riwayat gangguan vestibular (vertigo), epilepsi/kejang, atau depresi, mengalami cedera/trauma kepala dalam 6 bulan terakhir, sedang hamil, atau sedang menjalani terapi medis/fisik rutin yang relevan, atau bila kuota kelompok BMI Anda sudah terpenuhi (Anda dimasukkan ke daftar cadangan).</p>
+          <p>Pertanyaan skrining epilepsi dan depresi hanya penapisan awal berdasarkan jawaban atau riwayat diagnosis Anda, bukan alat diagnosis. Jawaban Anda dijaga kerahasiaannya.</p></div></details>
+        <details><summary>3. Prosedur penelitian</summary><div class="in"><ul>
+          <li>Pengukuran antropometri (tinggi dan berat badan), penentuan kelompok BMI, dan pencatatan jenis kelamin.</li>
+          <li>Pemasangan elektroda EEG 8 kanal (kontak kering di kulit kepala, klip telinga sebagai referensi), elektroda ECG 3 buah di dada, serta modul sensor PPG dan IMU di dada dengan strap elastis. Sebelum modul dipasang, jendela sensor PPG diberi gel transparan berbasis air yang dibersihkan lagi setelah sesi. Pemasangan dilakukan tim peneliti yang terlatih.</li>
+          <li>Dua sesi perekaman identik, yaitu tanpa VR (kondisi normal, sebagai pembanding) dan dengan VR, dengan jeda istirahat hingga Anda siap.</li>
+          <li>Setiap sesi dimulai dari posisi diam (berdoa dan arahan), lalu berjalan, berlari, berjalan, berlari, dan duduk–berdiri pada kursi (lima segmen C1–C5; sekitar 22 menit per sesi). Pada sesi VR Anda memakai head-mounted display (video diam, kemudian video bergerak pada segmen terakhir) dan didampingi peneliti serta asisten.</li>
+          <li>Anda mengisi Simulator Sickness Questionnaire (SSQ) sebelum sesi pertama dan segera setelah sesi dengan VR. Skor SSQ menjadi dasar penentuan label cybersickness.</li>
+          <li>Seluruh sinyal EEG, ECG, PPG, dan IMU direkam bersamaan selama kedua sesi.</li>
+          <li>Sebelum sesi utama, Anda mengisi lembar data diri dan skrining kesehatan (berat dan tinggi badan, aktivitas fisik, obat/terapi/trauma, epilepsi, depresi, alergi gel/plester) serta kuesioner MSSQ.</li>
+        </ul><p>Seluruh prosedur diperkirakan sekitar 90–100 menit per partisipan.</p></div></details>
+        <details><summary>4. Risiko dan ketidaknyamanan</summary><div class="in"><p>Risikonya ringan hingga sedang:</p><ul>
+          <li>Gejala cybersickness seperti pusing, mual, disorientasi, atau kelelahan mata selama atau setelah memakai VR. Umumnya sementara dan mereda dalam beberapa menit setelah sesi VR dihentikan.</li>
+          <li>Rasa tidak nyaman ringan akibat tekanan elektroda kering pada kulit kepala serta gel pada sensor PPG dan elektroda ECG, yang dapat menimbulkan sedikit iritasi. Beri tahu peneliti bila Anda alergi atau berkulit sensitif terhadap gel atau plester.</li>
+          <li>Kelelahan atau tidak nyaman akibat berat headset VR.</li>
+          <li>Kelelahan fisik ringan akibat berjalan, berlari, dan duduk–berdiri dalam dua sesi.</li>
+          <li>Risiko tersandung atau kehilangan keseimbangan saat bergerak memakai HMD, yang diminimalkan dengan pendampingan langsung dan area pengujian yang aman dan lapang.</li>
+        </ul><p>Bila Anda merasa tidak nyaman berarti (pusing berat, mual, atau ingin berhenti), Anda dapat menghentikan sesi kapan saja tanpa alasan. Peneliti segera menghentikan prosedur dan memberi waktu istirahat hingga Anda pulih.</p></div></details>
+        <details><summary>5. Manfaat dan kompensasi</summary><div class="in"><ul>
+          <li>Uang transport <span data-cfg="kompensasi">Rp30.000</span> per partisipan.</li>
+          <li>Makan dan air minum selama kegiatan.</li>
+          <li>Penanganan oleh tim peneliti bila timbul gejala cybersickness (kantong dan obat-obatan ringan).</li>
+        </ul><p>Kompensasi diberikan setelah kegiatan selesai, dan tetap diberikan bila Anda menghentikan sesi karena ketidaknyamanan atau memutuskan berhenti. Partisipasi Anda berkontribusi pada pengembangan sistem deteksi cybersickness yang lebih objektif di bidang biosignal processing dan interaksi manusia–komputer.</p></div></details>
+        <details><summary>6. Kerahasiaan data</summary><div class="in"><p>Seluruh data Anda (sinyal EEG, ECG, PPG, IMU, data antropometri, data skrining kesehatan termasuk riwayat epilepsi dan depresi, dan hasil kuesioner MSSQ dan SSQ) diberi kode identitas dan disimpan aman oleh tim peneliti. Data hanya dipakai untuk penelitian dan publikasi ilmiah, tanpa mencantumkan identitas pribadi Anda dalam bentuk apa pun.</p></div></details>
+        <details><summary>7. Kesukarelaan dan hak mengundurkan diri</summary><div class="in"><p>Keikutsertaan Anda sepenuhnya sukarela. Anda berhak menolak atau mengundurkan diri kapan saja selama penelitian berlangsung tanpa sanksi atau konsekuensi negatif apa pun, termasuk terhadap status akademik Anda.</p></div></details>
+        <details><summary>8. Pertanyaan dan informasi lebih lanjut</summary><div class="in"><p>Hubungi peneliti utama, <span data-cfg="kontak-nama"></span>, lewat <a data-cfg="kontak-email-link" href="#"></a>. Penjelasan ini merupakan ringkasan dari dokumen resmi Penjelasan Sebelum Persetujuan dan Informed Consent (No. <span data-cfg="etik-no"></span>).</p></div></details>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-bmi">
+  <div class="bmi-card" data-block aria-live="polite">
+    <div class="row"><span>Perkiraan BMI</span><b id="bmi-val">–</b></div>
+    <div class="gl" id="bmi-grp">Isi berat dan tinggi badan.</div>
+    <div class="bmi-scale" aria-hidden="true"><i id="bmi-pin"></i></div>
+    <div class="bmi-lab" aria-hidden="true"><span style="left:0">14</span><span style="left:18.75%">18,5</span><span style="left:37.5%">23</span><span style="left:100%">38+</span></div>
+    <p class="hint" style="margin-top:8px">Hanya perkiraan dari isian Anda. Peneliti mengukur ulang berat dan tinggi badan secara langsung, dan itulah yang dipakai.</p>
+  </div>
+</template>
+
+<template id="tpl-protokol">
+  <div data-block>
+    <div class="callout"><p><b>Ringkasnya:</b> dua sesi identik (tanpa VR dan dengan VR), masing-masing sekitar 22 menit, urutan ditentukan peneliti. Total sekitar 90–100 menit termasuk pemasangan alat dan kuesioner.</p></div>
+    <div class="seg" style="max-width:none">
+      <span><b>C1</b>Jalan · 5′</span><span class="run"><b>C2</b>Lari · 4′</span><span><b>C3</b>Jalan · 4′</span><span class="run"><b>C4</b>Lari · 4′</span><span><b>C5</b>Duduk–berdiri · 5′</span>
+    </div>
+    <figure class="fig" style="margin:14px 0 18px"><img src="lintasan.png" alt="Denah lintasan lima segmen" loading="lazy"><figcaption>Skema lintasan (tidak berskala).</figcaption></figure>
+    <div class="callout warn"><p><b>Yang mungkin terjadi:</b> pusing, mual (kadang sampai muntah), disorientasi, mata lelah, iritasi ringan kulit, headset terasa berat, dan lelah fisik. Anda boleh berhenti kapan saja. Kantong dan obat ringan tersedia, dan kompensasi tetap diberikan.</p></div>
+  </div>
+</template>
+
+<template id="tpl-asisten-info">
+  <div data-block>
+    <div class="twocol" style="margin-bottom:18px">
+      <div class="box"><h3>Tugas Anda</h3><ul>
+        <li>Membantu subject mengisi kuesioner, mengukur BMI, dan memahami Informed Consent.</li>
+        <li>Membersihkan area dada dan kepala subject untuk elektroda.</li>
+        <li>Memasang EEG 8 kanal, gel PPG, modul dada, dan headset VR.</li>
+        <li>Mendampingi subject berjalan dan berlari sepanjang lintasan, memantau modul dan VR, serta mengarahkan belokan.</li>
+        <li>Membantu mengecek kualitas sinyal EEG sebelum rekaman.</li>
+        <li>Melepas alat, membersihkan dan mensterilkan VR dan modul.</li>
+        <li>Menangani gejala ringan (pusing, mual, muntah) dan memantau iritasi kulit setelah sesi.</li>
+      </ul></div>
+      <div class="box"><h3>Yang Anda dapat</h3><ul>
+        <li><span data-cfg="honor-asisten"></span></li>
+        <li>Biaya perjalanan dan Makan selama bertugas ditanggung peneliti, termasuk ke Yogyakarta (bisa naik KRL) dan ke Boyolali Area Waduk Cengklik.</li>
+        <li>Hadiah apresiasi setelah kegiatan selesai.</li>
+      </ul>
+      <h3 style="margin-top:1em">Latar belakang yang membantu</h3>
+      <ul><li>Keperawatan atau klinis (menangani pusing dan mual).</li><li>Pernah memakai VR.</li><li>Pengajar atau instruktur.</li><li>Biomedis atau pemrosesan sinyal.</li></ul></div>
+    </div>
+    <div class="callout"><p><b>Waktu:</b> pengambilan data sekitar <b>6–10 hari</b> (satu hari ±3–5 subject), diawali wawancara. Tanggal yang Anda pilih nanti dipakai untuk menyusun jadwal.</p></div>
+    <div class="callout priv"><p><b>Etika:</b> Anda menjaga kerahasiaan data dan privasi subject. Pemasangan alat pada subject perempuan berhijab dilakukan di area tertutup oleh asisten perempuan; tidak ada foto atau video.</p></div>
+  </div>
+</template>
+
+<script>
+"use strict";
+/* =====================================================================
+   KONFIGURASI — ubah bagian ini saja
+   ===================================================================== */
+const CONFIG = {
+ 
+  ENDPOINT: "https://script.google.com/macros/s/AKfycbwukKSku_fPjEKOPvjcQXOU1sHhwuSRFGT5pTvgKG7OmjEGKXWqCpSIwdJUR5tRH-rHIg/exec",
+
+  FORM_KEY: "d32PQUh5c7s4",
+
+  KONTAK: {
+    nama: "Muh Hafid Al Karim",
+    email: "muhhafidalkarim@mail.ugm.ac.id",
+    wa: "6285785259258"                       // opsional, format 6281234567890 (tanpa +). Kosong = tombol WhatsApp disembunyikan.
+  },
+  ETIK: { no: "1.353/VIII/HREC/2026", lembaga: "KEPK RSUD Dr. Moewardi", tanggal: "11 Agustus 2026" },
+
+  // ⚠ PERKIRAAN. Ganti setelah jadwal pasti. Format yyyy-mm-dd. "libur" = tanggal yang tidak bisa dipilih.
+  AKUISISI:  { mulai: "2026-12-10", selesai: "2026-12-24", libur: [], pasti: false, label: "pertengahan Desember 2026" },
+  // ⚠ PERKIRAAN jendela wawancara asisten.
+  WAWANCARA: { mulai: "2026-11-02", selesai: "2026-11-27", libur: [] },
+  // ⚠ Rentang jam contoh (satu sesi ±90–100 menit). Ubah sesuai ketersediaan ruangan.
+  JAM_SUBJECT:   ["08.00–11.00", "11.00–14.00", "14.00–17.00"],
+  JAM_WAWANCARA: ["08.00–11.00", "13.00–16.00", "16.00–19.00"],
+
+  LOKASI: [
+    { id: "YK",  nama: "Yogyakarta", detail: "UGM: N207 DTETI atau SGLC Lt. 1", peta: "https://maps.app.goo.gl/AQ96fo2DGqYUetT79" },
+    { id: "BYL", nama: "Boyolali",   detail: "Alamat dikirim setelah jadwal pasti", peta: "" }
+  ],
+
+  KOMPENSASI: "Rp30.000",
+  // Honor asisten: nominal sengaja TIDAK ditampilkan. Ganti teks di bawah bila ingin berbeda.
+  HONOR_ASISTEN_TEKS: "Honor mengikuti RAB penelitian; nominal dibicarakan saat wawancara.",
+  USIA: { min: 18, max: 25 },
+
+  // true = gambar yang belum ada tampil sebagai kotak penanda nama file; false = disembunyikan (untuk produksi).
+  PLACEHOLDER_GAMBAR: true
+};
+
+/* =====================================================================
+   UTIL
+   ===================================================================== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* diabaikan */ } }
+};
+const HARI = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
+const BULAN = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+const BLN = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
+const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+const parseISO = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const fmtDate = s => { const d = parseISO(s); return HARI[d.getDay()] + " " + d.getDate() + " " + BLN[d.getMonth()]; };
+const num = v => { const n = Number(String(v).replace(",", ".")); return isFinite(n) && String(v).trim() !== "" ? n : null; };
+const id1 = n => n.toFixed(1).replace(".", ",");
+
+/* =====================================================================
+   TEKS DARI CONFIG
+   ===================================================================== */
+function fillConfig(root = document) {
+  const map = {
+    "kompensasi": CONFIG.KOMPENSASI, "etik-no": CONFIG.ETIK.no, "etik-lembaga": CONFIG.ETIK.lembaga,
+    "etik-tgl": CONFIG.ETIK.tanggal, "kontak-nama": CONFIG.KONTAK.nama, "honor-asisten": CONFIG.HONOR_ASISTEN_TEKS
+  };
+  $$("[data-cfg]", root).forEach(el => {
+    const k = el.dataset.cfg;
+    if (k === "kontak-email-link") { el.textContent = CONFIG.KONTAK.email; el.href = "mailto:" + CONFIG.KONTAK.email; }
+    else if (k === "kontak-wa-wrap") {
+      el.innerHTML = CONFIG.KONTAK.wa ? ' atau WhatsApp <a href="https://wa.me/' + esc(CONFIG.KONTAK.wa) + '">+' + esc(CONFIG.KONTAK.wa) + "</a>" : "";
+    } else if (k in map) el.textContent = map[k];
+  });
+}
+fillConfig();
+{
+  const f = $("#faq-tgl");
+  if (f) f.textContent = "Perkiraan " + CONFIG.AKUISISI.label + ". " + (CONFIG.AKUISISI.pasti ? "" : "Jadwal pasti dikonfirmasi lewat WhatsApp atau email.");
+  const lk = $("#lokasi");
+  if (lk) lk.innerHTML = CONFIG.LOKASI.map(l =>
+    '<div class="box" style="padding:14px 18px"><h3 style="font-size:1.05rem;margin-bottom:.2em">' + esc(l.nama) + '</h3><p class="muted" style="margin:0">' +
+    esc(l.detail) + (l.peta ? ' · <a href="' + esc(l.peta) + '" target="_blank" rel="noopener">Lihat peta</a>' : "") + "</p></div>").join("");
+}
+
+/* gambar yang belum ada */
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || img.dataset.fail) return;
+  img.dataset.fail = "1";
+  const fig = img.closest("figure");
+  if (img.hasAttribute("data-opt") || !CONFIG.PLACEHOLDER_GAMBAR) { (fig || img).hidden = true; return; }
+  const d = document.createElement("div");
+  d.className = "imgmiss";
+  d.innerHTML = "<span>Letakkan gambar ini sefolder dengan index.html:</span><code>" + esc(img.getAttribute("src")) + "</code>";
+  img.replaceWith(d);
+}, true);
+window.addEventListener("load", () => $$("img").forEach(i => { if (i.complete && i.naturalWidth === 0 && i.getAttribute("src")) i.dispatchEvent(new Event("error")); }));
+
+/* tema */
+{
+  const saved = store.get("cs-theme");
+  if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  $("#theme").addEventListener("click", () => {
+    const cur = document.documentElement.dataset.theme;
+    const dark = cur === "dark" || (cur === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
+    const nxt = dark ? "light" : "dark";
+    document.documentElement.dataset.theme = nxt; store.set("cs-theme", nxt);
+  });
+}
+
+/* tab alat */
+{
+  const tabs = $$(".tab");
+  const open = t => {
+    tabs.forEach(b => { const on = b === t; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; $("#p-" + b.dataset.tab).hidden = !on; });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => open(t));
+    t.addEventListener("keydown", e => {
+      let j = null;
+      if (e.key === "ArrowRight") j = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") j = (i - 1 + tabs.length) % tabs.length;
+      if (j !== null) { e.preventDefault(); tabs[j].focus(); open(tabs[j]); }
+    });
+  });
+}
+
+/* =====================================================================
+   ILUSTRASI SINYAL (hero)
+   ===================================================================== */
+(function scope() {
+  const cv = $("#scope"); if (!cv) return;
+  const ctx = cv.getContext("2d");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const SC = 0.7;                                   // 1 detik layar = 1 menit protokol
+  const SEG = [
+    { k: "C1", n: "Jalan", d: 5, step: 1.8, amp: .45, hr: 1.25, art: .2 },
+    { k: "C2", n: "Lari", d: 4, step: 2.9, amp: 1, hr: 2.05, art: .8 },
+    { k: "C3", n: "Jalan", d: 4, step: 1.8, amp: .45, hr: 1.5, art: .2 },
+    { k: "C4", n: "Lari", d: 4, step: 2.9, amp: 1, hr: 2.1, art: .8 },
+    { k: "C5", n: "Duduk–berdiri", d: 5, step: .4, amp: .8, hr: 1.6, art: .35 }
+  ];
+  let t0 = 0, ph = 0, ps = 0;
+  const S = SEG.map(s => { const o = Object.assign({}, s, { t0, ph0: ph, ps0: ps }); t0 += s.d; ph += s.hr * s.d * SC; ps += s.step * s.d * SC; return o; });
+  const CYC = t0, CH = ph, CS = ps;
+  const segAt = m => { for (let i = S.length - 1; i >= 0; i--) if (m >= S[i].t0) return i; return 0; };
+  const cum = (t, key) => {
+    const cyc = Math.floor(t / CYC), m = t - cyc * CYC, s = S[segAt(m)];
+    return key === "h" ? cyc * CH + s.ph0 + s.hr * SC * (m - s.t0) : cyc * CS + s.ps0 + s.step * SC * (m - s.t0);
+  };
+  const g = (x, c, w) => Math.exp(-(((x - c) / w) ** 2));
+  const frac = x => x - Math.floor(x);
+  const ecg = p => { const x = frac(p); return .12 * g(x, .18, .045) - .1 * g(x, .36, .012) + g(x, .4, .014) - .22 * g(x, .44, .014) + .28 * g(x, .68, .06); };
+  const ppg = p => { const x = frac(p - .12); return .85 * g(x, .22, .1) + .38 * g(x, .55, .11); };
+  const imu = t => { const m = t - Math.floor(t / CYC) * CYC, i = segAt(m), s = S[i], p = cum(t, "s");
+    return i === 4 ? s.amp * Math.sin(2 * Math.PI * p) * .9 : s.amp * (Math.pow(Math.abs(Math.sin(Math.PI * p)), 1.3) * 1.6 - .7) + .05 * Math.sin(t * 37); };
+  const eeg = t => { const m = t - Math.floor(t / CYC) * CYC, s = S[segAt(m)];
+    return .28 * Math.sin(2 * Math.PI * 10 * t + Math.sin(t * .7)) + .18 * Math.sin(2 * Math.PI * 21 * t + 1.3) + .22 * Math.sin(2 * Math.PI * 5.5 * t) +
+      .1 * Math.sin(t * 91.7) + s.art * .5 * Math.sin(2 * Math.PI * s.step * SC * t) * Math.sin(t * 3.1); };
+  const LANES = [
+    { n: "EEG", c: "#2DD4BF", f: (t) => eeg(t) * 1.15 },
+    { n: "ECG", c: "#F2B705", f: (t) => ecg(cum(t, "h")) * 1.5 - .25 },
+    { n: "PPG", c: "#FF7A6B", f: (t) => ppg(cum(t, "h")) * 1.5 - .6 },
+    { n: "IMU", c: "#7CC4FF", f: (t) => imu(t) * .9 }
+  ];
+  const phaseEls = $$("#phase span"), nowEl = $("#phase-now");
+  let W = 0, H = 0, dpr = 1, last = -1;
+  const fit = () => {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  function draw(now) {
+    const PPS = 70, L = 46;
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = "rgba(255,255,255,.05)"; ctx.lineWidth = 1;
+    for (let x = L; x < W; x += 28) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    const lh = H / LANES.length;
+    LANES.forEach((ln, i) => {
+      const cy = lh * (i + .5), A = lh * .34;
+      ctx.strokeStyle = "rgba(255,255,255,.07)"; ctx.beginPath(); ctx.moveTo(L, cy); ctx.lineTo(W, cy); ctx.stroke();
+      ctx.fillStyle = ln.c; ctx.font = "700 12px 'Bricolage Grotesque',system-ui,sans-serif"; ctx.textBaseline = "middle"; ctx.fillText(ln.n, 10, cy);
+      ctx.strokeStyle = ln.c; ctx.lineWidth = 1.6; ctx.lineJoin = "round"; ctx.beginPath();
+      for (let x = L; x <= W; x += 2) {
+        const t = now - (W - x) / PPS, y = cy - ln.f(t) * A;
+        x === L ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    });
+    const m = now - Math.floor(now / CYC) * CYC, i = segAt(m);
+    if (i !== last) {
+      last = i; phaseEls.forEach((el, j) => el.classList.toggle("on", j === i));
+      if (nowEl) nowEl.textContent = S[i].k + " · " + S[i].n;
+    }
+  }
+  let cur = reduce ? 6.5 : 0, running = false, raf = 0, startMs = 0;
+  fit(); new ResizeObserver(() => { fit(); draw(cur); }).observe(cv);
+  const tick = ms => { if (!running) return; cur = (ms - startMs) / 1000; draw(cur); raf = requestAnimationFrame(tick); };
+  const start = () => { if (running || reduce) return; running = true; startMs = performance.now() - cur * 1000; raf = requestAnimationFrame(tick); };
+  const stop = () => { running = false; cancelAnimationFrame(raf); };
+  draw(cur);
+  if (!reduce) {
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop())).observe(cv);
+    document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+  }
+})();
+
+/* =====================================================================
+   FORMULIR
+   ===================================================================== */
+const YT = [["Ya", "Ya"], ["Tidak", "Tidak"]];
+const ADA = [["Ada", "Ada"], ["Tidak ada", "Tidak ada"]];
+const lokOpts = () => CONFIG.LOKASI.map(l => [l.id, l.nama]);
+const tglCallout = () => '<div class="callout"><p><b>Perkiraan pelaksanaan: ' + esc(CONFIG.AKUISISI.label) + ".</b> " +
+  (CONFIG.AKUISISI.pasti ? "" : "Jadwal pasti dikonfirmasi lewat WhatsApp atau email. ") +
+  "Sehari kami menerima sekitar 3–5 subject, jadi pilih sebanyak mungkin tanggal yang memungkinkan.</p></div>";
+
+const FORMS = {
+  subject: {
+    name: "Subject", sheetRole: "Subject",
+    steps: [
+      { title: "Informasi penelitian", short: "Informasi", intro: "Baca ringkasan penelitian ini. Bila ingin lebih rinci, buka versi lengkap.", fields: [
+        { type: "tpl", tpl: "tpl-ic", mount: mountIC },
+        { name: "ic_baca", type: "consent", req: true, rev: false, err: "Centang bila Anda sudah membaca penjelasan.",
+          text: "Saya sudah membaca penjelasan penelitian ini. Saya paham bahwa pendaftaran ini belum merupakan persetujuan resmi; Informed Consent baru ditandatangani pada hari pelaksanaan." }
+      ] },
+      { title: "Data diri", short: "Data diri", fields: [
+        { name: "nama", label: "Nama lengkap", type: "text", req: true, minlen: 3, auto: "name", max: 80 },
+        { name: "jk", label: "Jenis kelamin", type: "radio", req: true, opts: [["L", "Laki-laki"], ["P", "Perempuan"]] },
+        { name: "usia", label: "Usia", type: "number", req: true, min: 10, max: 80, unit: "tahun", half: true, im: "numeric" },
+        { name: "nim", label: "NIM", type: "text", opt: true, max: 24, half: true, hint: "Kosongkan bila belum punya." },
+        { name: "mhs_baru", label: "Apakah Anda mahasiswa baru?", type: "radio", req: true, opts: [["Y", "Ya, mahasiswa baru"], ["T", "Bukan"]] },
+        { name: "kampus", label: "Kampus dan program studi", type: "text", req: true, minlen: 2, max: 100, auto: "organization" },
+        { name: "wa", label: "Nomor WhatsApp", type: "tel", req: true, auto: "tel", half: true, hint: "Dipakai untuk menjadwalkan. Contoh: 0812 3456 7890." },
+        { name: "email", label: "Email", type: "email", req: true, auto: "email", half: true },
+        { name: "lokasi", label: "Lokasi yang bisa Anda datangi", type: "check", req: true, opts: lokOpts, hint: "Pilih semua yang memungkinkan." },
+        { name: "jilbab", label: "Apakah Anda berhijab?", type: "radio", req: true, if: "jk=P", opts: [["V", "Ya"], ["X", "Tidak"]] },
+        { name: "hijab_bersedia", type: "radio", req: true, if: "jk=P&jilbab=V", opts: [["Ya", "Bersedia"], ["Tidak", "Tidak bersedia"]], stack: true,
+          label: "Pemasangan EEG butuh kontak langsung dengan kulit kepala. Bersediakah Anda melepas hijab saat pemasangan, di area tertutup bersama asisten perempuan?",
+          hint: "Peneliti tidak ikut mengawasi dan tidak ada foto atau video." }
+      ] },
+      { title: "Tubuh dan kesehatan", short: "Kesehatan", fields: [
+        { name: "bb", label: "Berat badan", type: "number", req: true, min: 30, max: 200, step: "0.1", unit: "kg", half: true, im: "decimal" },
+        { name: "tb", label: "Tinggi badan", type: "number", req: true, min: 120, max: 220, step: "0.1", unit: "cm", half: true, im: "decimal" },
+        { type: "tpl", tpl: "tpl-bmi", mount: mountBMI },
+        { type: "html", html: '<div class="callout priv"><p><b>Tentang pertanyaan berikut.</b> Isinya sama dengan lembar skrining resmi pada hari pelaksanaan. Bila jawaban Anda membuat Anda belum dapat ikut, jawaban itu tidak kami simpan bersama identitas apa pun.</p></div>' },
+        { name: "epilepsi", label: "Apakah Anda memiliki riwayat epilepsi atau kejang?", type: "radio", req: true, opts: ADA, hint: "Penapisan awal, bukan diagnosis." },
+        { name: "depresi", label: "Apakah Anda memiliki depresi (riwayat diagnosis tenaga kesehatan atau sedang dalam penanganan)?", type: "radio", req: true, opts: ADA, hint: "Penapisan awal, bukan diagnosis." },
+        { name: "vestibular", label: "Apakah Anda memiliki riwayat gangguan vestibular atau telinga dalam, misalnya vertigo?", type: "radio", req: true, opts: YT },
+        { name: "trauma", label: "Apakah Anda mengalami cedera atau trauma kepala dalam 6 bulan terakhir?", type: "radio", req: true, opts: YT },
+        { name: "penglihatan", label: "Apakah Anda memiliki gangguan penglihatan yang belum terkoreksi (tanpa kacamata atau lensa)?", type: "radio", req: true, opts: YT },
+        { name: "terapi", label: "Apakah Anda sedang menjalani terapi medis atau fisik secara rutin?", type: "radio", req: true, opts: YT },
+        { name: "hamil", label: "Apakah Anda sedang hamil?", type: "radio", req: true, if: "jk=P", opts: YT },
+        { type: "html", html: '<figure class="fig" style="max-width:380px;margin-bottom:12px"><img src="gel-ppg.png" alt="Gel transparan berbasis air untuk sensor PPG dan elektroda" loading="lazy"><figcaption>Gel yang dipakai pada sensor PPG dan elektroda.</figcaption></figure>' },
+        { name: "alergi_gel", label: "Apakah Anda alergi atau berkulit sensitif terhadap gel atau pasta elektroda, atau plester?", type: "radio", req: true, opts: YT, hint: "Jawab “Ya” bila ragu. Anda tetap bisa mendaftar; peneliti akan memeriksanya lebih dulu." }
+      ] },
+      { title: "Protokol dan kesiapan", short: "Protokol", fields: [
+        { type: "tpl", tpl: "tpl-protokol" },
+        { name: "protokol_setuju", type: "consent", req: true, rev: false, err: "Centang kesediaan mengikuti protokol.",
+          text: "Saya bersedia mengikuti seluruh protokol: dua sesi (tanpa VR dan dengan VR), berjalan, berlari, dan duduk–berdiri, serta mengisi kuesioner SSQ." },
+        { name: "efek_paham", type: "consent", req: true, rev: false, err: "Centang bila Anda memahami kemungkinan efeknya.",
+          text: "Saya memahami kemungkinan efeknya (pusing, mual, muntah, mata lelah, lelah fisik, iritasi ringan kulit) dan bahwa saya boleh berhenti kapan saja tanpa konsekuensi." },
+        { name: "rekening", label: "Untuk transfer kompensasi, apakah Anda punya rekening bank atau e-wallet?", type: "radio", req: true, stack: true,
+          opts: [["Rekening bank", "Punya rekening bank"], ["E-wallet", "Punya e-wallet (GoPay, OVO, DANA, dan sejenisnya)"], ["Keduanya", "Punya keduanya"], ["Belum punya", "Belum punya"]],
+          hint: "Kami tidak meminta nomornya di sini." }
+      ] },
+      { title: "Jadwal", short: "Jadwal", fields: [
+        { type: "html", html: tglCallout },
+        { name: "tanggal", label: "Tanggal yang bisa Anda hadiri", type: "calendar", req: true, win: () => CONFIG.AKUISISI, hint: "Pilih sebanyak mungkin; makin banyak, makin mudah dijadwalkan." },
+        { name: "jam", label: "Rentang jam yang cocok", type: "check", req: true, opts: () => CONFIG.JAM_SUBJECT.map(j => [j, j]), hint: "Satu kunjungan sekitar 90–100 menit." },
+        { name: "catatan", label: "Catatan untuk peneliti", type: "textarea", opt: true, max: 300 }
+      ] },
+      { title: "Tinjau dan kirim", short: "Kirim", review: true, intro: "Periksa kembali isian Anda. Setelah dikirim, ubah data dengan menghubungi peneliti." }
+    ],
+    after: [{ at: 1, check: screenSubject1 }, { at: 2, check: screenSubject2 }]
+  },
+  asisten: {
+    name: "Asisten", sheetRole: "Asisten",
+    steps: [
+      { title: "Peran dan tugas asisten", short: "Peran", intro: "Baca dulu tugas, waktu, dan yang Anda dapatkan.", fields: [{ type: "tpl", tpl: "tpl-asisten-info" }] },
+      { title: "Data diri dan latar belakang", short: "Data diri", fields: [
+        { name: "nama", label: "Nama lengkap", type: "text", req: true, minlen: 3, auto: "name", max: 80 },
+        { name: "jk", label: "Jenis kelamin", type: "radio", req: true, opts: [["L", "Laki-laki"], ["P", "Perempuan"]] },
+        { name: "usia", label: "Usia", type: "number", req: true, min: 17, max: 80, unit: "tahun", half: true, im: "numeric" },
+        { name: "domisili", label: "Kota domisili", type: "text", req: true, minlen: 2, max: 60, half: true, auto: "address-level2" },
+        { name: "wa", label: "Nomor WhatsApp", type: "tel", req: true, auto: "tel", half: true, hint: "Contoh: 0812 3456 7890." },
+        { name: "email", label: "Email", type: "email", req: true, auto: "email", half: true },
+        { name: "pendidikan", label: "Pendidikan terakhir", type: "select", req: true, half: true, opts: [["SMA/SMK/MA", "SMA/SMK/MA"], ["D3", "D3"], ["S1", "S1"], ["S2", "S2"], ["S3", "S3"], ["Lainnya", "Lainnya"]] },
+        { name: "status_studi", label: "Status studi", type: "radio", req: true, half: true, opts: [["Sedang menempuh", "Sedang menempuh"], ["Lulus", "Sudah lulus"]] },
+        { name: "institusi", label: "Institusi dan program studi", type: "text", req: true, minlen: 2, max: 120 },
+        { name: "keahlian", label: "Keahlian atau latar belakang yang relevan", type: "check", req: true, hint: "Pilih semua yang sesuai.",
+          opts: ["Keperawatan / klinis", "Penanganan pusing & mual", "Kesehatan lainnya", "VR / game", "Sinyal biomedis / elektro", "Pengajar / instruktur", "Lainnya"].map(x => [x, x]) },
+        { name: "keahlian_lain", label: "Keahlian lain", type: "text", opt: true, max: 120 },
+        { name: "pengalaman", label: "Pengalaman yang relevan", type: "textarea", opt: true, max: 400, hint: "Misalnya praktik klinis, pernah membantu penelitian, atau pernah memakai VR." }
+      ] },
+      { title: "Kesediaan", short: "Kesediaan", fields: [
+        { type: "html", html: '<div class="callout"><p><b>Perjalanan dan Makan.</b> Biaya perjalanan dan Makan selama bertugas ditanggung peneliti, termasuk ke Boyolali. Nominal tidak perlu Anda hitung di sini.</p></div>' },
+        { name: "boyolali", label: "Bersediakah Anda bertugas di Boyolali?", type: "radio", req: true, opts: [["Ya", "Bersedia"], ["Bisa dengan syarat", "Bisa dengan syarat"], ["Tidak", "Tidak bersedia"]] },
+        { name: "moda", label: "Cara Anda menuju Boyolali", type: "radio", req: true, if: "boyolali=Ya|Bisa dengan syarat", opts: [["KRL", "KRL"], ["Kendaraan sendiri", "Kendaraan sendiri"], ["Perlu dijemput", "Perlu dijemput"], ["Belum tahu", "Belum tahu"]] },
+        { name: "honor", label: "Honor", type: "radio", req: true, stack: true, opts: [["Sesuai RAB penelitian", "Sesuai RAB penelitian (nominal dibicarakan saat wawancara)"], ["Ingin mendiskusikan dulu", "Saya ingin mendiskusikannya dulu"]], hint: "Pendapat Anda membantu kami menyusun RAB." },
+        { name: "honor_catatan", label: "Catatan tentang honor", type: "textarea", opt: true, max: 200 },
+        { name: "protokol_setuju", type: "consent", req: true, rev: false, err: "Centang kesediaan Anda.",
+          text: "Saya sudah membaca peran dan tugas asisten. Saya bersedia mengikuti protokol dan SOP (kebersihan, keselamatan, kerahasiaan data), serta mendampingi subject berjalan dan berlari ringan." }
+      ] },
+      { title: "Jadwal", short: "Jadwal", fields: [
+        { name: "tgl_wawancara", label: "Tanggal wawancara yang cocok", type: "calendar", req: true, win: () => CONFIG.WAWANCARA, hint: "Pilih sebanyak mungkin." },
+        { name: "jam_wawancara", label: "Rentang jam wawancara", type: "check", req: true, opts: () => CONFIG.JAM_WAWANCARA.map(j => [j, j]) },
+        { type: "html", html: tglCallout },
+        { name: "tgl_tugas", label: "Tanggal Anda bisa bertugas", type: "calendar", req: true, win: () => CONFIG.AKUISISI, hint: "Sebagian besar hari diperkirakan terpakai; pilih yang Anda bisa." },
+        { name: "catatan", label: "Catatan untuk peneliti", type: "textarea", opt: true, max: 300 }
+      ] },
+      { title: "Tinjau dan kirim", short: "Kirim", review: true, intro: "Periksa kembali isian Anda sebelum dikirim." }
+    ],
+    after: []
+  }
+};
+
+/* ---- pemeriksaan kelayakan di sisi klien (server memeriksa ulang) ---- */
+function screenSubject1(v) {
+  const u = num(v.usia);
+  if (u !== null && (u < CONFIG.USIA.min || u > CONFIG.USIA.max)) return "usia";
+  if (v.mhs_baru === "T") return "status_mhs";
+  if (v.jk === "P" && v.jilbab === "V" && v.hijab_bersedia === "Tidak") return "hijab";
+  return null;
+}
+function screenSubject2(v) {
+  if (v.epilepsi === "Ada" || v.depresi === "Ada" || v.vestibular === "Ya" || v.trauma === "Ya" || v.penglihatan === "Ya" || v.terapi === "Ya") return "kesehatan";
+  if (v.jk === "P" && v.hamil === "Ya") return "hamil";
+  return null;
+}
+const STOP_TEXT = {
+  usia: "Penelitian ini terbatas untuk mahasiswa baru berusia " + CONFIG.USIA.min + "–" + CONFIG.USIA.max + " tahun, jadi kami belum bisa mengikutsertakan Anda.",
+  status_mhs: "Penelitian ini terbatas untuk mahasiswa baru, jadi kami belum bisa mengikutsertakan Anda.",
+  hijab: "Pemasangan EEG membutuhkan kontak langsung dengan kulit kepala, jadi kami belum bisa mengikutsertakan Anda tanpa prosedur itu. Bila ingin membahas kemungkinan lain, hubungi peneliti.",
+  kesehatan: "Berdasarkan jawaban Anda, saat ini kami belum bisa mengikutsertakan Anda demi keselamatan Anda dan keabsahan data.",
+  hamil: "Berdasarkan jawaban Anda, saat ini kami belum bisa mengikutsertakan Anda demi keselamatan Anda."
+};
+
+/* ---- pembuat markup ---- */
+function enumerate(win) {
+  const out = [], libur = new Set(win.libur || []);
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  for (let d = parseISO(win.mulai), end = parseISO(win.selesai); d <= end; d.setDate(d.getDate() + 1)) {
+    if (d >= today && !libur.has(iso(d))) out.push(iso(d));
+  }
+  return out;
+}
+function calHTML(name, win) {
+  const days = enumerate(win), set = new Set(days);
+  if (!days.length) return '<p class="hint">Jadwal belum tersedia. Hubungi peneliti.</p>';
+  const first = parseISO(win.mulai), last = parseISO(win.selesai);
+  let html = "";
+  for (let y = first.getFullYear(), m = first.getMonth(); y < last.getFullYear() || (y === last.getFullYear() && m <= last.getMonth());) {
+    const lead = (new Date(y, m, 1).getDay() + 6) % 7, nd = new Date(y, m + 1, 0).getDate();
+    const cells = Array(lead).fill(null);
+    for (let d = 1; d <= nd; d++) {
+      const key = y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0"), dow = cells.length % 7;
+      cells.push({ key, d, we: dow > 4 ? " we" : "", on: set.has(key) });
+    }
+    while (cells.length % 7) cells.push(null);
+    let body = "";
+    for (let w = 0; w < cells.length; w += 7) {       // lewati minggu yang semuanya di luar jendela
+      const wk = cells.slice(w, w + 7);
+      if (!wk.some(c => c && c.on)) continue;
+      body += wk.map(c => !c ? "<span></span>" : (c.on
+        ? '<label class="cal-d' + c.we + '"><input type="checkbox" data-multi="1" name="' + name + '" value="' + c.key + '" aria-label="' + esc(fmtDate(c.key)) + '"><span>' + c.d + "</span></label>"
+        : '<span class="cal-d off' + c.we + '"><span>' + c.d + "</span></span>")).join("");
+    }
+    html += '<div class="cal"><h4>' + BULAN[m] + " " + y + '</h4><div class="cal-g">' +
+      ["Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min"].map((h, i) => '<div class="dow' + (i > 4 ? " we" : "") + '">' + h + "</div>").join("") + body + "</div></div>";
+    m++; if (m > 11) { m = 0; y++; }
+  }
+  return html;
+}
+function fieldHTML(f, pfx) {
+  if (f.type === "html") return '<div data-block ' + (f.if ? 'data-if="' + esc(f.if) + '"' : "") + ">" + (typeof f.html === "function" ? f.html() : f.html) + "</div>";
+  if (f.type === "tpl") return '<div data-tpl="' + f.tpl + '"></div>';
+  const id = pfx + f.name, opt = f.opt ? '<span class="opt">(opsional)</span>' : "";
+  const days = f.type === "calendar" ? enumerate(f.win()) : null;
+  const req = f.req && !(days && !days.length);
+  const dat = 'data-name="' + f.name + '"' + (req ? " data-req" : "") + (f.if ? ' data-if="' + esc(f.if) + '"' : "");
+  const hint = f.hint ? '<p class="hint" id="' + id + '-h">' + f.hint + "</p>" : "";
+  const err = '<p class="err" id="' + id + '-e" role="alert"></p>';
+  const desc = 'aria-describedby="' + (f.hint ? id + "-h " : "") + id + '-e"';
+  const opts = typeof f.opts === "function" ? f.opts() : f.opts;
+  switch (f.type) {
+    case "text": case "tel": case "email":
+      return '<div class="field" ' + dat + '><label for="' + id + '">' + f.label + opt + '</label><input id="' + id + '" name="' + f.name + '" type="' + f.type + '"' +
+        (f.auto ? ' autocomplete="' + f.auto + '"' : "") + ' maxlength="' + (f.max || 120) + '" ' + desc + ">" + hint + err + "</div>";
+    case "number":
+      return '<div class="field" ' + dat + '><label for="' + id + '">' + f.label + opt + '</label><div class="inp-unit"><input id="' + id + '" name="' + f.name + '" type="number" inputmode="' + (f.im || "numeric") +
+        '" min="' + f.min + '" max="' + f.max + '" step="' + (f.step || "1") + '" ' + desc + "><span>" + f.unit + "</span></div>" + hint + err + "</div>";
+    case "select":
+      return '<div class="field" ' + dat + '><label for="' + id + '">' + f.label + opt + '</label><select id="' + id + '" name="' + f.name + '" ' + desc + '><option value="">Pilih…</option>' +
+        opts.map(([v, l]) => '<option value="' + esc(v) + '">' + esc(l) + "</option>").join("") + "</select>" + hint + err + "</div>";
+    case "textarea":
+      return '<div class="field" ' + dat + '><label for="' + id + '">' + f.label + opt + '</label><textarea id="' + id + '" name="' + f.name + '" maxlength="' + (f.max || 300) + '" ' + desc + "></textarea>" + hint + err + "</div>";
+    case "radio": case "check": {
+      const t = f.type === "radio" ? "radio" : "checkbox";
+      return '<fieldset class="field" ' + dat + "><legend>" + f.label + opt + '</legend><div class="chips' + (f.stack ? " stack" : "") + '">' +
+        opts.map(([v, l]) => '<label class="chip"><input type="' + t + '" name="' + f.name + '" value="' + esc(v) + '"' + (t === "checkbox" ? ' data-multi="1"' : "") + "><span>" + l + "</span></label>").join("") +
+        "</div>" + hint + err + "</fieldset>";
+    }
+    case "consent":
+      return '<div class="field" ' + dat + '><label class="consent"><input type="checkbox" name="' + f.name + '" value="1"><span>' + f.text + "</span></label>" + err + "</div>";
+    case "calendar":
+      return '<fieldset class="field" ' + dat + "><legend>" + f.label + opt + '</legend><div class="cal-wrap">' + calHTML(f.name, f.win()) + "</div>" +
+        (days.length ? '<div class="cal-tools"><button type="button" class="linkbtn" data-cal="work" data-for="' + f.name + '">Pilih semua hari kerja</button><button type="button" class="linkbtn" data-cal="all" data-for="' + f.name + '">Pilih semua</button><button type="button" class="linkbtn" data-cal="none" data-for="' + f.name + '">Kosongkan</button></div>' : "") +
+        hint + err + "</fieldset>";
+  }
+  return "";
+}
+
+/* ---- komponen khusus ---- */
+function mountIC(root, form) {
+  const box = $(".seg-toggle", root).parentElement;
+  const btns = $$("[data-ic]", box), short = $(".ic-short", box), full = $(".ic-full", box);
+  btns.forEach(b => b.addEventListener("click", () => {
+    const v = b.dataset.ic; form.icViewed.add(v);
+    btns.forEach(x => x.setAttribute("aria-pressed", x === b));
+    short.hidden = v !== "Ringkas"; full.hidden = v !== "Lengkap";
+  }));
+}
+function mountBMI(root, form) {
+  const bb = $("[name=bb]", form.f), tb = $("[name=tb]", form.f);
+  const val = $("#bmi-val", root), grp = $("#bmi-grp", root), pin = $("#bmi-pin", root);
+  const upd = () => {
+    const b = bmiOf(bb.value, tb.value);
+    if (b === null) { val.textContent = "–"; grp.textContent = "Isi berat dan tinggi badan."; pin.style.left = "-10px"; return; }
+    val.textContent = id1(b); grp.textContent = "Kelompok perkiraan: " + bmiGroup(b);
+    pin.style.left = Math.max(0, Math.min(100, (b - 14) / (38 - 14) * 100)) + "%";
+  };
+  bb.addEventListener("input", upd); tb.addEventListener("input", upd); upd();
+}
+function bmiOf(bb, tb) {
+  const w = num(bb), h = num(tb);
+  return (w && h && w >= 30 && w <= 200 && h >= 120 && h <= 220) ? Math.round(w / Math.pow(h / 100, 2) * 10) / 10 : null;
+}
+const bmiGroup = b => b < 18.5 ? "Kurus" : (b < 23 ? "Normal" : "Berat badan lebih–obesitas");
+
+/* ---- mesin formulir ---- */
+const forms = {};
+let activeRole = null, serverOpen = {}, beaconSent = {};
+
+function buildForm(role) {
+  const def = FORMS[role], pfx = role[0] + "-";
+  const el = document.createElement("div");
+  el.className = "formcard"; el.id = "form-" + role; el.hidden = true;
+  const n = def.steps.length;
+  el.innerHTML =
+    '<aside class="rail"><h3>' + esc(def.name) + '</h3><ol>' + def.steps.map(s => "<li>" + esc(s.short) + "</li>").join("") + "</ol>" +
+    '<div class="mini"><span class="mini-t"></span><div class="bar"><i></i></div></div></aside>' +
+    '<form class="body" novalidate autocomplete="on">' +
+    (CONFIG.ENDPOINT ? "" : '<div class="banner demo" role="note">Mode pratinjau: CONFIG.ENDPOINT masih kosong, jadi data tidak dikirim ke mana pun.</div>') +
+    def.steps.map((s, i) => {
+      let h = '<section class="step" data-i="' + i + '" hidden><h3 class="st" tabindex="-1">' + esc(s.title) + "</h3>" + (s.intro ? '<p class="intro">' + s.intro + "</p>" : "");
+      if (s.review) h += '<dl class="review" data-review></dl><div class="hp" aria-hidden="true"><label>Situs web<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>' +
+        '<div class="banner err" data-submit-err role="alert" hidden></div>';
+      else {
+        let run = [];
+        const flush = () => { if (run.length) { h += '<div class="grid2">' + run.join("") + "</div>"; run = []; } };
+        s.fields.forEach(f => {
+          const html = fieldHTML(f, pfx);
+          if (f.half) run.push(html); else { flush(); h += html; }
+        });
+        flush();
+      }
+      return h + "</section>";
+    }).join("") +
+    '<div class="actions"><button type="button" class="btn ghost" data-back>Kembali</button><div class="right"><button type="button" class="btn" data-next>Lanjut</button><button type="submit" class="btn gold" data-send hidden>Kirim pendaftaran</button></div></div>' +
+    "</form>";
+  const form = { role, def, el, f: el.querySelector("form"), cur: 0, started: Date.now(), icViewed: new Set(["Ringkas"]), defs: {}, result: null, locked: false };
+  def.steps.forEach(s => (s.fields || []).forEach(f => { if (f.name) form.defs[f.name] = f; }));
+  $$("[data-tpl]", el).forEach(slot => {
+    const t = document.getElementById(slot.dataset.tpl);
+    slot.replaceWith(t.content.cloneNode(true));
+  });
+  fillConfig(el);
+  def.steps.forEach(s => (s.fields || []).forEach(f => { if (f.type === "tpl" && f.mount) f.mount(el, form); }));
+  form.f.addEventListener("input", e => { applyConditions(form); const fe = e.target.closest(".field.bad"); if (fe) validateField(fe, form, collect(form.f)); });
+  form.f.addEventListener("change", e => { applyConditions(form); const fe = e.target.closest(".field.bad"); if (fe) validateField(fe, form, collect(form.f)); });
+  form.f.addEventListener("click", e => {
+    const b = e.target.closest("[data-cal]"); if (!b) return;
+    $$('input[name="' + b.dataset.for + '"]', form.f).forEach(x => {
+      const d = parseISO(x.value).getDay();
+      x.checked = b.dataset.cal === "all" ? true : (b.dataset.cal === "none" ? false : (d >= 1 && d <= 5));
+    });
+    const fe = b.closest(".field"); if (fe.classList.contains("bad")) validateField(fe, form, collect(form.f));
+  });
+  $("[data-next]", el).addEventListener("click", () => next(form));
+  $("[data-back]", el).addEventListener("click", () => go(form, form.cur - 1));
+  form.f.addEventListener("submit", e => { e.preventDefault(); submit(form); });
+  form.f.addEventListener("keydown", e => {
+    if (e.key === "Enter" && e.target.tagName === "INPUT" && form.cur < n - 1) { e.preventDefault(); next(form); }
+  });
+  applyConditions(form);
+  go(form, 0, true);
+  return form;
+}
+
+function collect(root) {
+  const o = {};
+  $$("input,select,textarea", root).forEach(el => {
+    if (!el.name || el.disabled) return;
+    if (el.type === "radio") { if (el.checked) o[el.name] = el.value; return; }
+    if (el.type === "checkbox") {
+      if (el.dataset.multi) { (o[el.name] = o[el.name] || []); if (el.checked) o[el.name].push(el.value); }
+      else o[el.name] = el.checked;
+      return;
+    }
+    o[el.name] = el.value.trim();
+  });
+  return o;
+}
+const evalCond = (expr, v) => expr.split("&").every(t => { const [k, vs] = t.split("="); return vs.split("|").includes(String(v[k] === undefined ? "" : v[k])); });
+function applyConditions(form) {
+  for (let pass = 0; pass < 3; pass++) {
+    const v = collect(form.f);
+    $$("[data-if]", form.f).forEach(el => {
+      const show = evalCond(el.dataset.if, v);
+      if (el.hidden === !show) return;
+      el.hidden = !show;
+      $$("input,select,textarea", el).forEach(i => { i.disabled = !show; });
+    });
+  }
+}
+
+/* ---- validasi ---- */
+function validateField(fe, form, vals) {
+  const name = fe.dataset.name; if (!name || fe.hidden) return true;
+  const def = form.defs[name], v = vals[name], req = fe.hasAttribute("data-req");
+  let msg = "";
+  const empty = def.type === "check" || def.type === "calendar" ? !(v && v.length) : (def.type === "consent" ? !v : (v === undefined || v === ""));
+  if (empty) { if (req) msg = def.err || (def.type === "consent" ? "Centang untuk melanjutkan." : (def.type === "check" || def.type === "calendar" ? "Pilih minimal satu." : (def.type === "radio" || def.type === "select" ? "Pilih salah satu." : "Wajib diisi."))); }
+  else if (def.type === "text" && def.minlen && v.length < def.minlen) msg = "Minimal " + def.minlen + " karakter.";
+  else if (def.type === "email" && !/^[^\s@]{1,64}@[^\s@]+\.[^\s@]{2,}$/.test(v)) msg = "Alamat email tidak valid.";
+  else if (def.type === "tel" && !/^(\+?62|0)8\d{7,11}$/.test(v.replace(/[\s\-().]/g, ""))) msg = "Nomor WhatsApp tidak valid. Contoh: 0812 3456 7890.";
+  else if (def.type === "number") {
+    const n = num(v);
+    if (n === null) msg = "Isi dengan angka.";
+    else if (n < def.min || n > def.max) msg = "Isi antara " + def.min + " dan " + def.max + " " + def.unit + ".";
+  }
+  setErr(fe, msg);
+  return !msg;
+}
+function setErr(fe, msg) {
+  fe.classList.toggle("bad", !!msg);
+  const e = $(".err", fe); if (e) e.textContent = msg || "";
+  $$("input:not([type=radio]):not([type=checkbox]),select,textarea", fe).forEach(i => i.setAttribute("aria-invalid", msg ? "true" : "false"));
+}
+function validateStep(form, i) {
+  const sec = $('.step[data-i="' + i + '"]', form.f), vals = collect(form.f), bad = [];
+  $$(".field[data-name]", sec).forEach(fe => { if (!validateField(fe, form, vals)) bad.push(fe); });
+  return bad;
+}
+
+/* ---- navigasi ---- */
+function go(form, i, silent) {
+  const n = form.def.steps.length;
+  i = Math.max(0, Math.min(n - 1, i)); form.cur = i;
+  $$(".step", form.f).forEach(s => { s.hidden = Number(s.dataset.i) !== i; });
+  $$(".rail li", form.el).forEach((li, j) => { li.className = j < i ? "done" : (j === i ? "cur" : ""); if (j === i) li.setAttribute("aria-current", "step"); else li.removeAttribute("aria-current"); });
+  $(".mini-t", form.el).textContent = "Langkah " + (i + 1) + " dari " + n + " · " + form.def.steps[i].short;
+  $(".bar i", form.el).style.width = ((i + 1) / n * 100) + "%";
+  $("[data-back]", form.el).style.visibility = i === 0 ? "hidden" : "visible";
+  $("[data-next]", form.el).hidden = i === n - 1;
+  $("[data-send]", form.el).hidden = i !== n - 1;
+  if (form.def.steps[i].review) buildReview(form);
+  if (!silent) {
+    const h = $('.step[data-i="' + i + '"] .st', form.f);
+    form.el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    if (h) h.focus({ preventScroll: true });
+  }
+}
+function next(form) {
+  const bad = validateStep(form, form.cur);
+  if (bad.length) { const f = bad[0], inp = $("input:not([disabled]),select,textarea", f); (inp || f).focus({ preventScroll: false }); f.scrollIntoView({ block: "center", behavior: "smooth" }); return; }
+  const vals = collect(form.f);
+  for (const a of form.def.after) {
+    if (a.at === form.cur) { const r = a.check(vals); if (r) return showStop(form, r); }
+  }
+  go(form, form.cur + 1);
+}
+
+/* ---- tinjau ---- */
+function display(def, v) {
+  if (v === undefined || v === "" || (Array.isArray(v) && !v.length)) return "–";
+  const opts = typeof def.opts === "function" ? def.opts() : def.opts;
+  const lab = x => { const o = (opts || []).find(o => o[0] === x); return o ? o[1] : x; };
+  if (def.type === "calendar") return v.map(fmtDate).join(", ");
+  if (Array.isArray(v)) return v.map(lab).join(", ");
+  if (def.type === "number") return v + " " + def.unit;
+  return lab(v);
+}
+function buildReview(form) {
+  const vals = collect(form.f), rows = [];
+  form.def.steps.forEach(s => (s.fields || []).forEach(f => {
+    if (!f.name || f.rev === false) return;
+    const fe = $('.field[data-name="' + f.name + '"]', form.f); if (!fe || fe.hidden) return;
+    let label = String(f.label || f.text || f.name).replace(/<[^>]+>/g, "");
+    if (f.name === "hijab_bersedia") label = "Melepas hijab saat pemasangan EEG";
+    rows.push("<div><dt>" + esc(label.length > 80 ? label.slice(0, 77) + "…" : label) + "</dt><dd>" + esc(display(f, vals[f.name])) + "</dd></div>");
+    if (f.name === "tb") { const b = bmiOf(vals.bb, vals.tb); rows.push("<div><dt>Perkiraan BMI</dt><dd>" + (b === null ? "–" : id1(b) + " (" + bmiGroup(b) + ")") + "</dd></div>"); }
+  }));
+  $("[data-review]", form.f).innerHTML = rows.join("");
+}
+
+/* ---- kirim ---- */
+function payloadOf(form) {
+  const v = collect(form.f), p = { type: form.role, key: CONFIG.FORM_KEY, hp: v.website || "", elapsed: Date.now() - form.started };
+  Object.keys(form.defs).forEach(k => {
+    const d = form.defs[k]; if (!(k in v)) return;
+    p[k] = d.type === "number" ? num(v[k]) : v[k];
+  });
+  if (form.role === "subject") p.ic_versi = form.icViewed.has("Lengkap") ? (form.icViewed.has("Ringkas") ? "Ringkas + Lengkap" : "Lengkap") : "Ringkas";
+  return p;
+}
+async function postJSON(payload) {
+  if (!CONFIG.ENDPOINT) { await sleep(700); return { ok: true, id: (payload.type === "subject" ? "S" : "A") + "-DEMO", demo: true }; }
+  const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 25000);
+  try {
+    const res = await fetch(CONFIG.ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload), redirect: "follow", signal: ctl.signal });
+    const txt = await res.text();
+    try { return JSON.parse(txt); } catch (e) { throw new Error("bad-json"); }
+  } finally { clearTimeout(to); }
+}
+async function submit(form) {
+  const errBox = $("[data-submit-err]", form.f), btn = $("[data-send]", form.el);
+  errBox.hidden = true;
+  for (let i = 0; i < form.def.steps.length - 1; i++) {
+    if (validateStep(form, i).length) { go(form, i); return; }
+  }
+  const vals = collect(form.f);
+  for (const a of form.def.after) { const r = a.check(vals); if (r) return showStop(form, r); }
+  const label = btn.textContent; btn.disabled = true; btn.innerHTML = '<span class="spin" aria-hidden="true"></span> Mengirim…';
+  const payload = payloadOf(form);
+  try {
+    const r = await postJSON(payload);
+    if (r && r.ok) return showDone(form, r, payload);
+    if (r && r.code === "SCREENOUT") return showStop(form, "kesehatan", true);
+    if (r && r.code === "INVALID" && r.errors) {
+      let firstStep = null;
+      Object.keys(r.errors).forEach(k => {
+        const fe = $('.field[data-name="' + k + '"]', form.f); if (!fe) return;
+        setErr(fe, r.errors[k]);
+        const si = Number(fe.closest(".step").dataset.i); if (firstStep === null || si < firstStep) firstStep = si;
+      });
+      errBox.textContent = "Ada isian yang perlu diperbaiki."; errBox.hidden = false;
+      if (firstStep !== null) go(form, firstStep);
+      return;
+    }
+    const msgs = { CLOSED: "Pendaftaran sedang ditutup.", BUSY: "Server sedang sibuk. Coba lagi dalam beberapa menit.", FORBIDDEN: "Formulir ini belum tersambung dengan benar ke server (kunci tidak cocok). Hubungi peneliti." };
+    errBox.textContent = (r && msgs[r.code]) || "Pendaftaran belum terkirim. Coba lagi, atau hubungi peneliti lewat " + CONFIG.KONTAK.email + ".";
+    errBox.hidden = false;
+  } catch (e) {
+    errBox.textContent = "Tidak bisa menghubungi server. Periksa koneksi internet Anda lalu kirim ulang. Isian Anda masih tersimpan di halaman ini.";
+    errBox.hidden = false;
+  } finally {
+    btn.disabled = false; btn.textContent = label;
+  }
+}
+
+/* ---- hasil ---- */
+function showResult(form, html, cls) {
+  const res = document.createElement("div");
+  res.className = "formcard"; res.style.gridTemplateColumns = "1fr";
+  res.innerHTML = '<div class="body result ' + (cls || "") + '" tabindex="-1">' + html + "</div>";
+  form.el.after(res); form.el.hidden = true; form.result = res;
+  res.scrollIntoView({ block: "start", behavior: "smooth" });
+  $(".result", res).focus({ preventScroll: true });
+  return res;
+}
+function showDone(form, r, payload) {
+  const role = form.role, kode = r.id ? '<div class="kode" aria-label="Kode pendaftaran">' + esc(r.id) + "</div>" : "";
+  const wa = CONFIG.KONTAK.wa ? '<a class="btn" target="_blank" rel="noopener" href="https://wa.me/' + esc(CONFIG.KONTAK.wa) + "?text=" +
+    encodeURIComponent("Halo, saya sudah mendaftar sebagai " + (role === "subject" ? "subject" : "asisten") + " penelitian cybersickness VR." + (r.id ? " Kode: " + r.id : "")) + '">Kabari lewat WhatsApp</a>' : "";
+  const steps = role === "subject"
+    ? "<li>Peneliti menghubungi Anda lewat WhatsApp atau email untuk menjadwalkan.</li><li>Pada hari pelaksanaan: penjelasan, Informed Consent, pengukuran berat dan tinggi badan, lalu skrining.</li><li>Bila kuota kelompok BMI Anda sudah penuh, Anda masuk daftar cadangan dan tetap kami kabari.</li>"
+    : "<li>Peneliti menghubungi Anda untuk jadwal wawancara.</li><li>Setelah wawancara, peneliti mengonfirmasi tanggal bertugas dan lokasi.</li>";
+  form.locked = true;
+  showResult(form,
+    '<div class="mark" aria-hidden="true">✓</div><h3>Pendaftaran Anda tercatat</h3>' +
+    (kode ? "<p>Simpan kode ini bila Anda perlu menghubungi peneliti:</p>" + kode : "") +
+    "<p>Yang terjadi selanjutnya:</p><ol>" + steps + '</ol><p class="muted">Untuk mengubah data, hubungi peneliti dan sebutkan kode di atas. Bila Anda pernah mendaftar dengan nomor yang sama, data yang lama tetap dipakai.</p>' +
+    (r.demo ? '<div class="banner demo">Mode pratinjau: data di bawah tidak dikirim ke mana pun.</div><details><summary>Lihat data yang akan dikirim</summary><pre class="payload">' + esc(JSON.stringify(payload, null, 2)) + "</pre></details>" : "") +
+    '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">' + wa + '<a class="btn ghost" href="#top">Kembali ke atas</a></div>');
+}
+function showStop(form, reason, fromServer) {
+  if (!fromServer) beacon(form, reason);
+  const res = showResult(form,
+    '<div class="mark" aria-hidden="true">!</div><h3>Terima kasih sudah tertarik membantu</h3><p>' + esc(STOP_TEXT[reason] || STOP_TEXT.kesehatan) +
+    '</p><p class="muted">Kriteria ini kami terapkan kepada semua calon. Jawaban Anda tidak disimpan bersama identitas apa pun. Pertanyaan? Hubungi <a href="mailto:' +
+    esc(CONFIG.KONTAK.email) + '">' + esc(CONFIG.KONTAK.email) + '</a>.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">' +
+    '<button type="button" class="btn ghost" data-recheck>Saya salah menjawab, periksa kembali</button><a class="btn" href="#top">Kembali ke atas</a></div>', "stop");
+  $("[data-recheck]", res).addEventListener("click", () => {
+    res.remove(); form.result = null; form.el.hidden = false;
+    form.el.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+}
+function beacon(form, reason) {
+  if (beaconSent[reason]) return; beaconSent[reason] = true;
+  if (!CONFIG.ENDPOINT) return;
+  try {
+    fetch(CONFIG.ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, keepalive: true,
+      body: JSON.stringify({ type: "screenout", key: CONFIG.FORM_KEY, role: form.def.sheetRole, reason }) }).catch(() => {});
+  } catch (e) { /* diabaikan */ }
+}
+
+/* ---- pilih peran ---- */
+function selectRole(role, scroll) {
+  if (!FORMS[role]) return;
+  activeRole = role;
+  $$(".role").forEach(b => b.setAttribute("aria-pressed", b.dataset.role === role));
+  const root = $("#form-root");
+  if (!forms[role]) { forms[role] = buildForm(role); root.appendChild(forms[role].el); }
+  Object.keys(forms).forEach(k => {
+    const fm = forms[k], on = k === role;
+    fm.el.hidden = !on || fm.locked || !!fm.result;
+    if (fm.result) fm.result.hidden = !on;
+  });
+  const closed = serverOpen && serverOpen[role] === false, bn = $("#banner-closed");
+  bn.hidden = !closed;
+  if (closed) {
+    bn.textContent = "Pendaftaran " + (role === "subject" ? "subject" : "asisten") + " sedang ditutup.";
+    $$("[data-next],[data-send]", forms[role].el).forEach(b => { b.disabled = true; });
+  }
+  if (scroll) root.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+$$(".role").forEach(b => b.addEventListener("click", () => selectRole(b.dataset.role, true)));
+$$("[data-go]").forEach(a => a.addEventListener("click", () => selectRole(a.dataset.go, false)));
+function fromHash() {
+  const h = location.hash;
+  if (h === "#daftar-subject") selectRole("subject", true);
+  else if (h === "#daftar-asisten") selectRole("asisten", true);
+}
+window.addEventListener("hashchange", fromHash);
+fromHash();
+
+/* ---- cek buka/tutup dari server (tanpa membuka data apa pun) ---- */
+(async function health() {
+  if (!CONFIG.ENDPOINT) return;
+  try {
+    const r = await fetch(CONFIG.ENDPOINT, { method: "GET" }), j = await r.json();
+    if (j && j.open) { serverOpen = j.open; if (activeRole) selectRole(activeRole, false); }
+  } catch (e) { /* abaikan: server tetap memeriksa saat kirim */ }
+})();
+
+</script>
+</body>
+</html>
