@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");try{if(localStorage.getItem("cs-sb")==="closed")document.documentElement.dataset.sb="closed"}catch(e){}</script>
 
 <style>
 /* =====================================================================
@@ -99,9 +99,10 @@ li{margin:.25em 0}
    ===================================================================== */
 .shell{min-height:100dvh}
 .sidebar{position:fixed;z-index:90;inset:0 auto 0 0;width:min(86vw,320px);display:flex;flex-direction:column;gap:18px;padding:20px 16px calc(18px + env(safe-area-inset-bottom));
-  background:linear-gradient(180deg,#0B2340 0%,#091B31 55%,#071526 100%);color:#C3D3E4;overflow-y:auto;overscroll-behavior:contain;
+  background:linear-gradient(180deg,#0B2340 0%,#091B31 55%,#071526 100%);color:#C3D3E4;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;
   transform:translateX(-104%);visibility:hidden;transition:transform .38s var(--ease),visibility 0s linear .38s;box-shadow:24px 0 60px -24px rgba(0,0,0,.6)}
 .sidebar.open{transform:none;visibility:visible;transition:transform .38s var(--ease),visibility 0s}
+.sidebar::-webkit-scrollbar{display:none}
 .scrim{position:fixed;inset:0;z-index:80;background:rgba(4,12,22,.58);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:fade .25s both}
 @keyframes fade{from{opacity:0}}
 .sb-top{display:flex;align-items:center;gap:12px}
@@ -109,7 +110,7 @@ li{margin:.25em 0}
 .sb-brand img{height:42px;width:auto;background:#fff;border-radius:10px;padding:3px}
 .sb-brand b{display:block;font:700 1.05rem/1.1 var(--f-head);letter-spacing:-.01em}
 .sb-brand small{display:block;color:#8FA6BE;font-size:.78rem;line-height:1.25;margin-top:2px}
-.sb-x{display:grid}
+.sb-x{display:grid;flex:none}
 .sb-label{font:600 .7rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#6F88A3;margin:6px 10px -6px}
 .sb-nav{display:grid;gap:3px}
 .sb-nav a{position:relative;display:flex;align-items:center;gap:12px;padding:.68em .85em;border-radius:12px;color:#B7C9DB;text-decoration:none;font-weight:500;font-size:.98rem;transition:background .2s,color .2s}
@@ -124,7 +125,7 @@ li{margin:.25em 0}
 .sb-foot a{color:#fff;word-break:break-all}
 .sb-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .sb-prog{height:4px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden}
-.sb-prog i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--teal),var(--gold))}
+.sb-prog i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);will-change:transform;background:linear-gradient(90deg,var(--teal),var(--gold))}
 
 .topbar{position:sticky;top:0;z-index:60;height:var(--hdr);display:flex;align-items:center;gap:10px;padding:0 var(--gut);padding-top:env(safe-area-inset-top);
   background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--line-2)}
@@ -132,7 +133,7 @@ li{margin:.25em 0}
 .topbar .brand img{height:34px;width:auto}
 .topbar .brand b{font:700 .98rem/1.1 var(--f-head);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 .topbar .prog{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent}
-.topbar .prog i{display:block;height:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--teal),var(--gold))}
+.topbar .prog i{display:block;height:100%;transform-origin:left;transform:scaleX(0);will-change:transform;background:linear-gradient(90deg,var(--teal),var(--gold))}
 .icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,background .2s}
 .icon-btn:hover{border-color:var(--teal);background:color-mix(in srgb,var(--teal) 10%,transparent)}
 .sidebar .icon-btn{border-color:rgba(255,255,255,.2);color:#fff}
@@ -142,14 +143,31 @@ li{margin:.25em 0}
 :root[data-theme="dark"] .ic-moon{display:none}
 @media (prefers-color-scheme:dark){:root[data-theme="auto"] .ic-sun{display:block}:root[data-theme="auto"] .ic-moon{display:none}}
 
+.sb-open{display:none}
 @media (min-width:1100px){
-  .shell{display:grid;grid-template-columns:var(--sb) minmax(0,1fr)}
-  .sidebar{position:sticky;top:0;height:100dvh;width:auto;inset:auto;transform:none;visibility:visible;box-shadow:none;border-right:1px solid rgba(255,255,255,.06)}
-  .sb-x{display:none}
-  .topbar,.scrim{display:none!important}
+  .shell{display:block}
+  .page{margin-left:var(--sb);transition:margin-left .42s var(--ease)}
+  .sidebar{position:fixed;top:0;left:0;bottom:0;height:100dvh;width:var(--sb);inset:0 auto 0 0;transform:none;visibility:visible;box-shadow:none;border-right:1px solid rgba(255,255,255,.06);
+    overscroll-behavior:auto;transition:transform .42s var(--ease),visibility 0s}
   .sb-nav a[aria-current="true"]::before{left:-16px}
+  .topbar,.scrim{display:none!important}
+  /* sidebar disembunyikan */
+  html[data-sb="closed"] .page{margin-left:0}
+  html[data-sb="closed"] .sidebar{transform:translateX(-100%);visibility:hidden;transition:transform .42s var(--ease),visibility 0s linear .42s}
+  .sb-open{position:fixed;z-index:70;left:16px;top:16px;display:grid;background:var(--card);box-shadow:var(--shadow-lg);opacity:0;transform:translateX(-12px) scale(.9);pointer-events:none;visibility:hidden;transition:opacity .3s,transform .3s var(--ease),visibility 0s linear .3s}
+  html[data-sb="closed"] .sb-open{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .35s .2s,transform .35s .2s var(--ease),visibility 0s}
 }
-@media (min-width:1100px) and (max-height:700px){.sb-foot .etik-s{display:none}}
+/* layar pendek: rapatkan sidebar agar muat tanpa scroll internal */
+@media (min-width:1100px) and (max-height:860px){
+  .sidebar{gap:12px;padding-block:16px 14px}
+  .sb-brand img{height:36px}
+  .sb-label{display:none}
+  .sb-nav{gap:2px}
+  .sb-nav a{padding:.5em .8em;font-size:.94rem}
+  .sb-cta .btn{min-height:42px;font-size:.92rem}
+  .sb-foot{padding-top:10px;gap:8px}
+}
+@media (min-width:1100px) and (max-height:700px){.sb-foot .etik-s,.sb-brand small{display:none}.sb-nav a{padding:.4em .8em}}
 
 /* =====================================================================
    TOMBOL
@@ -465,7 +483,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);ba
 
 .actions{position:sticky;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
   margin:28px calc(-1*var(--pad)) calc(-1*var(--pad));padding:14px var(--pad) calc(14px + env(safe-area-inset-bottom));
-  background:color-mix(in srgb,var(--card) 96%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line-2)}
+  background:var(--card);border-top:1px solid var(--line-2)}
 .actions .right{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
 @container fr (max-width:480px){.actions{flex-wrap:nowrap}.actions .btn{padding-inline:1.1em}.actions .right{flex:1;justify-content:flex-end}.actions .right .btn{flex:1}}
 .spin{width:18px;height:18px;border-radius:50%;border:2.5px solid currentColor;border-right-color:transparent;animation:sp .7s linear infinite}
@@ -525,6 +543,7 @@ body:has(.formcard:not([hidden]) .actions) .totop{display:none}
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-chevl" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
@@ -544,7 +563,7 @@ body:has(.formcard:not([hidden]) .actions) .totop{display:none}
       <img src="logo-ugm.png" alt="Logo Universitas Gadjah Mada" width="42" height="42" data-opt>
       <span><b>Riset Cybersickness VR</b><small>Magister Teknik Biomedis · UGM</small></span>
     </a>
-    <button class="icon-btn sb-x" type="button" id="sb-close" aria-label="Tutup menu"><svg class="ico"><use href="#i-x"/></svg></button>
+    <button class="icon-btn sb-x" type="button" id="sb-close" aria-label="Sembunyikan menu" title="Sembunyikan menu"><svg class="ico" aria-hidden="true"><use href="#i-chevl"/></svg></button>
   </div>
 
   <div class="sb-label" aria-hidden="true">Menu</div>
@@ -576,6 +595,7 @@ body:has(.formcard:not([hidden]) .actions) .totop{display:none}
   </div>
 </aside>
 <div class="scrim" id="scrim" hidden></div>
+<button class="icon-btn sb-open" type="button" id="sb-open" aria-label="Tampilkan menu" title="Tampilkan menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
 
 <div class="page">
 <header class="topbar">
@@ -986,7 +1006,7 @@ body:has(.formcard:not([hidden]) .actions) .totop{display:none}
    ===================================================================== */
 const CONFIG = {
  
-  ENDPOINT: "https://script.google.com/macros/s/AKfycbwukKSku_fPjEKOPvjcQXOU1sHhwuSRFGT5pTvgKG7OmjEGKXWqCpSIwdJUR5tRH-rHIg/exec",
+  ENDPOINT: "https://script.google.com/macros/s/AKfycbypDrY2RerEQA0Mz7IhY1XUFX2AFwD9DsEBvCYbJOGkxWzAvxoSTiHbW4dKCtWY9_1Wtw/exec",
 
   FORM_KEY: "d32PQUh5c7s4",
 
@@ -1605,9 +1625,12 @@ function payloadOf(form) {
     p[k] = d.type === "number" ? num(v[k]) : v[k];
   });
   if (form.role === "subject") {
-    /* Code.gs mewajibkan mhs_baru ∈ {Y,T} dan menolak "T". Agar non-mahasiswa tidak tersaring tanpa mengubah Code.gs,
-       kolom itu selalu "Y"; status sebenarnya ditulis di kolom "Kampus - Prodi". */
+    /* Code.gs v1.0 mewajibkan mhs_baru ∈ {Y,T} dan menolak "T"; maka selalu "Y" dan status ikut ditulis di awalan kampus. */
     p.mhs_baru = "Y";
+    /* Code.gs v1.1 membaca bidang di bawah ini. mhs_baru + kampus (gabungan) tetap dikirim agar Code.gs lama (v1.0) juga bisa menerima. */
+    p.status_peserta = v.status_peserta || "";
+    if (v.status_peserta === "Mahasiswa") p.kampus_mhs = v.kampus_mhs || "";
+    else { p.pekerjaan = v.pekerjaan || ""; p.instansi = v.instansi || ""; }
     const kk = v.status_peserta === "Mahasiswa"
       ? "Mahasiswa · " + (v.kampus_mhs || "")
       : "Non-mahasiswa · " + (v.pekerjaan || "") + (v.instansi ? " (" + v.instansi + ")" : "");
@@ -1751,10 +1774,23 @@ fromHash();
    SIDEBAR, SCROLL-SPY, PROGRES, TAMPIL HALUS
    ===================================================================== */
 (function shell() {
-  const sb = $("#sidebar"), scrim = $("#scrim"), btn = $("#menu"), closeBtn = $("#sb-close"), up = $("#totop");
+  const root = document.documentElement;
+  const sb = $("#sidebar"), scrim = $("#scrim"), btn = $("#menu"), closeBtn = $("#sb-close"), openBtn = $("#sb-open"), up = $("#totop");
   const mq = matchMedia("(min-width:1100px)");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   let back = null;
 
+  /* ---- desktop: sembunyikan / tampilkan sidebar (diingat di peramban) ---- */
+  const isHidden = () => root.dataset.sb === "closed";
+  function setHidden(h, focus) {
+    if (h) root.dataset.sb = "closed"; else delete root.dataset.sb;
+    store.set("cs-sb", h ? "closed" : "open");
+    openBtn.setAttribute("aria-expanded", String(!h));
+    if (focus) setTimeout(() => (h ? openBtn : closeBtn).focus({ preventScroll: true }), 60);
+    queueMeasure();
+  }
+
+  /* ---- mobile / tablet: laci geser ---- */
   function setOpen(o) {
     if (mq.matches) o = false;
     if (o === sb.classList.contains("open")) return;
@@ -1765,9 +1801,11 @@ fromHash();
     else if (back) { try { back.focus({ preventScroll: true }); } catch (e) { /* diabaikan */ } back = null; }
   }
   btn.addEventListener("click", () => setOpen(!sb.classList.contains("open")));
-  closeBtn.addEventListener("click", () => setOpen(false));
+  closeBtn.addEventListener("click", () => { if (mq.matches) setHidden(true, true); else setOpen(false); });
+  openBtn.addEventListener("click", () => setHidden(false, true));
   scrim.addEventListener("click", () => setOpen(false));
   sb.addEventListener("click", e => { if (e.target.closest("a")) setOpen(false); });
+  openBtn.setAttribute("aria-expanded", String(!isHidden()));
   document.addEventListener("keydown", e => {
     if (!sb.classList.contains("open")) return;
     if (e.key === "Escape") { setOpen(false); return; }
@@ -1779,31 +1817,53 @@ fromHash();
       else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
     }
   });
-  (mq.addEventListener ? mq.addEventListener.bind(mq, "change") : mq.addListener.bind(mq))(() => { if (mq.matches) { sb.classList.remove("open"); scrim.hidden = true; document.body.classList.remove("lock"); btn.setAttribute("aria-expanded", "false"); } });
+  (mq.addEventListener ? mq.addEventListener.bind(mq, "change") : mq.addListener.bind(mq))(() => {
+    if (mq.matches) { sb.classList.remove("open"); scrim.hidden = true; document.body.classList.remove("lock"); btn.setAttribute("aria-expanded", "false"); }
+    queueMeasure();
+  });
 
-  /* penanda bagian aktif + bilah progres */
+  /* ---- penanda bagian aktif + bilah progres ----
+     Posisi bagian disimpan (tidak dibaca ulang tiap scroll) supaya scroll tetap ringan. */
   const links = $$(".sb-nav a").map(a => ({ a, el: document.getElementById(a.getAttribute("href").slice(1)) })).filter(x => x.el);
-  let queued = false;
-  function onScroll() {
-    queued = false;
-    const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
-    document.documentElement.style.setProperty("--p", (h > 0 ? Math.min(1, y / h) : 0).toFixed(4));
-    const line = window.innerHeight * 0.35;
-    let cur = links[0];
-    links.forEach(s => { if (s.el.getBoundingClientRect().top <= line) cur = s; });
-    if (h > 0 && h - y < 4) cur = links[links.length - 1];
-    links.forEach(s => { if (s === cur) s.a.setAttribute("aria-current", "true"); else s.a.removeAttribute("aria-current"); });
-    up.classList.toggle("show", y > window.innerHeight * 0.8);
-  }
-  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(onScroll); } };
-  window.addEventListener("scroll", queue, { passive: true });
-  window.addEventListener("resize", queue);
-  onScroll();
-  up.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
+  const bars = $$(".sb-prog i, .topbar .prog i");
+  let tops = [], docH = 1, vh = window.innerHeight, curIdx = -1, shown = false, lastP = -1, tick = false, mTimer = 0;
 
-  /* tampil halus saat masuk layar */
+  function measure() {
+    mTimer = 0;
+    const y = window.scrollY;
+    tops = links.map(s => s.el.getBoundingClientRect().top + y);
+    docH = document.documentElement.scrollHeight; vh = window.innerHeight;
+    onScroll();
+  }
+  function queueMeasure() { clearTimeout(mTimer); mTimer = setTimeout(measure, 460); }   // tunggu animasi sidebar selesai
+
+  function onScroll() {
+    tick = false;
+    const y = window.scrollY, max = Math.max(1, docH - vh);
+    const p = Math.min(1, y / max);
+    if (Math.abs(p - lastP) > 0.002) { lastP = p; const t = "scaleX(" + p.toFixed(3) + ")"; bars.forEach(b => { b.style.transform = t; }); }
+    const line = y + vh * 0.35;
+    let idx = 0;
+    for (let i = 0; i < tops.length; i++) if (tops[i] <= line) idx = i;
+    if (docH - vh - y < 4) idx = tops.length - 1;
+    if (idx !== curIdx) {
+      curIdx = idx;
+      links.forEach((s, i) => { if (i === idx) s.a.setAttribute("aria-current", "true"); else s.a.removeAttribute("aria-current"); });
+    }
+    const sh = y > vh * 0.8;
+    if (sh !== shown) { shown = sh; up.classList.toggle("show", sh); }
+  }
+  const queue = () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } };
+  window.addEventListener("scroll", queue, { passive: true });
+  window.addEventListener("resize", queueMeasure);
+  window.addEventListener("load", measure);
+  if ("ResizeObserver" in window) new ResizeObserver(queueMeasure).observe(document.querySelector("main"));
+  measure();
+  up.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
+
+  /* ---- tampil halus saat masuk layar ---- */
   const rvs = $$(".rv");
-  if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) rvs.forEach(e => e.classList.add("in"));
+  if (!("IntersectionObserver" in window) || reduce) rvs.forEach(e => e.classList.add("in"));
   else {
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: 0.04 });
     rvs.forEach(e => io.observe(e));
