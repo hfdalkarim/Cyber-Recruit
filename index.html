@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Riset Cybersickness VR · Daftar Subject &amp; Asisten · UGM</title>
-<meta name="description" content="Pendaftaran subject dan asisten penelitian cybersickness pada pengguna virtual reality (EEG, ECG, PPG, IMU). Magister Teknik Biomedis, Universitas Gadjah Mada.">
+<meta name="description" content="Pendaftaran subject (usia 18–25 tahun, mahasiswa maupun non-mahasiswa) dan asisten penelitian cybersickness pada pengguna virtual reality (EEG, ECG, PPG, IMU). Magister Teknik Biomedis, Universitas Gadjah Mada.">
 <meta name="theme-color" content="#0A1F36">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Riset Cybersickness VR · Daftar Subject &amp; Asisten">
-<meta property="og:description" content="Bantu kami mengukur pusing saat memakai VR. Mahasiswa baru 18–25 tahun dan asisten lapangan dicari. Magister Teknik Biomedis UGM.">
+<meta property="og:description" content="Bantu kami mengukur pusing saat memakai VR. Terbuka untuk usia 18–25 tahun (mahasiswa maupun non-mahasiswa) dan asisten lapangan. Magister Teknik Biomedis UGM.">
 <!-- SETELAH DEPLOY: ganti og:image dengan URL absolut agar pratinjau WhatsApp/sosmed muncul, mis. https://USERNAME.github.io/NAMA-REPO/og-image.png -->
 <meta property="og:image" content="og-image.png">
 <meta name="robots" content="noindex, nofollow">
@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");try{if(localStorage.getItem("cs-sb")==="closed")document.documentElement.dataset.sb="closed"}catch(e){}</script>
 
 <style>
 /* =====================================================================
@@ -26,16 +27,19 @@
   --ink:#0A1F36; --ink-2:#12304F; --ink-3:#1B4168;
   --gold:#F2B705; --gold-d:#8A6500; --gold-soft:#FFF4CC;
   --teal:#13A898; --teal-d:#0B7468; --teal-soft:#DDF5F1;
-  --coral:#FF7A6B; --sky:#7CC4FF;
-  --paper:#F3F6F9; --card:#FFFFFF; --line:#D6DFE8; --line-2:#E8EEF4;
+  --coral:#FF7A6B; --sky:#7CC4FF; --blue:#2C7FC4;
+  --paper:#F2F6FA; --card:#FFFFFF; --line:#D6DFE8; --line-2:#E8EEF4;
   --text:#14212E; --muted:#556577; --faint:#8696A7;
   --danger:#B42318; --danger-soft:#FDE8E6; --ok:#157347; --ok-soft:#DCF3E6;
-  --shadow:0 1px 2px rgba(10,31,54,.06),0 8px 24px -12px rgba(10,31,54,.18);
-  --r-s:8px; --r-m:14px; --r-l:22px;
+  --shadow:0 1px 2px rgba(10,31,54,.06),0 10px 30px -14px rgba(10,31,54,.20);
+  --shadow-lg:0 2px 4px rgba(10,31,54,.06),0 24px 48px -20px rgba(10,31,54,.28);
+  --r-s:10px; --r-m:16px; --r-l:24px;
   --f-head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --f-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
-  --gut:clamp(16px,4vw,32px);
-  --hdr:64px;
+  --gut:clamp(16px,4.2vw,36px);
+  --sb:272px;          /* lebar sidebar (desktop) */
+  --hdr:0px;           /* tinggi bilah atas (mobile) */
+  --ease:cubic-bezier(.22,.8,.3,1);
 }
 :root[data-theme="dark"]{
   --paper:#08131F; --card:#0F2236; --line:#223A55; --line-2:#1A2F47;
@@ -43,7 +47,8 @@
   --teal:#2CC9B6; --teal-d:#7FE3D6; --teal-soft:#0F3A3B;
   --gold-soft:#3A2F08; --gold-d:#F2C94C;
   --danger:#FF8B7E; --danger-soft:#3A1713; --ok:#6FD79C; --ok-soft:#10301F;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.4),0 24px 48px -20px rgba(0,0,0,.7);
 }
 @media (prefers-color-scheme:dark){
   :root[data-theme="auto"]{
@@ -52,17 +57,22 @@
     --teal:#2CC9B6; --teal-d:#7FE3D6; --teal-soft:#0F3A3B;
     --gold-soft:#3A2F08; --gold-d:#F2C94C;
     --danger:#FF8B7E; --danger-soft:#3A1713; --ok:#6FD79C; --ok-soft:#10301F;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.4),0 24px 48px -20px rgba(0,0,0,.7);
   }
 }
+@media (max-width:1099.98px){:root{--hdr:60px}}
 
 /* =====================================================================
    DASAR
    ===================================================================== */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hdr) + 16px)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{margin:0;background:var(--paper);color:var(--text);font:400 1.0625rem/1.62 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hdr) + 18px);scroll-padding-bottom:96px;color-scheme:light dark}
+html[data-theme="light"]{color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--text);font:400 clamp(1rem,.96rem + .18vw,1.0625rem)/1.65 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body.lock{overflow:hidden}
 img{max-width:100%;display:block}
 a{color:var(--teal-d);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
@@ -70,216 +80,348 @@ h1,h2,h3,h4{font-family:var(--f-head);line-height:1.1;margin:0;letter-spacing:-.
 p{margin:0 0 1em;max-width:68ch}
 ul,ol{margin:0 0 1em;padding-left:1.2em}
 li{margin:.25em 0}
-:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
-.wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.wrap{width:min(1040px,100% - 2*var(--gut));margin-inline:auto}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .muted{color:var(--muted)}
 .hidden,[hidden]{display:none!important}
-.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--ink);padding:10px 14px;border-radius:var(--r-s);z-index:100;font-weight:600}
+.skip{position:fixed;left:12px;top:-70px;background:var(--gold);color:var(--ink);padding:10px 16px;border-radius:var(--r-s);z-index:200;font-weight:600;transition:top .2s}
 .skip:focus{top:12px}
+.ico{width:1.25em;height:1.25em;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* tampil halus saat di-scroll */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media print{.js .rv{opacity:1!important;transform:none!important}}
+
+/* =====================================================================
+   KERANGKA: SIDEBAR + KONTEN
+   ===================================================================== */
+.shell{min-height:100dvh}
+.sidebar{position:fixed;z-index:90;inset:0 auto 0 0;width:min(86vw,320px);display:flex;flex-direction:column;gap:18px;padding:20px 16px calc(18px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,#0B2340 0%,#091B31 55%,#071526 100%);color:#C3D3E4;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;
+  transform:translateX(-104%);visibility:hidden;transition:transform .38s var(--ease),visibility 0s linear .38s;box-shadow:24px 0 60px -24px rgba(0,0,0,.6)}
+.sidebar.open{transform:none;visibility:visible;transition:transform .38s var(--ease),visibility 0s}
+.sidebar::-webkit-scrollbar{display:none}
+.scrim{position:fixed;inset:0;z-index:80;background:rgba(4,12,22,.58);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:fade .25s both}
+@keyframes fade{from{opacity:0}}
+.sb-top{display:flex;align-items:center;gap:12px}
+.sb-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:0;flex:1}
+.sb-brand img{height:42px;width:auto;background:#fff;border-radius:10px;padding:3px}
+.sb-brand b{display:block;font:700 1.05rem/1.1 var(--f-head);letter-spacing:-.01em}
+.sb-brand small{display:block;color:#8FA6BE;font-size:.78rem;line-height:1.25;margin-top:2px}
+.sb-x{display:grid;flex:none}
+.sb-label{font:600 .7rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#6F88A3;margin:6px 10px -6px}
+.sb-nav{display:grid;gap:3px}
+.sb-nav a{position:relative;display:flex;align-items:center;gap:12px;padding:.68em .85em;border-radius:12px;color:#B7C9DB;text-decoration:none;font-weight:500;font-size:.98rem;transition:background .2s,color .2s}
+.sb-nav a .ico{width:1.2em;height:1.2em;opacity:.8}
+.sb-nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+.sb-nav a[aria-current="true"]{background:linear-gradient(90deg,rgba(242,183,5,.18),rgba(242,183,5,.04));color:#fff}
+.sb-nav a[aria-current="true"]::before{content:"";position:absolute;left:-16px;top:20%;bottom:20%;width:4px;border-radius:0 4px 4px 0;background:var(--gold)}
+.sb-nav a[aria-current="true"] .ico{color:var(--gold);opacity:1}
+.sb-cta{display:grid;gap:8px}
+.sb-foot{margin-top:auto;display:grid;gap:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);font-size:.84rem;color:#8FA6BE}
+.sb-foot p{margin:0;max-width:none;line-height:1.5}
+.sb-foot a{color:#fff;word-break:break-all}
+.sb-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sb-prog{height:4px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden}
+.sb-prog i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);will-change:transform;background:linear-gradient(90deg,var(--teal),var(--gold))}
+
+.topbar{position:sticky;top:0;z-index:60;height:var(--hdr);display:flex;align-items:center;gap:10px;padding:0 var(--gut);padding-top:env(safe-area-inset-top);
+  background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--line-2)}
+.topbar .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);min-width:0;flex:1}
+.topbar .brand img{height:34px;width:auto}
+.topbar .brand b{font:700 .98rem/1.1 var(--f-head);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.topbar .prog{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent}
+.topbar .prog i{display:block;height:100%;transform-origin:left;transform:scaleX(0);will-change:transform;background:linear-gradient(90deg,var(--teal),var(--gold))}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,background .2s}
+.icon-btn:hover{border-color:var(--teal);background:color-mix(in srgb,var(--teal) 10%,transparent)}
+.sidebar .icon-btn{border-color:rgba(255,255,255,.2);color:#fff}
+.sidebar .icon-btn:hover{border-color:var(--gold);background:rgba(255,255,255,.06)}
+.ic-sun{display:none}
+:root[data-theme="dark"] .ic-sun{display:block}
+:root[data-theme="dark"] .ic-moon{display:none}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"] .ic-sun{display:block}:root[data-theme="auto"] .ic-moon{display:none}}
+
+.sb-open{display:none}
+@media (min-width:1100px){
+  .shell{display:block}
+  .page{margin-left:var(--sb);transition:margin-left .42s var(--ease)}
+  .sidebar{position:fixed;top:0;left:0;bottom:0;height:100dvh;width:var(--sb);inset:0 auto 0 0;transform:none;visibility:visible;box-shadow:none;border-right:1px solid rgba(255,255,255,.06);
+    overscroll-behavior:auto;transition:transform .42s var(--ease),visibility 0s}
+  .sb-nav a[aria-current="true"]::before{left:-16px}
+  .topbar,.scrim{display:none!important}
+  /* sidebar disembunyikan */
+  html[data-sb="closed"] .page{margin-left:0}
+  html[data-sb="closed"] .sidebar{transform:translateX(-100%);visibility:hidden;transition:transform .42s var(--ease),visibility 0s linear .42s}
+  .sb-open{position:fixed;z-index:70;left:16px;top:16px;display:grid;background:var(--card);box-shadow:var(--shadow-lg);opacity:0;transform:translateX(-12px) scale(.9);pointer-events:none;visibility:hidden;transition:opacity .3s,transform .3s var(--ease),visibility 0s linear .3s}
+  html[data-sb="closed"] .sb-open{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .35s .2s,transform .35s .2s var(--ease),visibility 0s}
+}
+/* layar pendek: rapatkan sidebar agar muat tanpa scroll internal */
+@media (min-width:1100px) and (max-height:860px){
+  .sidebar{gap:12px;padding-block:16px 14px}
+  .sb-brand img{height:36px}
+  .sb-label{display:none}
+  .sb-nav{gap:2px}
+  .sb-nav a{padding:.5em .8em;font-size:.94rem}
+  .sb-cta .btn{min-height:42px;font-size:.92rem}
+  .sb-foot{padding-top:10px;gap:8px}
+}
+@media (min-width:1100px) and (max-height:700px){.sb-foot .etik-s,.sb-brand small{display:none}.sb-nav a{padding:.4em .8em}}
 
 /* =====================================================================
    TOMBOL
    ===================================================================== */
-.btn{--bg:var(--ink);--fg:#fff;--bd:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.7em 1.35em;border-radius:999px;border:1.5px solid var(--bd);background:var(--bg);color:var(--fg);font:600 1rem/1 var(--f-body);cursor:pointer;text-decoration:none;transition:transform .15s,background .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px -8px rgba(10,31,54,.5)}
-.btn:active{transform:none}
+.btn{--bg:var(--ink);--fg:#fff;--bd:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.7em 1.4em;border-radius:999px;border:1.5px solid var(--bd);background:var(--bg);color:var(--fg);font:600 1rem/1.1 var(--f-body);cursor:pointer;text-decoration:none;transition:transform .2s var(--ease),background .2s,box-shadow .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(10,31,54,.55)}
+.btn:active{transform:none;box-shadow:none}
 .btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
 .btn.gold{--bg:var(--gold);--fg:var(--ink);--bd:var(--gold)}
+.btn.gold:hover{box-shadow:0 10px 24px -8px rgba(242,183,5,.6)}
 .btn.ghost{--bg:transparent;--fg:var(--text);--bd:var(--line)}
-.btn.ghost:hover{--bd:var(--teal)}
-.btn.onink{--bg:transparent;--fg:#fff;--bd:rgba(255,255,255,.4)}
-.btn.onink:hover{--bd:#fff}
-.btn.sm{min-height:40px;padding:.55em 1.05em;font-size:.94rem}
+.btn.ghost:hover{--bd:var(--teal);box-shadow:none}
+.btn.onink{--bg:rgba(255,255,255,.04);--fg:#fff;--bd:rgba(255,255,255,.38)}
+.btn.onink:hover{--bd:#fff;--bg:rgba(255,255,255,.1);box-shadow:none}
+.btn.sm{min-height:42px;padding:.55em 1.1em;font-size:.94rem}
+.btn.block{width:100%}
 [data-theme="dark"] .btn:not(.gold):not(.ghost):not(.onink){--bg:var(--teal);--fg:#04201D;--bd:var(--teal)}
 @media (prefers-color-scheme:dark){:root[data-theme="auto"] .btn:not(.gold):not(.ghost):not(.onink){--bg:var(--teal);--fg:#04201D;--bd:var(--teal)}}
 
-/* =====================================================================
-   HEADER
-   ===================================================================== */
-.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 84%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line-2)}
-.top .wrap{display:flex;align-items:center;gap:18px;height:var(--hdr)}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);min-width:0}
-.brand img{height:40px;width:auto}
-.brand b{font:700 1.02rem/1.1 var(--f-head);display:block;letter-spacing:-.01em}
-.brand small{display:block;color:var(--muted);font-size:.78rem;line-height:1.2}
-.nav{margin-left:auto;display:flex;gap:4px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;font-weight:500;font-size:.95rem;padding:.5em .8em;border-radius:999px}
-.nav a:hover{background:var(--line-2)}
-.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer}
-.icon-btn:hover{border-color:var(--teal)}
-@media (max-width:860px){.nav a:not(.keep){display:none}.brand small{display:none}}
-@media (max-width:520px){.top .wrap{gap:10px}.brand{gap:9px}.brand img{height:34px}.brand b{font-size:.9rem;white-space:nowrap}.nav{margin-left:auto}.nav .btn.sm{padding:.5em .95em}}
+.page{min-width:0}
+/* semua tata letak di bawah mengikuti lebar KONTEN (bukan layar), sehingga rapi dengan/ tanpa sidebar */
+main{container:main/inline-size}
 
 /* =====================================================================
    HERO
    ===================================================================== */
-.hero{position:relative;background:var(--ink);color:#EAF1F8;overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
-  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/32px 32px,
-  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/32px 32px}
-.hero::after{content:"";position:absolute;z-index:-1;right:-10%;top:-20%;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(19,168,152,.28),transparent 70%)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(44px,8vw,96px)}
-.hero h1{font-size:clamp(2.35rem,5.4vw,4.1rem);line-height:1.02;letter-spacing:-.025em;font-weight:800;color:#fff;margin-bottom:.45em}
-.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:#C7D6E6;max-width:56ch}
-.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:1.6em 0 1.4em}
-.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:0 0 1.2em;list-style:none;color:#DCE7F2;font-size:.97rem}
-.hero .facts li{margin:0;position:relative;padding-left:18px}
-.hero .facts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero{position:relative;color:#EAF1F8;overflow:hidden;isolation:isolate;
+  background:radial-gradient(900px 520px at 88% -8%,rgba(19,168,152,.38),transparent 62%),radial-gradient(760px 480px at -8% 108%,rgba(44,127,196,.32),transparent 60%),linear-gradient(160deg,#0A1F36,#081A2E 60%,#0A2340)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.9;
+  background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/34px 34px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);gap:clamp(28px,5vw,60px);align-items:center;padding-block:clamp(40px,7vw,88px) clamp(72px,9vw,112px)}
+.pill{display:inline-flex;align-items:center;gap:.6em;padding:.45em 1em .45em .8em;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:#D5E3F1;font-size:.88rem;font-weight:500;margin-bottom:1.4em}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(242,183,5,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(242,183,5,0)}100%{box-shadow:0 0 0 0 rgba(242,183,5,0)}}
+.hero h1{font-size:clamp(2.2rem,1.4rem + 3.6cqi,4rem);line-height:1.02;letter-spacing:-.028em;font-weight:800;color:#fff;margin-bottom:.45em}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--gold),#FFD966 45%,#6FE3D3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(1.02rem,.95rem + .5cqi,1.2rem);color:#C7D6E6;max-width:54ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:1.6em 0 1.5em}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 1.3em;list-style:none}
+.hero .facts li{margin:0;display:inline-flex;align-items:center;gap:.5em;padding:.4em .85em;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#DCE7F2;font-size:.9rem}
+.hero .facts .ico{width:1.05em;height:1.05em;color:var(--gold)}
 .hero .etik{font-size:.84rem;color:#8FA6BE;max-width:60ch;margin:0}
-@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
 
-.scope{background:#06121F;border:1px solid rgba(255,255,255,.12);border-radius:var(--r-l);padding:14px 14px 12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
-.scope-top{display:flex;justify-content:space-between;align-items:center;padding:2px 6px 10px;color:#9CB2C8;font-size:.82rem}
+.scope{background:linear-gradient(180deg,#071B2D,#06121F);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-l);padding:14px 14px 12px;box-shadow:0 40px 70px -34px rgba(0,0,0,.8),0 0 0 6px rgba(255,255,255,.03)}
+.scope-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:2px 6px 10px;color:#9CB2C8;font-size:.82rem}
 .scope-top b{color:#fff;font-family:var(--f-head);font-weight:700;font-size:.95rem}
-.scope canvas{display:block;width:100%;height:clamp(230px,30vw,300px);border-radius:10px;background:#071827}
+.scope-top span{background:rgba(242,183,5,.14);color:var(--gold);border-radius:999px;padding:.2em .75em;font-weight:600;white-space:nowrap}
+.scope canvas{display:block;width:100%;height:clamp(220px,28cqi,300px);border-radius:12px;background:#071827}
 .phase{display:grid;grid-template-columns:5fr 4fr 4fr 4fr 5fr;gap:4px;margin-top:10px}
-.phase span{display:block;padding:7px 6px 6px;border-radius:7px;background:rgba(255,255,255,.06);color:#8FA6BE;font-size:.76rem;line-height:1.25;text-align:center;transition:background .2s,color .2s}
+.phase span{display:block;padding:7px 4px 6px;border-radius:8px;background:rgba(255,255,255,.06);color:#8FA6BE;font-size:.74rem;line-height:1.25;text-align:center;transition:background .25s,color .25s,transform .25s}
 .phase span b{display:block;font-family:var(--f-head);font-size:.86rem;color:inherit}
-.phase span.on{background:var(--gold);color:var(--ink)}
-.scope-cap{margin:10px 6px 0;font-size:.8rem;color:#7F97AF;max-width:none}
+.phase span.on{background:var(--gold);color:var(--ink);transform:translateY(-1px)}
+.scope-cap{margin:10px 6px 0;font-size:.78rem;color:#7F97AF;max-width:none}
+@container main (max-width:860px){.hero .wrap{grid-template-columns:1fr}.scope{max-width:560px}}
+
+/* kartu kelayakan menumpuk di tepi hero */
+.elig{position:relative;z-index:2;margin-top:-52px}
+.elig ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.elig li{margin:0;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:18px 20px;box-shadow:var(--shadow-lg)}
+.elig .ico{width:2.6rem;height:2.6rem;padding:.55rem;border-radius:12px;background:var(--teal-soft);color:var(--teal-d)}
+.elig li:nth-child(2) .ico{background:var(--gold-soft);color:var(--gold-d)}
+.elig li:nth-child(3) .ico{background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue)}
+.elig b{display:block;font:700 1.08rem/1.2 var(--f-head);margin-bottom:.2em}
+.elig span{display:block;color:var(--muted);font-size:.93rem;line-height:1.45}
+@container main (max-width:760px){.elig ul{grid-template-columns:1fr}.elig{margin-top:-40px}}
 
 /* =====================================================================
    SEKSI UMUM
    ===================================================================== */
 section{scroll-margin-top:calc(var(--hdr) + 8px)}
-.sec{padding-block:clamp(56px,8vw,104px)}
+.sec{padding-block:clamp(56px,8vw,100px)}
 .sec.tint{background:var(--card);border-block:1px solid var(--line-2)}
-.sec h2{font-size:clamp(1.75rem,3.4vw,2.7rem);margin-bottom:.45em}
-.sec .lead{font-size:1.14rem;color:var(--muted);max-width:62ch;margin-bottom:2em}
-.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
-@media (max-width:860px){.split{grid-template-columns:1fr}}
+.kicker{display:flex;align-items:center;gap:.7em;font:700 .78rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);margin-bottom:1em}
+.kicker::before{content:"";width:28px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--gold))}
+.sec h2{font-size:clamp(1.75rem,1.2rem + 2.2cqi,2.7rem);margin-bottom:.45em}
+.sec .lead{font-size:clamp(1.04rem,1rem + .3cqi,1.16rem);color:var(--muted);max-width:62ch;margin-bottom:2em}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,60px);align-items:start}
+@container main (max-width:820px){.split{grid-template-columns:1fr}}
 
 /* sensor */
-.sensors{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
-.sensors li{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);margin:0}
-.sensors b{font:800 1.5rem/1 var(--f-head);letter-spacing:-.02em}
-.sensors li:nth-child(1) b{color:var(--teal)}
-.sensors li:nth-child(2) b{color:var(--gold-d)}
-.sensors li:nth-child(3) b{color:#E0584A}
-.sensors li:nth-child(4) b{color:#2C7FC4}
-[data-theme="dark"] .sensors li:nth-child(3) b{color:var(--coral)}
-[data-theme="dark"] .sensors li:nth-child(4) b{color:var(--sky)}
-.sensors span{color:var(--muted)}
+.sens{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sens li{--c:var(--teal);margin:0;position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:16px 16px 16px 18px;transition:transform .3s var(--ease),box-shadow .3s}
+.sens li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
+.sens li:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.sens li:nth-child(2){--c:var(--gold)}
+.sens li:nth-child(3){--c:var(--coral)}
+.sens li:nth-child(4){--c:var(--blue)}
+.sens b{display:block;font:800 1.55rem/1 var(--f-head);letter-spacing:-.02em;color:var(--c);margin-bottom:.35em}
+.sens li:nth-child(2) b{color:var(--gold-d)}
+.sens span{color:var(--muted);font-size:.95rem;line-height:1.5;display:block}
+@container main (max-width:520px){.sens{grid-template-columns:1fr}}
 .who{margin:0;display:grid;gap:0}
-.who dt{font:700 1.15rem/1.2 var(--f-head);margin-top:1.1em}
+.who dt{font:700 1.15rem/1.2 var(--f-head);margin-top:1.2em}
 .who dt:first-child{margin-top:0}
-.who dd{margin:.35em 0 0;color:var(--muted)}
-.who .bmi{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.who .bmi span{background:var(--line-2);border-radius:999px;padding:.3em .85em;font-size:.92rem;color:var(--text)}
+.who dd{margin:.4em 0 0;color:var(--muted)}
+.who .bmi{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.who .bmi span{background:var(--line-2);border-radius:999px;padding:.32em .9em;font-size:.9rem;color:var(--text)}
 
 /* fig */
-.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--shadow)}
 .fig img{width:100%;height:auto;background:#fff}
-.fig figcaption{padding:10px 14px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line-2)}
+.fig figcaption{padding:11px 16px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line-2)}
 .imgmiss{display:grid;place-items:center;text-align:center;gap:6px;min-height:200px;padding:20px;background:repeating-linear-gradient(135deg,var(--line-2) 0 10px,transparent 10px 20px);color:var(--muted);font-size:.9rem;border-radius:inherit}
 .imgmiss code{background:var(--card);border:1px solid var(--line);padding:2px 8px;border-radius:6px;font-size:.88rem;color:var(--text)}
 
 /* alur */
 .steps{list-style:none;margin:0;padding:0;position:relative;counter-reset:s}
-.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.steps li{position:relative;padding:0 0 22px 60px;margin:0;counter-increment:s}
-.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--teal);color:var(--teal-d);font:700 1rem/1 var(--f-head)}
+.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--teal),var(--line) 40%,var(--line))}
+.steps li{position:relative;padding:0 0 24px 62px;margin:0;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--teal);color:var(--teal-d);font:700 1rem/1 var(--f-head);box-shadow:0 0 0 5px var(--paper)}
+.sec.tint .steps li::before{box-shadow:0 0 0 5px var(--card)}
 .steps li.main::before{background:var(--gold);border-color:var(--gold);color:var(--ink)}
 .steps h3{font-size:1.18rem;margin-bottom:.25em}
 .steps p{color:var(--muted);margin:0}
 .seg{display:grid;grid-template-columns:5fr 4fr 4fr 4fr 5fr;gap:4px;margin:14px 0 4px;max-width:520px}
-.seg span{text-align:center;background:var(--teal-soft);color:var(--teal-d);border-radius:8px;padding:8px 4px;font-size:.78rem;line-height:1.25}
+.seg span{text-align:center;background:var(--teal-soft);color:var(--teal-d);border-radius:9px;padding:8px 4px;font-size:.76rem;line-height:1.25}
 .seg span b{display:block;font-family:var(--f-head);font-size:.92rem}
 .seg span.run{background:var(--gold-soft);color:var(--gold-d)}
 .seg span i{display:block;font-style:normal;font-size:.7rem;opacity:.85;margin-top:2px}
 
 /* tabs alat */
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
-.tab{border:1.5px solid var(--line);background:transparent;color:var(--text);border-radius:999px;padding:.55em 1.1em;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:42px}
-.tab:hover{border-color:var(--teal)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{border:1.5px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:.6em 1.15em;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:44px;transition:all .2s var(--ease)}
+.tab:hover{border-color:var(--teal);transform:translateY(-1px)}
 .tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 [data-theme="dark"] .tab[aria-selected="true"]{background:var(--teal);color:#04201D;border-color:var(--teal)}
 @media (prefers-color-scheme:dark){:root[data-theme="auto"] .tab[aria-selected="true"]{background:var(--teal);color:#04201D;border-color:var(--teal)}}
-.panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,44px);align-items:start}
-@media (max-width:860px){.panel{grid-template-columns:1fr}}
-.panel h3{font-size:1.5rem;margin-bottom:.4em}
+@media (max-width:640px){.tabs{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1*var(--gut));padding:2px var(--gut) 8px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{white-space:nowrap}}
+.panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,44px);align-items:center;animation:stepIn .45s var(--ease)}
+.panel[hidden]{display:none}
+@container main (max-width:820px){.panel{grid-template-columns:1fr}}
+.panel h3{font-size:1.5rem;margin-bottom:.5em}
 .panel ul{color:var(--muted)}
 
+/* lokasi */
+.locs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2.5vw,24px)}
+@container main (max-width:760px){.locs{grid-template-columns:1fr}}
+.loc{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);padding:clamp(20px,3vw,30px);box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s}
+.loc::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--teal) 20%,transparent),transparent)}
+.loc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.loc-ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal-d)}
+.loc-ic .ico{width:1.6rem;height:1.6rem}
+.loc.byl .loc-ic{background:var(--gold-soft);color:var(--gold-d)}
+.loc h3{font-size:1.4rem;margin-bottom:.15em}
+.loc .area{display:inline-block;font:600 .88rem/1 var(--f-body);color:var(--teal-d);background:var(--teal-soft);padding:.4em .8em;border-radius:999px;margin:.3em 0 .8em}
+.loc.byl .area{color:var(--gold-d);background:var(--gold-soft)}
+.loc p{color:var(--muted);margin:0 0 1em;font-size:.97rem}
+.loc .btn{position:relative;z-index:1}
+.callout.note-lok{margin-top:22px}
+
 /* aman */
-.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,28px);align-items:start}
-@media (max-width:860px){.twocol{grid-template-columns:1fr}}
-.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:clamp(18px,3vw,28px)}
+.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2.5vw,24px);align-items:start}
+@container main (max-width:760px){.twocol{grid-template-columns:1fr}}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2.5vw,24px);align-items:start}
+.stack{display:grid;gap:clamp(14px,2.5vw,24px);min-width:0}
+@container main (max-width:760px){.cols2{grid-template-columns:1fr;gap:clamp(14px,2.5vw,24px)}.stack{display:contents}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:clamp(18px,3vw,28px);box-shadow:var(--shadow)}
+.sec.tint .box{background:var(--paper);box-shadow:none}
+.sec.tint .box.gold{background:var(--gold-soft)}
 .box h3{font-size:1.25rem;margin-bottom:.6em}
 .box ul{margin:0;color:var(--muted)}
 .box.gold{background:var(--gold-soft);border-color:color-mix(in srgb,var(--gold) 55%,transparent)}
 .box.gold h3{color:var(--gold-d)}
-.box .big{font:800 2rem/1 var(--f-head);color:var(--text);margin:.1em 0 .35em}
+.box .big{font:800 2.2rem/1 var(--f-head);color:var(--text);margin:.1em 0 .35em}
+.box.ok{border-color:color-mix(in srgb,var(--teal) 40%,var(--line))}
+.box.ok h3{color:var(--teal-d)}
+.ticks{list-style:none;padding:0}
+.ticks li{position:relative;padding-left:1.7em}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal-d);font-weight:800}
+.crosses{list-style:none;padding:0}
+.crosses li{position:relative;padding-left:1.7em}
+.crosses li::before{content:"–";position:absolute;left:.15em;top:0;color:var(--danger);font-weight:800}
 
 /* =====================================================================
    FORM
    ===================================================================== */
-.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px}
-@media (max-width:640px){.roles{grid-template-columns:1fr}}
-.role{text-align:left;border:1.5px solid var(--line);border-radius:var(--r-m);background:var(--card);padding:18px 20px;cursor:pointer;color:var(--text);font:inherit;display:grid;gap:4px;transition:border-color .15s,box-shadow .15s}
-.role:hover{border-color:var(--teal)}
-.role b{font:700 1.2rem/1.15 var(--f-head)}
+#form-root{container:fr/inline-size}
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:24px}
+@container main (max-width:640px){.roles{grid-template-columns:1fr}}
+.role{position:relative;text-align:left;border:1.5px solid var(--line);border-radius:var(--r-l);background:var(--card);padding:22px 24px;cursor:pointer;color:var(--text);font:inherit;display:grid;gap:6px;transition:border-color .2s,box-shadow .3s,transform .3s var(--ease)}
+.role:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.role b{font:700 1.3rem/1.15 var(--f-head)}
 .role span{color:var(--muted);font-size:.95rem}
-.role[aria-pressed="true"]{border-color:var(--teal);box-shadow:0 0 0 3px color-mix(in srgb,var(--teal) 26%,transparent)}
+.role[aria-pressed="true"]{border-color:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 24%,transparent);background:linear-gradient(180deg,var(--card),color-mix(in srgb,var(--teal-soft) 60%,var(--card)))}
 .role[aria-pressed="true"] b::after{content:" ✓";color:var(--teal-d)}
 
-.formcard{scroll-margin-top:calc(var(--hdr) + 12px);background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--shadow);display:grid;grid-template-columns:240px minmax(0,1fr);overflow:hidden}
-@media (max-width:900px){.formcard{grid-template-columns:1fr}}
-.rail{background:var(--ink);color:#C7D6E6;padding:26px 22px}
-.rail h3{font-size:1.05rem;color:#fff;margin-bottom:1em}
-.rail ol{list-style:none;margin:0;padding:0;counter-reset:r}
-.rail li{counter-increment:r;position:relative;padding:8px 0 8px 40px;margin:0;font-size:.95rem;color:#8FA6BE}
-.rail li::before{content:counter(r);position:absolute;left:0;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1.5px solid #3A5675;font:600 .82rem/1 var(--f-body)}
+.formcard{scroll-margin-top:calc(var(--hdr) + 14px);background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--shadow-lg);display:grid;grid-template-columns:230px minmax(0,1fr);overflow:clip;animation:stepIn .5s var(--ease)}
+@container fr (max-width:780px){.formcard{display:block}}
+.rail{background:linear-gradient(180deg,#0B2340,#091B31);color:#C7D6E6;padding:28px 22px}
+.rail-in{position:sticky;top:calc(var(--hdr) + 24px)}
+.rail h3{font-size:1.1rem;color:#fff;margin-bottom:1.1em}
+.rail ol{list-style:none;margin:0;padding:0;counter-reset:r;position:relative}
+.rail li{counter-increment:r;position:relative;padding:9px 0 9px 42px;margin:0;font-size:.95rem;color:#8FA6BE;transition:color .2s}
+.rail li::before{content:counter(r);position:absolute;left:0;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1.5px solid #3A5675;font:600 .82rem/1 var(--f-body);transition:all .25s var(--ease);background:#0B2340;z-index:1}
+.rail li:not(:last-child)::after{content:"";position:absolute;left:14.5px;top:calc(50% + 15px);height:calc(100% - 30px);width:2px;background:#27425F}
 .rail li.done{color:#C7D6E6}
 .rail li.done::before{content:"✓";background:var(--teal);border-color:var(--teal);color:#04201D}
+.rail li.done::after{background:var(--teal)}
 .rail li.cur{color:#fff;font-weight:600}
-.rail li.cur::before{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-@media (max-width:900px){
-  .rail{padding:14px 18px}
+.rail li.cur::before{background:var(--gold);border-color:var(--gold);color:var(--ink);box-shadow:0 0 0 5px rgba(242,183,5,.2)}
+.rail .mini{display:none;font-size:.95rem;color:#fff}
+.rail .bar{height:5px;border-radius:5px;background:#274260;margin-top:10px;overflow:hidden}
+.rail .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .45s var(--ease)}
+@container fr (max-width:780px){
+  .rail{padding:14px 20px;position:sticky;top:var(--hdr);z-index:6}
+  .rail-in{position:static}
   .rail h3,.rail ol{display:none}
   .rail .mini{display:block}
 }
-.rail .mini{display:none;font-size:.95rem;color:#fff}
-.rail .bar{height:5px;border-radius:5px;background:#274260;margin-top:10px;overflow:hidden}
-.rail .bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
-.body{padding:clamp(20px,4vw,40px);min-width:0}
-.body h3.st{font-size:clamp(1.4rem,2.6vw,1.85rem);margin-bottom:.35em;outline:none}
+.body{--pad:clamp(20px,4vw,40px);padding:var(--pad);min-width:0}
+.body h3.st{font-size:clamp(1.4rem,1.1rem + 1.3cqi,1.9rem);margin-bottom:.35em;outline:none}
 .body .intro{color:var(--muted);margin-bottom:1.4em}
+.step:not([hidden]){animation:stepIn .45s var(--ease)}
+@keyframes stepIn{from{opacity:0;transform:translateY(12px)}}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 18px}
-@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+@container fr (max-width:600px){.grid2{grid-template-columns:1fr}}
 
-.field{margin:0 0 18px;border:0;padding:0;min-width:0}
-.field>label,.field>legend{display:block;font-weight:600;margin-bottom:6px;padding:0;font-size:1rem}
+.field{margin:0 0 20px;border:0;padding:0;min-width:0}
+.field>label,.field>legend{display:block;font-weight:600;margin-bottom:7px;padding:0;font-size:1rem}
 .field .opt{font-weight:400;color:var(--faint);margin-left:.4em;font-size:.9rem}
-.field .hint{margin:6px 0 0;font-size:.9rem;color:var(--muted)}
-.field .err{margin:6px 0 0;font-size:.9rem;color:var(--danger);font-weight:500;min-height:0}
+.field .hint{margin:7px 0 0;font-size:.9rem;color:var(--muted)}
+.field .err{margin:7px 0 0;font-size:.9rem;color:var(--danger);font-weight:500;min-height:0}
 .field .err:empty{display:none}
 .field.bad input:not([type=checkbox]):not([type=radio]),.field.bad select,.field.bad textarea{border-color:var(--danger)}
-.field.bad .chips,.field.bad .cal{outline:2px solid color-mix(in srgb,var(--danger) 45%,transparent);outline-offset:4px;border-radius:12px}
-input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{width:100%;min-height:48px;padding:.65em .9em;border:1.5px solid var(--line);border-radius:var(--r-s);background:var(--paper);color:var(--text);font:inherit;transition:border-color .15s,box-shadow .15s}
-textarea{min-height:96px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px color-mix(in srgb,var(--teal) 25%,transparent)}
+.field.bad .chips,.field.bad .cal{outline:2px solid color-mix(in srgb,var(--danger) 45%,transparent);outline-offset:4px;border-radius:14px}
+input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{width:100%;min-height:50px;padding:.68em .95em;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--text);font:inherit;transition:border-color .2s,box-shadow .2s,background .2s}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none' stroke='%238696A7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.6rem}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);background:var(--card);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 22%,transparent)}
 .inp-unit{display:flex;align-items:stretch}
 .inp-unit input{border-top-right-radius:0;border-bottom-right-radius:0;min-width:0}
-.inp-unit span{display:grid;place-items:center;padding:0 14px;border:1.5px solid var(--line);border-left:0;border-radius:0 var(--r-s) var(--r-s) 0;background:var(--line-2);color:var(--muted);font-weight:600}
+.inp-unit span{display:grid;place-items:center;padding:0 16px;border:1.5px solid var(--line);border-left:0;border-radius:0 12px 12px 0;background:var(--line-2);color:var(--muted);font-weight:600}
 
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{position:relative;display:inline-flex}
 .chip input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;width:100%;height:100%}
-.chip span{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:.55em 1.1em;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);color:var(--text);font-weight:500;transition:border-color .12s,background .12s}
+.chip span{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:.55em 1.2em;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);color:var(--text);font-weight:500;transition:border-color .15s,background .15s,transform .15s}
 .chip:hover span{border-color:var(--teal)}
+.chip:active span{transform:scale(.98)}
 .chip input:checked+span{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);font-weight:600}
 .chip input:checked+span::before{content:"✓";font-weight:800}
 .chip input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
 .chips.stack{flex-direction:column;align-items:stretch}
-.chips.stack .chip span{border-radius:var(--r-s);width:100%}
+.chips.stack .chip span{border-radius:12px;width:100%}
+.chips.big .chip{flex:1 1 200px}
+.chips.big .chip span{width:100%;justify-content:center;border-radius:14px;min-height:54px;font-size:1.02rem}
 
-.consent{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r-m);background:var(--paper);cursor:pointer}
+.consent{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;padding:15px 17px;border:1.5px solid var(--line);border-radius:var(--r-m);background:var(--paper);cursor:pointer;transition:border-color .2s,background .2s}
 .consent input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--teal)}
 .consent:has(input:checked){border-color:var(--teal);background:var(--teal-soft)}
 .field.bad .consent{border-color:var(--danger)}
 
-.callout{border-left:4px solid var(--teal);background:var(--teal-soft);padding:12px 16px;border-radius:0 var(--r-s) var(--r-s) 0;margin:0 0 18px;font-size:.97rem}
+.callout{border-left:4px solid var(--teal);background:var(--teal-soft);padding:13px 17px;border-radius:0 12px 12px 0;margin:0 0 18px;font-size:.97rem}
 .callout.warn{border-color:var(--gold);background:var(--gold-soft)}
 .callout.priv{border-color:var(--ink-3);background:var(--line-2)}
 .callout p:last-child{margin-bottom:0}
@@ -287,59 +429,64 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);bo
 
 /* IC */
 .seg-toggle{display:inline-flex;background:var(--line-2);border-radius:999px;padding:4px;margin-bottom:14px}
-.seg-toggle button{border:0;background:transparent;color:var(--text);padding:.55em 1.2em;border-radius:999px;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:40px}
+.seg-toggle button{border:0;background:transparent;color:var(--text);padding:.55em 1.2em;border-radius:999px;font:600 .95rem/1 var(--f-body);cursor:pointer;min-height:42px;transition:background .2s}
 .seg-toggle button[aria-pressed="true"]{background:var(--card);box-shadow:var(--shadow);color:var(--teal-d)}
 .ic-short ul{margin:0 0 1em}
 .ic-full details{border-top:1px solid var(--line)}
 .ic-full details:last-child{border-bottom:1px solid var(--line)}
-.ic-full summary,.faq summary{cursor:pointer;list-style:none;padding:14px 4px;font-weight:600;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.ic-full summary,.faq summary{cursor:pointer;list-style:none;padding:15px 4px;font-weight:600;display:flex;justify-content:space-between;gap:12px;align-items:center}
 .ic-full summary::-webkit-details-marker,.faq summary::-webkit-details-marker{display:none}
-.ic-full summary::after,.faq summary::after{content:"+";font:500 1.5rem/1 var(--f-body);color:var(--teal-d);transition:transform .2s}
+.ic-full summary::after,.faq summary::after{content:"+";font:500 1.5rem/1 var(--f-body);color:var(--teal-d);transition:transform .25s var(--ease);flex:none}
 .ic-full details[open] summary::after,.faq details[open] summary::after{transform:rotate(45deg)}
 .ic-full .in,.faq .in{padding:0 4px 16px;color:var(--muted)}
 .ic-scroll{max-height:420px;overflow:auto;padding-right:6px;margin-bottom:14px;border-radius:var(--r-s)}
 
 /* BMI */
-.bmi-card{border:1.5px solid var(--line);border-radius:var(--r-m);padding:14px 16px;margin:-2px 0 20px;background:var(--paper)}
+.bmi-card{border:1.5px solid var(--line);border-radius:var(--r-m);padding:15px 17px;margin:-2px 0 20px;background:var(--paper)}
 .bmi-card .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .bmi-card b{font:800 1.9rem/1 var(--f-head)}
 .bmi-card .gl{font-weight:600}
 .bmi-scale{position:relative;height:10px;border-radius:10px;margin:12px 0 6px;background:linear-gradient(90deg,#7CC4FF 0 18.75%,#2CC9B6 18.75% 37.5%,#F2B705 37.5% 100%)}
-.bmi-scale i{position:absolute;top:-5px;width:6px;height:20px;border-radius:4px;background:var(--text);transform:translateX(-50%);transition:left .25s;left:-10px}
+.bmi-scale i{position:absolute;top:-5px;width:6px;height:20px;border-radius:4px;background:var(--text);transform:translateX(-50%);transition:left .35s var(--ease);left:-10px}
 .bmi-lab{position:relative;height:1.3em;font-size:.78rem;color:var(--muted)}
 .bmi-lab span{position:absolute;top:0;transform:translateX(-50%)}
 .bmi-lab span:first-child{transform:none}
 .bmi-lab span:last-child{transform:translateX(-100%)}
 
 /* kalender */
-.cal-wrap{display:grid;gap:18px}
-.cal h4{font:700 1.02rem/1 var(--f-head);margin-bottom:8px}
+.cal-wrap{display:grid;gap:20px}
+.cal h4{font:700 1.02rem/1 var(--f-head);margin-bottom:9px}
 .cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
 .cal-g .dow{font-size:.74rem;color:var(--faint);text-align:center;padding-bottom:2px}
 .cal-g .dow.we{color:var(--coral)}
 .cal-d{position:relative;aspect-ratio:1/.86;min-height:42px}
 .cal-d input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;width:100%;height:100%}
-.cal-d span{position:absolute;inset:0;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);font-weight:600;font-size:.95rem;transition:background .12s,border-color .12s}
+.cal-d span{position:absolute;inset:0;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:11px;background:var(--paper);font-weight:600;font-size:.95rem;transition:background .15s,border-color .15s,transform .15s}
 .cal-d:hover span{border-color:var(--teal)}
+.cal-d input:active+span{transform:scale(.94)}
 .cal-d.we span{color:var(--muted)}
 .cal-d input:checked+span{background:var(--teal);border-color:var(--teal);color:#04201D}
 .cal-d input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
 .cal-d.off{pointer-events:none}
 .cal-d.off span{background:transparent;border-color:transparent;color:var(--faint);opacity:.45;font-weight:400}
-.cal-tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
-.linkbtn{border:0;background:none;color:var(--teal-d);font:600 .92rem/1 var(--f-body);padding:8px 2px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:36px}
+.cal-tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.linkbtn{border:0;background:none;color:var(--teal-d);font:600 .92rem/1 var(--f-body);padding:8px 2px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:38px}
 
 /* tinjau */
 .review{margin:0 0 18px;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
-.review div{display:grid;grid-template-columns:minmax(120px,.8fr) 1.6fr;gap:12px;padding:10px 16px;border-top:1px solid var(--line-2)}
+.review div{display:grid;grid-template-columns:minmax(120px,.8fr) 1.6fr;gap:12px;padding:11px 16px;border-top:1px solid var(--line-2)}
+.review div:nth-child(even){background:color-mix(in srgb,var(--line-2) 40%,transparent)}
 .review div:first-child{border-top:0}
 .review dt{color:var(--muted);font-size:.93rem}
 .review dd{margin:0;font-weight:500;overflow-wrap:anywhere}
-@media (max-width:560px){.review div{grid-template-columns:1fr;gap:2px}}
+@container fr (max-width:560px){.review div{grid-template-columns:1fr;gap:2px}}
 .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 
-.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line-2);flex-wrap:wrap}
+.actions{position:sticky;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  margin:28px calc(-1*var(--pad)) calc(-1*var(--pad));padding:14px var(--pad) calc(14px + env(safe-area-inset-bottom));
+  background:var(--card);border-top:1px solid var(--line-2)}
 .actions .right{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+@container fr (max-width:480px){.actions{flex-wrap:nowrap}.actions .btn{padding-inline:1.1em}.actions .right{flex:1;justify-content:flex-end}.actions .right .btn{flex:1}}
 .spin{width:18px;height:18px;border-radius:50%;border:2.5px solid currentColor;border-right-color:transparent;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 
@@ -349,7 +496,8 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);bo
 
 /* hasil */
 .result{text-align:left}
-.result .mark{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--ok-soft);color:var(--ok);margin-bottom:14px}
+.result .mark{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--ok-soft);color:var(--ok);margin-bottom:14px;animation:pop .6s var(--ease)}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
 .result.stop .mark{background:var(--gold-soft);color:var(--gold-d)}
 .result h3{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:.4em}
 .kode{display:inline-block;font:800 1.7rem/1 var(--f-head);letter-spacing:.04em;background:var(--line-2);border-radius:var(--r-s);padding:.45em .8em;margin:.4em 0 1em}
@@ -357,42 +505,108 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);bo
 pre.payload{background:#06121F;color:#BFD3E6;border-radius:var(--r-s);padding:14px;overflow:auto;font-size:.8rem;line-height:1.5;max-height:320px}
 
 /* faq + footer */
-.faq details{border-top:1px solid var(--line)}
+.faq details{border-top:1px solid var(--line);transition:background .2s}
 .faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{font-size:1.06rem}
+.faq details[open]{background:color-mix(in srgb,var(--teal-soft) 35%,transparent)}
+.faq summary{font-size:1.06rem;padding-inline:12px}
+.faq .in{padding-inline:12px}
 .faq p{margin:0 0 .7em}
-footer{background:var(--ink);color:#B7C8DA;padding-block:44px 34px;font-size:.95rem}
+footer{background:linear-gradient(180deg,#0A1F36,#071526);color:#B7C8DA;padding-block:48px 38px;font-size:.95rem}
 footer .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
 @media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
 footer h4{color:#fff;font-size:1.05rem;line-height:1.3;margin-bottom:.6em}
 footer a{color:#fff}
 footer .logos{display:flex;gap:14px;align-items:center;margin-bottom:14px}
-footer .logos img{height:44px;width:auto}
+footer .logos img{height:46px;width:auto}
 footer p{margin-bottom:.6em}
 footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#7F97AF;font-size:.85rem}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:55;width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-lg);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s var(--ease)}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+[data-theme="dark"] .totop{background:var(--teal);color:#04201D}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"] .totop{background:var(--teal);color:#04201D}}
+body:has(.formcard:not([hidden]) .actions) .totop{display:none}
 </style>
 </head>
 <body>
 <a class="skip" href="#daftar">Lewati ke formulir pendaftaran</a>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Riset Cybersickness VR, ke atas">
-      <img src="logo-ugm.png" alt="Logo Universitas Gadjah Mada" width="40" height="40" data-opt>
+<!-- ikon (sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2.2h12.4a1.5 1.5 0 0 0 1.3-2.2L14 9V3"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-chevl" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.7a3.5 3.5 0 0 1 0 6.6M18 14.8c1.9.7 3.2 2.4 3.5 5.2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v8h14v-8"/><path d="M12 8C12 5 9 3.5 8 5s.5 3 4 3zM12 8c0-3 3-4.5 4-3s-.5 3-4 3z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<div class="shell">
+
+<!-- ================================ SIDEBAR ================================ -->
+<aside class="sidebar" id="sidebar" aria-label="Navigasi situs">
+  <div class="sb-top">
+    <a class="sb-brand" href="#top">
+      <img src="logo-ugm.png" alt="Logo Universitas Gadjah Mada" width="42" height="42" data-opt>
       <span><b>Riset Cybersickness VR</b><small>Magister Teknik Biomedis · UGM</small></span>
     </a>
-    <nav class="nav" aria-label="Navigasi utama">
-      <a href="#penelitian">Penelitian</a>
-      <a href="#alur">Alur</a>
-      <a href="#alat">Alat</a>
-      <a href="#aman">Keselamatan</a>
-      <a href="#faq">FAQ</a>
-      <a href="#daftar" class="btn gold sm keep">Daftar</a>
-    </nav>
-    <button class="icon-btn" id="theme" type="button" aria-label="Ganti tema terang/gelap" title="Ganti tema">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-    </button>
+    <button class="icon-btn sb-x" type="button" id="sb-close" aria-label="Sembunyikan menu" title="Sembunyikan menu"><svg class="ico" aria-hidden="true"><use href="#i-chevl"/></svg></button>
   </div>
+
+  <div class="sb-label" aria-hidden="true">Menu</div>
+  <nav class="sb-nav" aria-label="Bagian halaman">
+    <a href="#top"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Beranda</a>
+    <a href="#penelitian"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>Penelitian</a>
+    <a href="#alur"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>Alur sesi</a>
+    <a href="#alat"><svg class="ico" aria-hidden="true"><use href="#i-pulse"/></svg>Alat</a>
+    <a href="#lokasi"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Lokasi</a>
+    <a href="#aman"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Keselamatan</a>
+    <a href="#daftar"><svg class="ico" aria-hidden="true"><use href="#i-edit"/></svg>Daftar</a>
+    <a href="#faq"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg>FAQ</a>
+  </nav>
+
+  <div class="sb-cta">
+    <a class="btn gold block" href="#daftar-subject" data-go="subject">Daftar sebagai subject</a>
+    <a class="btn onink block" href="#daftar-asisten" data-go="asisten">Daftar sebagai asisten</a>
+  </div>
+
+  <div class="sb-foot">
+    <div class="sb-prog" aria-hidden="true"><i></i></div>
+    <p class="etik-s">Izin etik No. <span data-cfg="etik-no"></span><br><span data-cfg="etik-lembaga"></span></p>
+    <div class="sb-row">
+      <a data-cfg="kontak-email-link" href="#"></a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Ganti tema terang/gelap" title="Ganti tema">
+        <svg class="ico ic-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+<div class="scrim" id="scrim" hidden></div>
+<button class="icon-btn sb-open" type="button" id="sb-open" aria-label="Tampilkan menu" title="Tampilkan menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+
+<div class="page">
+<header class="topbar">
+  <button class="icon-btn" type="button" id="menu" aria-label="Buka menu" aria-expanded="false" aria-controls="sidebar"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  <a class="brand" href="#top" aria-label="Riset Cybersickness VR, ke atas">
+    <img src="logo-ugm.png" alt="" width="34" height="34" data-opt>
+    <b>Riset Cybersickness VR</b>
+  </a>
+  <a class="btn gold sm" href="#daftar">Daftar</a>
+  <div class="prog" aria-hidden="true"><i></i></div>
 </header>
 
 <main id="main">
@@ -401,21 +615,22 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
 <section class="hero" id="top">
   <div class="wrap">
     <div>
-      <h1>Pusing saat memakai VR? Bantu kami mengukurnya.</h1>
-      <p class="lead">Penelitian Magister Teknik Biomedis UGM merekam sinyal otak, jantung, denyut nadi, dan gerak tubuh saat Anda berjalan dan berlari di treadmill, lalu duduk–berdiri, dengan dan tanpa headset VR. Hasilnya dipakai untuk membangun sistem yang mendeteksi cybersickness secara objektif.</p>
-      <div class="cta">
+      <span class="pill rv"><i></i>Pendaftaran dibuka · usia 18–25 tahun</span>
+      <h1 class="rv" style="--d:.05s">Pusing saat memakai VR? Bantu kami <em>mengukurnya</em>.</h1>
+      <p class="lead rv" style="--d:.1s">Penelitian <span data-cfg="kontak-nama"></span>, mahasiswa Magister Teknik Biomedis UGM, merekam sinyal otak, jantung, denyut nadi, dan gerak tubuh saat Anda berjalan dan berlari di treadmill, lalu duduk–berdiri, dengan dan tanpa headset VR. Hasilnya dipakai untuk membangun sistem yang mendeteksi cybersickness secara objektif.</p>
+      <div class="cta rv" style="--d:.15s">
         <a class="btn gold" href="#daftar-subject" data-go="subject">Daftar sebagai subject</a>
         <a class="btn onink" href="#daftar-asisten" data-go="asisten">Daftar sebagai asisten</a>
       </div>
-      <ul class="facts">
-        <li>30 mahasiswa baru usia 18–25 tahun</li>
-        <li>Sekitar 90–100 menit per orang</li>
-        <li>Transport <span data-cfg="kompensasi">Rp30.000</span>, Makan, dan air minum</li>
+      <ul class="facts rv" style="--d:.2s">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg>30 peserta · mahasiswa &amp; non-mahasiswa</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Sekitar 90–100 menit</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg><span>Transport <span data-cfg="kompensasi">Rp30.000</span> + makan</span></li>
       </ul>
-      <p class="etik">Izin etik: No. <span data-cfg="etik-no"></span> (<span data-cfg="etik-lembaga"></span>, <span data-cfg="etik-tgl"></span>).</p>
+      <p class="etik rv" style="--d:.25s">Izin etik: No. <span data-cfg="etik-no"></span> (<span data-cfg="etik-lembaga"></span>, <span data-cfg="etik-tgl"></span>).</p>
     </div>
 
-    <div class="scope" role="img" aria-label="Ilustrasi empat kanal sinyal: EEG, ECG, PPG, dan IMU, yang berubah mengikuti lima segmen berjalan, berlari, dan duduk berdiri.">
+    <div class="scope rv" style="--d:.15s" role="img" aria-label="Ilustrasi empat kanal sinyal: EEG, ECG, PPG, dan IMU, yang berubah mengikuti lima segmen berjalan, berlari, dan duduk berdiri.">
       <div class="scope-top"><b>Empat sinyal, satu waktu</b><span id="phase-now">C1 · Jalan</span></div>
       <canvas id="scope" aria-hidden="true"></canvas>
       <div class="phase" id="phase" aria-hidden="true">
@@ -426,34 +641,46 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
   </div>
 </section>
 
+<!-- ============================= SIAPA YANG BISA ============================= -->
+<div class="elig">
+  <div class="wrap">
+    <ul>
+      <li class="rv"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><div><b>Usia 18–25 tahun</b><span>Satu-satunya batas usia untuk subject. Berlaku sama untuk semua pendaftar.</span></div></li>
+      <li class="rv" style="--d:.07s"><svg class="ico" aria-hidden="true"><use href="#i-edit"/></svg><div><b>Mahasiswa atau bukan</b><span>Pekerja, wirausaha, pencari kerja, maupun mahasiswa semuanya boleh mendaftar.</span></div></li>
+      <li class="rv" style="--d:.14s"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><div><b>Sehat dan aman</b><span>Ada skrining kesehatan singkat demi keselamatan Anda. Boleh berhenti kapan saja.</span></div></li>
+    </ul>
+  </div>
+</div>
+
 <!-- ============================== PENELITIAN ============================== -->
 <section class="sec" id="penelitian">
   <div class="wrap">
-    <h2>Apa yang direkam, dan untuk apa</h2>
-    <p class="lead">Cybersickness adalah rasa pusing, mual, dan tidak nyaman yang bisa muncul saat memakai VR. Selama ini tingkatnya hanya diukur lewat kuesioner. Kami ingin tahu apakah sinyal tubuh bisa menjawabnya lebih objektif.</p>
+    <div class="kicker rv">Penelitian</div>
+    <h2 class="rv">Apa yang direkam, dan untuk apa</h2>
+    <p class="lead rv">Cybersickness adalah rasa pusing, mual, dan tidak nyaman yang bisa muncul saat memakai VR. Selama ini tingkatnya hanya diukur lewat kuesioner. Kami ingin tahu apakah sinyal tubuh bisa menjawabnya lebih objektif.</p>
 
-    <figure class="fig" style="margin-bottom:clamp(24px,4vw,44px)">
+    <figure class="fig rv" style="margin-bottom:clamp(24px,4vw,44px)">
       <img src="hero-setup.png" alt="Contoh pemasangan: EEG di kepala, modul sensor di dada, dan headset VR" width="1600" height="1000" data-opt loading="lazy">
       <figcaption>Contoh pemasangan: elektroda EEG di kepala, modul sensor di dada, dan headset VR.</figcaption>
     </figure>
 
     <div class="split">
       <div>
-        <ul class="sensors">
-          <li><b>EEG</b><span>Aktivitas listrik otak lewat 8 elektroda kering di kulit kepala. Klip telinga menjadi referensi.</span></li>
-          <li><b>ECG</b><span>Aktivitas listrik jantung lewat 3 elektroda di dada.</span></li>
-          <li><b>PPG</b><span>Denyut nadi lewat sensor optik pada modul yang menempel di dada.</span></li>
-          <li><b>IMU</b><span>Gerak dan kemiringan tubuh, dari modul dada yang sama.</span></li>
+        <ul class="sens">
+          <li class="rv"><b>EEG</b><span>Aktivitas listrik otak lewat 8 elektroda kering di kulit kepala. Klip telinga menjadi referensi.</span></li>
+          <li class="rv" style="--d:.06s"><b>ECG</b><span>Aktivitas listrik jantung lewat 3 elektroda di dada.</span></li>
+          <li class="rv" style="--d:.12s"><b>PPG</b><span>Denyut nadi lewat sensor optik pada modul yang menempel di dada.</span></li>
+          <li class="rv" style="--d:.18s"><b>IMU</b><span>Gerak dan kemiringan tubuh, dari modul dada yang sama.</span></li>
         </ul>
         <p style="margin-top:1.2em" class="muted">Keempat sinyal direkam bersamaan dan disinkronkan. Tingkat pusing ditentukan dari kuesioner SSQ yang Anda isi sebelum dan sesudah sesi VR.</p>
       </div>
-      <dl class="who">
+      <dl class="who rv">
         <dt>Subject</dt>
-        <dd>30 mahasiswa baru berusia 18–25 tahun, dibagi ke tiga kelompok BMI dengan 10 orang per kelompok. Jenis kelamin diupayakan seimbang.
+        <dd>30 peserta berusia 18–25 tahun, mahasiswa maupun non-mahasiswa, dibagi ke tiga kelompok BMI dengan 10 orang per kelompok. Jenis kelamin diupayakan seimbang.
           <div class="bmi"><span>Kurus &lt; 18,5</span><span>Normal 18,5–22,9</span><span>BB lebih–obesitas ≥ 23,0</span></div>
         </dd>
         <dt>Asisten lapangan</dt>
-        <dd>Pendamping yang memasang alat, mendampingi subject dari belakang saat berjalan dan berlari di treadmill, serta menangani gejala ringan. Bertugas di Yogyakarta dan Boyolali.</dd>
+        <dd>Pendamping yang memasang alat, mendampingi subject dari belakang saat berjalan dan berlari di treadmill, serta menangani gejala ringan. Bertugas di Yogyakarta dan Boyolali (area Waduk Cengklik).</dd>
       </dl>
     </div>
   </div>
@@ -462,28 +689,26 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
 <!-- ================================= ALUR ================================= -->
 <section class="sec tint" id="alur">
   <div class="wrap">
-    <h2>Satu hari, dua sesi rekaman</h2>
-    <p class="lead">Dari datang sampai pulang sekitar 90–100 menit. Urutan sesi (tanpa VR dan dengan VR) ditentukan peneliti, dengan jeda istirahat sampai Anda siap.</p>
-    <div class="split">
+    <div class="kicker rv">Alur sesi</div>
+    <h2 class="rv">Satu hari, dua sesi rekaman</h2>
+    <p class="lead rv">Dari datang sampai pulang sekitar 90–100 menit. Urutan sesi (tanpa VR dan dengan VR) ditentukan peneliti, dengan jeda istirahat sampai Anda siap.</p>
+    <div class="split" style="grid-template-columns:minmax(0,1fr)">
       <ol class="steps">
-        <li><h3>Penjelasan dan persetujuan</h3><p>Anda mendapat penjelasan lengkap, boleh bertanya, lalu menandatangani Informed Consent. Pendaftaran di halaman ini bukan pengganti tanda tangan itu.</p></li>
-        <li><h3>Ukur dan isi formulir</h3><p>Berat dan tinggi badan diukur langsung. Anda mengisi lembar data diri, skrining kesehatan, dan kuesioner kerentanan mabuk perjalanan (MSSQ).</p></li>
-        <li><h3>Pasang alat</h3><p>Asisten membersihkan kulit kepala dan dada, lalu memasang EEG, ECG, dan modul dada. Gel transparan berbasis air dioles pada sensor PPG sebelum modul menempel.</p></li>
-        <li><h3>Isi SSQ awal</h3><p>Satu lembar gejala (16 butir, skala 0–3) sebelum sesi pertama.</p></li>
-        <li class="main"><h3>Dua sesi rekaman, masing-masing sekitar 22 menit</h3>
+        <li class="rv"><h3>Penjelasan dan persetujuan</h3><p>Anda mendapat penjelasan lengkap, boleh bertanya, lalu menandatangani Informed Consent. Pendaftaran di halaman ini bukan pengganti tanda tangan itu.</p></li>
+        <li class="rv"><h3>Ukur dan isi formulir</h3><p>Berat dan tinggi badan diukur langsung. Anda mengisi lembar data diri, skrining kesehatan, dan kuesioner kerentanan mabuk perjalanan (MSSQ).</p></li>
+        <li class="rv"><h3>Pasang alat</h3><p>Asisten membersihkan kulit kepala dan dada, lalu memasang EEG, ECG, dan modul dada. Gel transparan berbasis air dioles pada sensor PPG sebelum modul menempel.</p></li>
+        <li class="rv"><h3>Isi SSQ awal</h3><p>Satu lembar gejala (16 butir, skala 0–3) sebelum sesi pertama.</p></li>
+        <li class="main rv"><h3>Dua sesi rekaman, masing-masing sekitar 22 menit</h3>
           <p>Anda berdiri di atas treadmill dengan kunci pengaman terpasang, lalu jalan, lari, jalan, dan lari; kecepatan berubah bertahap. Di segmen terakhir treadmill berhenti dan Anda duduk–berdiri di kursi. Pada sesi VR Anda memakai headset dan melihat video; asisten berdiri di belakang Anda dan peneliti memantau.</p>
           <div class="seg" aria-label="Lima segmen per sesi: C1 jalan 5 km/jam 5 menit, C2 lari 8 km/jam 4 menit, C3 jalan 5 km/jam 4 menit, C4 lari 8 km/jam 4 menit, C5 duduk berdiri 5 menit">
             <span><b>C1</b>Jalan · 5′<i>5 km/jam</i></span><span class="run"><b>C2</b>Lari · 4′<i>8 km/jam</i></span><span><b>C3</b>Jalan · 4′<i>5 km/jam</i></span><span class="run"><b>C4</b>Lari · 4′<i>8 km/jam</i></span><span><b>C5</b>Duduk–berdiri · 5′<i>treadmill berhenti</i></span>
           </div>
         </li>
-        <li><h3>Isi SSQ akhir</h3><p>Segera setelah sesi dengan VR selesai.</p></li>
-        <li><h3>Lepas alat dan pulang</h3><p>Asisten memeriksa kulit Anda dan membersihkan area pemasangan. Anda menerima kompensasi, Makan, dan air minum.</p></li>
+        <li class="rv"><h3>Isi SSQ akhir</h3><p>Segera setelah sesi dengan VR selesai.</p></li>
+        <li class="rv"><h3>Lepas alat dan pulang</h3><p>Asisten memeriksa kulit Anda dan membersihkan area pemasangan. Anda menerima kompensasi, makan, dan air minum.</p></li>
       </ol>
-      <div style="position:sticky;top:calc(var(--hdr) + 16px)">
-        <div id="lokasi" style="margin-top:18px;display:grid;gap:12px"></div>
-      </div>
     </div>
-    <figure class="fig" style="margin-top:36px">
+    <figure class="fig rv" style="margin-top:clamp(28px,4vw,44px)">
       <a href="lintasanfixx.png" target="_blank" rel="noopener" aria-label="Buka gambar protokol treadmill ukuran penuh">
         <img src="lintasanfixx.png" alt="Tata letak dan kecepatan treadmill: Anda di atas treadmill dengan kunci pengaman dan tombol stop darurat, asisten berdiri di belakang, kursi di samping untuk segmen terakhir, dan laptop peneliti; di bawahnya grafik kecepatan treadmill: jalan 5 km/jam, lari 8 km/jam, jalan 5 km/jam, lari 8 km/jam, lalu berhenti untuk duduk dan berdiri" width="2000" height="1250" loading="lazy">
       </a>
@@ -495,8 +720,9 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
 <!-- ================================= ALAT ================================= -->
 <section class="sec" id="alat">
   <div class="wrap">
-    <h2>Alat yang dipasang di tubuh Anda</h2>
-    <p class="lead">Pemasangan dilakukan oleh tim yang terlatih. Kalau ada yang terasa tidak nyaman, katakan saja; kami berhenti dan menyesuaikan.</p>
+    <div class="kicker rv">Alat</div>
+    <h2 class="rv">Alat yang dipasang di tubuh Anda</h2>
+    <p class="lead rv">Pemasangan dilakukan oleh tim yang terlatih. Kalau ada yang terasa tidak nyaman, katakan saja; kami berhenti dan menyesuaikan.</p>
     <div class="tabs" role="tablist" aria-label="Pilih alat">
       <button class="tab" role="tab" id="t-eeg" aria-controls="p-eeg" aria-selected="true" data-tab="eeg">EEG kepala</button>
       <button class="tab" role="tab" id="t-ecg" aria-controls="p-ecg" aria-selected="false" data-tab="ecg" tabindex="-1">ECG dada</button>
@@ -533,13 +759,26 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
   </div>
 </section>
 
-<!-- ============================== KESELAMATAN ============================== -->
-<section class="sec tint" id="aman">
+<!-- ================================= LOKASI ================================= -->
+<section class="sec tint" id="lokasi">
   <div class="wrap">
-    <h2>Keselamatan, hak Anda, dan kompensasi</h2>
-    <p class="lead">Risikonya ringan hingga sedang. Anda boleh berhenti kapan saja, tanpa alasan dan tanpa sanksi.</p>
-    <div class="twocol">
-      <div class="box">
+    <div class="kicker rv">Lokasi</div>
+    <h2 class="rv">Di mana kegiatan berlangsung</h2>
+    <p class="lead rv">Pengambilan data dilakukan di dua lokasi. Saat mendaftar, pilih lokasi yang bisa Anda datangi; Anda boleh memilih keduanya.</p>
+    <div class="locs" id="lokasi-list"></div>
+    <div class="callout note-lok rv"><p><b>Datang ke Boyolali?</b> Kegiatan di Boyolali berpusat di area Waduk Cengklik. Titik temu pasti, patokan jalan, dan jam kedatangan dikirim lewat WhatsApp setelah jadwal Anda dikonfirmasi, jadi Anda tidak perlu menebak-nebak lokasinya.</p></div>
+  </div>
+</section>
+
+<!-- ============================== KESELAMATAN ============================== -->
+<section class="sec" id="aman">
+  <div class="wrap">
+    <div class="kicker rv">Keselamatan</div>
+    <h2 class="rv">Keselamatan, hak Anda, dan kompensasi</h2>
+    <p class="lead rv">Risikonya ringan hingga sedang. Anda boleh berhenti kapan saja, tanpa alasan dan tanpa sanksi.</p>
+    <div class="cols2">
+      <div class="stack">
+      <div class="box rv" style="order:3">
         <h3>Yang mungkin Anda rasakan</h3>
         <ul>
           <li>Pusing, mual (pada sebagian orang sampai muntah), disorientasi, atau mata lelah saat atau setelah memakai VR. Biasanya mereda dalam beberapa menit setelah VR dilepas.</li>
@@ -549,7 +788,18 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
         </ul>
         <p class="muted" style="margin:.8em 0 0">Kantong, obat ringan, dan waktu istirahat tersedia di lokasi.</p>
       </div>
-      <div class="box gold">
+      <div class="box rv" style="order:5">
+        <h3>Data Anda</h3>
+        <ul>
+          <li>Data diberi kode dan disimpan aman oleh tim peneliti.</li>
+          <li>Dipakai hanya untuk penelitian dan publikasi ilmiah, tanpa identitas pribadi.</li>
+          <li>Di formulir ini kami tidak meminta nomor rekening, KTP, atau foto.</li>
+          <li>Jawaban yang membuat Anda belum dapat ikut tidak disimpan bersama identitas apa pun.</li>
+        </ul>
+      </div>
+      </div>
+      <div class="stack">
+      <div class="box gold rv" style="order:4;--d:.06s">
         <h3>Kompensasi</h3>
         <p class="big" data-cfg="kompensasi">Rp30.000</p>
         <ul>
@@ -559,11 +809,20 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
           <li>Tetap diberikan walau Anda berhenti di tengah sesi.</li>
         </ul>
       </div>
-      <div class="box">
+      <div class="box ok rv" style="order:1">
+        <h3>Siapa yang bisa ikut</h3>
+        <ul class="ticks">
+          <li>Berusia 18–25 tahun.</li>
+          <li>Mahasiswa maupun non-mahasiswa.</li>
+          <li>Sehat secara umum dan bersedia mengikuti seluruh sesi.</li>
+          <li>Bersedia memakai EEG di kulit kepala (untuk yang berhijab: dilakukan di area tertutup oleh asisten perempuan).</li>
+        </ul>
+      </div>
+      <div class="box rv" style="order:2;--d:.06s">
         <h3>Siapa yang belum bisa ikut</h3>
         <p class="muted">Demi keselamatan Anda dan keabsahan data, kriteria ini berlaku sama untuk semua calon:</p>
-        <ul>
-          <li>Bukan mahasiswa baru, atau berusia di luar 18–25 tahun.</li>
+        <ul class="crosses">
+          <li>Berusia di luar 18–25 tahun.</li>
           <li>Riwayat gangguan vestibular (mis. vertigo), epilepsi atau kejang, atau depresi.</li>
           <li>Cedera atau trauma kepala dalam 6 bulan terakhir.</li>
           <li>Sedang hamil, atau sedang menjalani terapi medis/fisik rutin yang relevan.</li>
@@ -571,31 +830,24 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
           <li>Kuota kelompok BMI Anda sudah penuh: Anda masuk daftar cadangan.</li>
         </ul>
       </div>
-      <div class="box">
-        <h3>Data Anda</h3>
-        <ul>
-          <li>Data diberi kode dan disimpan aman oleh tim peneliti.</li>
-          <li>Dipakai hanya untuk penelitian dan publikasi ilmiah, tanpa identitas pribadi.</li>
-          <li>Di formulir ini kami tidak meminta nomor rekening, KTP, atau foto.</li>
-          <li>Jawaban yang membuat Anda belum dapat ikut tidak disimpan bersama identitas apa pun.</li>
-        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================================ DAFTAR ================================ -->
-<section class="sec" id="daftar">
+<section class="sec tint" id="daftar">
   <div class="wrap">
-    <h2>Daftar</h2>
-    <p class="lead">Pilih peran Anda. Mengisi formulir meMakan waktu sekitar 5–7 menit.</p>
+    <div class="kicker rv">Daftar</div>
+    <h2 class="rv">Daftar sekarang</h2>
+    <p class="lead rv">Pilih peran Anda. Mengisi formulir memakan waktu sekitar 5–7 menit.</p>
     <div id="banner-closed" class="banner err" role="status" hidden></div>
     <div class="roles" role="group" aria-label="Pilih peran">
-      <button type="button" class="role" data-role="subject" aria-pressed="false" id="daftar-subject">
-        <b>Subject</b><span>Mahasiswa baru 18–25 tahun · sekitar 90–100 menit · transport <span data-cfg="kompensasi">Rp30.000</span> + Makan</span>
+      <button type="button" class="role rv" data-role="subject" aria-pressed="false" id="daftar-subject">
+        <b>Subject</b><span>Usia 18–25 tahun, mahasiswa maupun non-mahasiswa · sekitar 90–100 menit · transport <span data-cfg="kompensasi">Rp30.000</span> + makan</span>
       </button>
-      <button type="button" class="role" data-role="asisten" aria-pressed="false" id="daftar-asisten">
-        <b>Asisten lapangan</b><span>Memasang alat dan mendampingi subject · Yogyakarta &amp; Boyolali · honor sesuai RAB</span>
+      <button type="button" class="role rv" style="--d:.06s" data-role="asisten" aria-pressed="false" id="daftar-asisten">
+        <b>Asisten lapangan</b><span>Memasang alat dan mendampingi subject · Yogyakarta &amp; Boyolali (area Waduk Cengklik) · honor sesuai RAB</span>
       </button>
     </div>
     <div id="form-root" aria-live="polite"></div>
@@ -603,15 +855,18 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
 </section>
 
 <!-- ================================== FAQ ================================== -->
-<section class="sec tint" id="faq">
+<section class="sec" id="faq">
   <div class="wrap">
-    <h2>Pertanyaan yang sering muncul</h2>
-    <div class="faq" style="max-width:820px">
+    <div class="kicker rv">FAQ</div>
+    <h2 class="rv">Pertanyaan yang sering muncul</h2>
+    <div class="faq rv" style="max-width:820px">
       <details><summary>Apakah ini berbahaya?</summary><div class="in"><p>Risikonya ringan hingga sedang, terutama pusing atau mual saat memakai VR yang umumnya mereda setelah headset dilepas. Anda didampingi sepanjang sesi dan boleh berhenti kapan saja.</p></div></details>
+      <details><summary>Apakah saya harus mahasiswa untuk ikut?</summary><div class="in"><p>Tidak. Mahasiswa maupun non-mahasiswa boleh mendaftar sebagai subject, asalkan berusia 18–25 tahun dan lolos skrining kesehatan. Di formulir Anda cukup memilih status dan mengisi pekerjaan atau kegiatan Anda.</p></div></details>
+      <details><summary>Mengapa dibatasi usia 18–25 tahun?</summary><div class="in"><p>Agar kelompok subject seragam sehingga hasil rekaman lebih mudah dibandingkan. Batas usia ini sama untuk semua pendaftar.</p></div></details>
       <details><summary>Mengapa ditanya BMI, epilepsi, dan depresi?</summary><div class="in"><p>BMI dipakai untuk membagi subject ke tiga kelompok yang seimbang. Pertanyaan epilepsi dan depresi hanya penapisan awal untuk keselamatan dan keabsahan data, bukan diagnosis. BMI di formulir ini hanya perkiraan; peneliti mengukur ulang secara langsung.</p></div></details>
-      <details><summary>Mengapa hanya mahasiswa baru berusia 18–25 tahun?</summary><div class="in"><p>Agar kelompok subject seragam. Kriteria ini sama untuk semua pendaftar.</p></div></details>
       <details><summary>Apakah saya pasti diterima setelah mendaftar?</summary><div class="in"><p>Belum. Pendaftaran ini baru tahap awal. Peneliti akan menghubungi Anda lewat WhatsApp atau email untuk menjadwalkan, lalu skrining dan pengukuran dilakukan langsung. Jika kuota kelompok BMI Anda sudah penuh, Anda masuk daftar cadangan.</p></div></details>
       <details><summary>Kapan pengambilan data berlangsung?</summary><div class="in"><p id="faq-tgl">Perkiraan pertengahan Desember 2026. Jadwal pasti dikonfirmasi lewat WhatsApp.</p></div></details>
+      <details><summary>Di mana lokasi di Boyolali?</summary><div class="in"><p>Di area Waduk Cengklik, Kecamatan Ngemplak, Kabupaten Boyolali. Titik temu pasti dikirim lewat WhatsApp setelah jadwal Anda dikonfirmasi.</p></div></details>
       <details><summary>Mengapa ada pertanyaan tentang hijab?</summary><div class="in"><p>Pemasangan EEG membutuhkan kontak langsung dengan kulit kepala. Bagi subject berhijab, pemasangan dilakukan oleh asisten perempuan di area tertutup. Peneliti tidak ikut mengawasi dan tidak ada foto atau video.</p></div></details>
       <details><summary>Bagaimana kalau saya pusing di tengah sesi?</summary><div class="in"><p>Katakan kepada asisten. Sesi dihentikan, Anda beristirahat, dan tim menyiapkan kantong serta obat ringan. Kompensasi tetap diberikan.</p></div></details>
       <details><summary>Apakah mendaftar berarti saya sudah menyetujui Informed Consent?</summary><div class="in"><p>Tidak. Persetujuan resmi berupa tanda tangan Informed Consent dilakukan pada hari pelaksanaan setelah Anda mendapat penjelasan langsung.</p></div></details>
@@ -640,6 +895,10 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
     <p class="fine">Pendaftaran di halaman ini bukan Informed Consent. Persetujuan resmi ditandatangani pada hari pelaksanaan. Jangan mengirim data yang tidak diminta formulir ini.</p>
   </div>
 </footer>
+</div><!-- /.page -->
+</div><!-- /.shell -->
+
+<button class="totop" type="button" id="totop" aria-label="Kembali ke atas"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
 
 <!-- ============================== TEMPLATE ============================== -->
 <template id="tpl-ic">
@@ -651,11 +910,11 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
     <div class="ic-short">
       <ul>
         <li><b>Tujuan.</b> Mengembangkan sistem klasifikasi cybersickness (pusing atau tidak) dari sinyal EEG, ECG, PPG, dan IMU yang direkam bersamaan pada pengguna VR.</li>
-        <li><b>Peserta.</b> 30 mahasiswa baru berusia 18–25 tahun, dalam tiga kelompok BMI (10 orang per kelompok).</li>
+        <li><b>Peserta.</b> 30 peserta berusia 18–25 tahun, mahasiswa maupun non-mahasiswa, dalam tiga kelompok BMI (10 orang per kelompok).</li>
         <li><b>Yang dilakukan.</b> Ukur berat dan tinggi badan, isi formulir, lalu pasang EEG 8 kanal di kepala serta ECG 3 elektroda dan modul PPG/IMU di dada. Dua sesi rekaman sekitar 22 menit (tanpa VR dan dengan VR): jalan 5 km/jam, lari 8 km/jam, jalan 5 km/jam, lari 8 km/jam di treadmill, lalu duduk–berdiri. SSQ diisi sebelum sesi pertama dan segera setelah sesi VR. Total sekitar 90–100 menit.</li>
         <li><b>Risiko.</b> Pusing, mual, disorientasi, atau mata lelah akibat VR; iritasi ringan akibat elektroda atau gel; headset terasa berat; lelah; risiko tersandung atau jatuh di treadmill (ada kunci pengaman, tombol stop darurat, dan pendampingan).</li>
         <li><b>Hak.</b> Sukarela. Berhenti kapan saja tanpa alasan dan tanpa sanksi, termasuk terhadap status akademik. Kompensasi tetap diberikan.</li>
-        <li><b>Kompensasi.</b> Uang transport <span data-cfg="kompensasi">Rp30.000</span>, Makan, air minum, dan penanganan gejala bila muncul.</li>
+        <li><b>Kompensasi.</b> Uang transport <span data-cfg="kompensasi">Rp30.000</span>, makan, air minum, dan penanganan gejala bila muncul.</li>
         <li><b>Data.</b> Diberi kode, dijaga kerahasiaannya, dan dipakai hanya untuk penelitian dan publikasi ilmiah tanpa identitas pribadi.</li>
       </ul>
     </div>
@@ -663,8 +922,8 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
       <div class="ic-scroll" tabindex="0" role="region" aria-label="Penjelasan sebelum persetujuan, versi lengkap">
         <details open><summary>1. Tujuan penelitian</summary><div class="in"><p>Mengembangkan sistem klasifikasi cybersickness (kondisi pusing atau tidak pusing) berbasis machine learning menggunakan sinyal multimodal EEG (elektroensefalogram), ECG (elektrokardiogram), PPG (fotopletismografi), dan IMU (Inertial Measurement Unit) yang direkam secara tersinkronisasi pada pengguna virtual reality (VR).</p></div></details>
         <details><summary>2. Kriteria dan jumlah partisipan</summary><div class="in">
-          <p>Penelitian melibatkan 30 partisipan dari mahasiswa baru berusia 18–25 tahun. Partisipan dikelompokkan berdasarkan BMI yang diukur langsung oleh peneliti ke dalam tiga kelompok dengan jumlah sama (10 orang per kelompok): kurus (BMI &lt; 18,5 kg/m²), normal (18,5–22,9 kg/m²), dan berat badan lebih hingga obesitas (≥ 23,0 kg/m²). Jenis kelamin dicatat dan diupayakan seimbang pada setiap kelompok.</p>
-          <p>Anda dapat mengikuti penelitian ini bila berstatus mahasiswa baru berusia 18–25 tahun, bersedia mengikuti seluruh sesi, tidak memiliki gangguan penglihatan yang belum terkoreksi, sehat secara umum, serta menjawab &ldquo;Tidak ada&rdquo; pada pertanyaan skrining epilepsi/kejang dan depresi. Anda tidak dapat diikutsertakan bila memiliki riwayat gangguan vestibular (vertigo), epilepsi/kejang, atau depresi, mengalami cedera/trauma kepala dalam 6 bulan terakhir, sedang hamil, atau sedang menjalani terapi medis/fisik rutin yang relevan, atau bila kuota kelompok BMI Anda sudah terpenuhi (Anda dimasukkan ke daftar cadangan).</p>
+          <p>Penelitian melibatkan 30 partisipan berusia 18–25 tahun, baik mahasiswa maupun non-mahasiswa. Partisipan dikelompokkan berdasarkan BMI yang diukur langsung oleh peneliti ke dalam tiga kelompok dengan jumlah sama (10 orang per kelompok): kurus (BMI &lt; 18,5 kg/m²), normal (18,5–22,9 kg/m²), dan berat badan lebih hingga obesitas (≥ 23,0 kg/m²). Jenis kelamin dicatat dan diupayakan seimbang pada setiap kelompok.</p>
+          <p>Anda dapat mengikuti penelitian ini bila berusia 18–25 tahun (mahasiswa maupun non-mahasiswa), bersedia mengikuti seluruh sesi, tidak memiliki gangguan penglihatan yang belum terkoreksi, sehat secara umum, serta menjawab &ldquo;Tidak ada&rdquo; pada pertanyaan skrining epilepsi/kejang dan depresi. Anda tidak dapat diikutsertakan bila memiliki riwayat gangguan vestibular (vertigo), epilepsi/kejang, atau depresi, mengalami cedera/trauma kepala dalam 6 bulan terakhir, sedang hamil, atau sedang menjalani terapi medis/fisik rutin yang relevan, atau bila kuota kelompok BMI Anda sudah terpenuhi (Anda dimasukkan ke daftar cadangan).</p>
           <p>Pertanyaan skrining epilepsi dan depresi hanya penapisan awal berdasarkan jawaban atau riwayat diagnosis Anda, bukan alat diagnosis. Jawaban Anda dijaga kerahasiaannya.</p></div></details>
         <details><summary>3. Prosedur penelitian</summary><div class="in"><ul>
           <li>Pengukuran antropometri (tinggi dan berat badan), penentuan kelompok BMI, dan pencatatan jenis kelamin.</li>
@@ -730,7 +989,7 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
       </ul></div>
       <div class="box"><h3>Yang Anda dapat</h3><ul>
         <li><span data-cfg="honor-asisten"></span></li>
-        <li>Biaya perjalanan dan Makan selama bertugas ditanggung peneliti, termasuk ke Yogyakarta (bisa naik KRL) dan ke Boyolali Area Waduk Cengklik.</li>
+        <li>Biaya perjalanan dan makan selama bertugas ditanggung peneliti, termasuk ke Yogyakarta (bisa naik KRL) dan ke Boyolali (area Waduk Cengklik).</li>
         <li>Hadiah apresiasi setelah kegiatan selesai.</li>
       </ul>
       <h3 style="margin-top:1em">Latar belakang yang membantu</h3>
@@ -748,7 +1007,7 @@ footer .fine{grid-column:1/-1;max-width:none;border-top:1px solid rgba(255,255,2
    ===================================================================== */
 const CONFIG = {
  
-  ENDPOINT: "https://script.google.com/macros/s/AKfycbwukKSku_fPjEKOPvjcQXOU1sHhwuSRFGT5pTvgKG7OmjEGKXWqCpSIwdJUR5tRH-rHIg/exec",
+  ENDPOINT: "https://script.google.com/macros/s/AKfycbypDrY2RerEQA0Mz7IhY1XUFX2AFwD9DsEBvCYbJOGkxWzAvxoSTiHbW4dKCtWY9_1Wtw/exec",
 
   FORM_KEY: "d32PQUh5c7s4",
 
@@ -768,8 +1027,12 @@ const CONFIG = {
   JAM_WAWANCARA: ["08.00–11.00", "13.00–16.00", "16.00–19.00"],
 
   LOKASI: [
-    { id: "YK",  nama: "Yogyakarta", detail: "UGM: N207 DTETI atau SGLC Lt. 1", peta: "https://maps.app.goo.gl/AQ96fo2DGqYUetT79" },
-    { id: "BYL", nama: "Boyolali",   detail: "Alamat dikirim setelah jadwal pasti", peta: "" }
+    { id: "YK",  nama: "Yogyakarta", area: "Kampus UGM",
+      detail: "UGM: N207 DTETI atau SGLC Lt. 1.",
+      peta: "https://maps.app.goo.gl/AQ96fo2DGqYUetT79" },
+    { id: "BYL", nama: "Boyolali",   area: "Area Waduk Cengklik",
+      detail: "Waduk Cengklik, Kec. Ngemplak, Kab. Boyolali, Jawa Tengah. Titik temu pasti dan patokan jalan dikirim lewat WhatsApp setelah jadwal dikonfirmasi.",
+      peta: "https://www.google.com/maps/search/?api=1&query=Waduk+Cengklik+Boyolali" }
   ],
 
   KOMPENSASI: "Rp30.000",
@@ -821,10 +1084,12 @@ fillConfig();
 {
   const f = $("#faq-tgl");
   if (f) f.textContent = "Perkiraan " + CONFIG.AKUISISI.label + ". " + (CONFIG.AKUISISI.pasti ? "" : "Jadwal pasti dikonfirmasi lewat WhatsApp atau email.");
-  const lk = $("#lokasi");
-  if (lk) lk.innerHTML = CONFIG.LOKASI.map(l =>
-    '<div class="box" style="padding:14px 18px"><h3 style="font-size:1.05rem;margin-bottom:.2em">' + esc(l.nama) + '</h3><p class="muted" style="margin:0">' +
-    esc(l.detail) + (l.peta ? ' · <a href="' + esc(l.peta) + '" target="_blank" rel="noopener">Lihat peta</a>' : "") + "</p></div>").join("");
+  const lk = $("#lokasi-list");
+  if (lk) lk.innerHTML = CONFIG.LOKASI.map((l, i) =>
+    '<article class="loc rv' + (l.id === "BYL" ? " byl" : "") + '" style="--d:' + (i * 0.07) + 's"><div class="loc-ic"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></div><div>' +
+    "<h3>" + esc(l.nama) + "</h3>" + (l.area ? '<span class="area">' + esc(l.area) + "</span>" : "") +
+    "<p>" + esc(l.detail) + "</p>" +
+    (l.peta ? '<a class="btn ghost sm" href="' + esc(l.peta) + '" target="_blank" rel="noopener">Buka di peta</a>' : "") + "</div></article>").join("");
 }
 
 /* gambar yang belum ada */
@@ -845,12 +1110,12 @@ window.addEventListener("load", () => $$("img").forEach(i => { if (i.complete &&
 {
   const saved = store.get("cs-theme");
   if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
-  $("#theme").addEventListener("click", () => {
+  $$("[data-theme-toggle]").forEach(b => b.addEventListener("click", () => {
     const cur = document.documentElement.dataset.theme;
     const dark = cur === "dark" || (cur === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
     const nxt = dark ? "light" : "dark";
     document.documentElement.dataset.theme = nxt; store.set("cs-theme", nxt);
-  });
+  }));
 }
 
 /* tab alat */
@@ -955,7 +1220,7 @@ window.addEventListener("load", () => $$("img").forEach(i => { if (i.complete &&
    ===================================================================== */
 const YT = [["Ya", "Ya"], ["Tidak", "Tidak"]];
 const ADA = [["Ada", "Ada"], ["Tidak ada", "Tidak ada"]];
-const lokOpts = () => CONFIG.LOKASI.map(l => [l.id, l.nama]);
+const lokOpts = () => CONFIG.LOKASI.map(l => [l.id, l.nama + (l.area ? " · " + l.area : "")]);
 const tglCallout = () => '<div class="callout"><p><b>Perkiraan pelaksanaan: ' + esc(CONFIG.AKUISISI.label) + ".</b> " +
   (CONFIG.AKUISISI.pasti ? "" : "Jadwal pasti dikonfirmasi lewat WhatsApp atau email. ") +
   "Sehari kami menerima sekitar 3–5 subject, jadi pilih sebanyak mungkin tanggal yang memungkinkan.</p></div>";
@@ -972,12 +1237,17 @@ const FORMS = {
       { title: "Data diri", short: "Data diri", fields: [
         { name: "nama", label: "Nama lengkap", type: "text", req: true, minlen: 3, auto: "name", max: 80 },
         { name: "jk", label: "Jenis kelamin", type: "radio", req: true, opts: [["L", "Laki-laki"], ["P", "Perempuan"]] },
-        { name: "usia", label: "Usia", type: "number", req: true, min: 10, max: 80, unit: "tahun", half: true, im: "numeric" },
-        { name: "nim", label: "NIM", type: "text", opt: true, max: 24, half: true, hint: "Kosongkan bila belum punya." },
-        { name: "mhs_baru", label: "Apakah Anda mahasiswa baru?", type: "radio", req: true, opts: [["Y", "Ya, mahasiswa baru"], ["T", "Bukan"]] },
-        { name: "kampus", label: "Kampus dan program studi", type: "text", req: true, minlen: 2, max: 100, auto: "organization" },
+        { name: "usia", label: "Usia", type: "number", req: true, min: 10, max: 80, unit: "tahun", half: true, im: "numeric", hint: "Peserta berusia 18–25 tahun." },
         { name: "wa", label: "Nomor WhatsApp", type: "tel", req: true, auto: "tel", half: true, hint: "Dipakai untuk menjadwalkan. Contoh: 0812 3456 7890." },
-        { name: "email", label: "Email", type: "email", req: true, auto: "email", half: true },
+        { name: "status_peserta", label: "Status Anda saat ini", type: "radio", req: true, local: true, big: true,
+          opts: [["Mahasiswa", "Mahasiswa"], ["Non-mahasiswa", "Non-mahasiswa"]],
+          hint: "Mahasiswa maupun non-mahasiswa boleh mendaftar, asalkan berusia 18–25 tahun." },
+        { name: "kampus_mhs", label: "Kampus dan program studi", type: "text", req: true, local: true, minlen: 2, max: 80, auto: "organization", half: true, if: "status_peserta=Mahasiswa" },
+        { name: "nim", label: "NIM", type: "text", opt: true, max: 24, half: true, if: "status_peserta=Mahasiswa", hint: "Kosongkan bila belum punya." },
+        { name: "pekerjaan", label: "Kegiatan utama Anda", type: "select", req: true, local: true, half: true, if: "status_peserta=Non-mahasiswa",
+          opts: [["Bekerja", "Bekerja"], ["Wirausaha", "Wirausaha"], ["Sedang mencari kerja", "Sedang mencari kerja"], ["Pelajar SMA/SMK", "Pelajar SMA/SMK"], ["Lainnya", "Lainnya"]] },
+        { name: "instansi", label: "Tempat bekerja atau kegiatan", type: "text", opt: true, local: true, max: 50, half: true, if: "status_peserta=Non-mahasiswa", hint: "Mis. nama perusahaan atau usaha. Boleh dikosongkan." },
+        { name: "email", label: "Email", type: "email", req: true, auto: "email" },
         { name: "lokasi", label: "Lokasi yang bisa Anda datangi", type: "check", req: true, opts: lokOpts, hint: "Pilih semua yang memungkinkan." },
         { name: "jilbab", label: "Apakah Anda berhijab?", type: "radio", req: true, if: "jk=P", opts: [["V", "Ya"], ["X", "Tidak"]] },
         { name: "hijab_bersedia", type: "radio", req: true, if: "jk=P&jilbab=V", opts: [["Ya", "Bersedia"], ["Tidak", "Tidak bersedia"]], stack: true,
@@ -1039,9 +1309,9 @@ const FORMS = {
         { name: "pengalaman", label: "Pengalaman yang relevan", type: "textarea", opt: true, max: 400, hint: "Misalnya praktik klinis, pernah membantu penelitian, atau pernah memakai VR." }
       ] },
       { title: "Kesediaan", short: "Kesediaan", fields: [
-        { type: "html", html: '<div class="callout"><p><b>Perjalanan dan Makan.</b> Biaya perjalanan dan Makan selama bertugas ditanggung peneliti, termasuk ke Boyolali. Nominal tidak perlu Anda hitung di sini.</p></div>' },
-        { name: "boyolali", label: "Bersediakah Anda bertugas di Boyolali?", type: "radio", req: true, opts: [["Ya", "Bersedia"], ["Bisa dengan syarat", "Bisa dengan syarat"], ["Tidak", "Tidak bersedia"]] },
-        { name: "moda", label: "Cara Anda menuju Boyolali", type: "radio", req: true, if: "boyolali=Ya|Bisa dengan syarat", opts: [["KRL", "KRL"], ["Kendaraan sendiri", "Kendaraan sendiri"], ["Perlu dijemput", "Perlu dijemput"], ["Belum tahu", "Belum tahu"]] },
+        { type: "html", html: '<div class="callout"><p><b>Perjalanan dan makan.</b> Biaya perjalanan dan makan selama bertugas ditanggung peneliti, termasuk ke Boyolali (area Waduk Cengklik). Nominal tidak perlu Anda hitung di sini.</p></div>' },
+        { name: "boyolali", label: "Bersediakah Anda bertugas di Yogyakarta dan Boyolali (area Waduk Cengklik)?", type: "radio", req: true, opts: [["Ya", "Bersedia"], ["Bisa dengan syarat", "Bisa dengan syarat"], ["Tidak", "Tidak bersedia"]] },
+        { name: "moda", label: "Cara Anda menuju area Waduk Cengklik, Boyolali", type: "radio", req: true, if: "boyolali=Ya|Bisa dengan syarat", opts: [["KRL", "KRL"], ["Kendaraan sendiri", "Kendaraan sendiri"], ["Perlu dijemput", "Perlu dijemput"], ["Belum tahu", "Belum tahu"]] },
         { name: "honor", label: "Honor", type: "radio", req: true, stack: true, opts: [["Sesuai RAB penelitian", "Sesuai RAB penelitian (nominal dibicarakan saat wawancara)"], ["Ingin mendiskusikan dulu", "Saya ingin mendiskusikannya dulu"]], hint: "Pendapat Anda membantu kami menyusun RAB." },
         { name: "honor_catatan", label: "Catatan tentang honor", type: "textarea", opt: true, max: 200 },
         { name: "protokol_setuju", type: "consent", req: true, rev: false, err: "Centang kesediaan Anda.",
@@ -1064,7 +1334,6 @@ const FORMS = {
 function screenSubject1(v) {
   const u = num(v.usia);
   if (u !== null && (u < CONFIG.USIA.min || u > CONFIG.USIA.max)) return "usia";
-  if (v.mhs_baru === "T") return "status_mhs";
   if (v.jk === "P" && v.jilbab === "V" && v.hijab_bersedia === "Tidak") return "hijab";
   return null;
 }
@@ -1074,8 +1343,7 @@ function screenSubject2(v) {
   return null;
 }
 const STOP_TEXT = {
-  usia: "Penelitian ini terbatas untuk mahasiswa baru berusia " + CONFIG.USIA.min + "–" + CONFIG.USIA.max + " tahun, jadi kami belum bisa mengikutsertakan Anda.",
-  status_mhs: "Penelitian ini terbatas untuk mahasiswa baru, jadi kami belum bisa mengikutsertakan Anda.",
+  usia: "Penelitian ini terbatas untuk peserta berusia " + CONFIG.USIA.min + "–" + CONFIG.USIA.max + " tahun (mahasiswa maupun non-mahasiswa), jadi kami belum bisa mengikutsertakan Anda.",
   hijab: "Pemasangan EEG membutuhkan kontak langsung dengan kulit kepala, jadi kami belum bisa mengikutsertakan Anda tanpa prosedur itu. Bila ingin membahas kemungkinan lain, hubungi peneliti.",
   kesehatan: "Berdasarkan jawaban Anda, saat ini kami belum bisa mengikutsertakan Anda demi keselamatan Anda dan keabsahan data.",
   hamil: "Berdasarkan jawaban Anda, saat ini kami belum bisa mengikutsertakan Anda demi keselamatan Anda."
@@ -1142,7 +1410,7 @@ function fieldHTML(f, pfx) {
       return '<div class="field" ' + dat + '><label for="' + id + '">' + f.label + opt + '</label><textarea id="' + id + '" name="' + f.name + '" maxlength="' + (f.max || 300) + '" ' + desc + "></textarea>" + hint + err + "</div>";
     case "radio": case "check": {
       const t = f.type === "radio" ? "radio" : "checkbox";
-      return '<fieldset class="field" ' + dat + "><legend>" + f.label + opt + '</legend><div class="chips' + (f.stack ? " stack" : "") + '">' +
+      return '<fieldset class="field" ' + dat + "><legend>" + f.label + opt + '</legend><div class="chips' + (f.stack ? " stack" : "") + (f.big ? " big" : "") + '">' +
         opts.map(([v, l]) => '<label class="chip"><input type="' + t + '" name="' + f.name + '" value="' + esc(v) + '"' + (t === "checkbox" ? ' data-multi="1"' : "") + "><span>" + l + "</span></label>").join("") +
         "</div>" + hint + err + "</fieldset>";
     }
@@ -1193,8 +1461,8 @@ function buildForm(role) {
   el.className = "formcard"; el.id = "form-" + role; el.hidden = true;
   const n = def.steps.length;
   el.innerHTML =
-    '<aside class="rail"><h3>' + esc(def.name) + '</h3><ol>' + def.steps.map(s => "<li>" + esc(s.short) + "</li>").join("") + "</ol>" +
-    '<div class="mini"><span class="mini-t"></span><div class="bar"><i></i></div></div></aside>' +
+    '<aside class="rail"><div class="rail-in"><h3>' + esc(def.name) + '</h3><ol>' + def.steps.map(s => "<li>" + esc(s.short) + "</li>").join("") + "</ol>" +
+    '<div class="mini"><span class="mini-t"></span><div class="bar"><i></i></div></div></div></aside>' +
     '<form class="body" novalidate autocomplete="on">' +
     (CONFIG.ENDPOINT ? "" : '<div class="banner demo" role="note">Mode pratinjau: CONFIG.ENDPOINT masih kosong, jadi data tidak dikirim ke mana pun.</div>') +
     def.steps.map((s, i) => {
@@ -1354,9 +1622,21 @@ function buildReview(form) {
 function payloadOf(form) {
   const v = collect(form.f), p = { type: form.role, key: CONFIG.FORM_KEY, hp: v.website || "", elapsed: Date.now() - form.started };
   Object.keys(form.defs).forEach(k => {
-    const d = form.defs[k]; if (!(k in v)) return;
+    const d = form.defs[k]; if (!(k in v) || d.local) return;
     p[k] = d.type === "number" ? num(v[k]) : v[k];
   });
+  if (form.role === "subject") {
+    /* Code.gs v1.0 mewajibkan mhs_baru ∈ {Y,T} dan menolak "T"; maka selalu "Y" dan status ikut ditulis di awalan kampus. */
+    p.mhs_baru = "Y";
+    /* Code.gs v1.1 membaca bidang di bawah ini. mhs_baru + kampus (gabungan) tetap dikirim agar Code.gs lama (v1.0) juga bisa menerima. */
+    p.status_peserta = v.status_peserta || "";
+    if (v.status_peserta === "Mahasiswa") p.kampus_mhs = v.kampus_mhs || "";
+    else { p.pekerjaan = v.pekerjaan || ""; p.instansi = v.instansi || ""; }
+    const kk = v.status_peserta === "Mahasiswa"
+      ? "Mahasiswa · " + (v.kampus_mhs || "")
+      : "Non-mahasiswa · " + (v.pekerjaan || "") + (v.instansi ? " (" + v.instansi + ")" : "");
+    p.kampus = kk.slice(0, 100);
+  }
   if (form.role === "subject") p.ic_versi = form.icViewed.has("Lengkap") ? (form.icViewed.has("Ringkas") ? "Ringkas + Lengkap" : "Lengkap") : "Ringkas";
   return p;
 }
@@ -1488,6 +1768,107 @@ fromHash();
     const r = await fetch(CONFIG.ENDPOINT, { method: "GET" }), j = await r.json();
     if (j && j.open) { serverOpen = j.open; if (activeRole) selectRole(activeRole, false); }
   } catch (e) { /* abaikan: server tetap memeriksa saat kirim */ }
+})();
+
+
+/* =====================================================================
+   SIDEBAR, SCROLL-SPY, PROGRES, TAMPIL HALUS
+   ===================================================================== */
+(function shell() {
+  const root = document.documentElement;
+  const sb = $("#sidebar"), scrim = $("#scrim"), btn = $("#menu"), closeBtn = $("#sb-close"), openBtn = $("#sb-open"), up = $("#totop");
+  const mq = matchMedia("(min-width:1100px)");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let back = null;
+
+  /* ---- desktop: sembunyikan / tampilkan sidebar (diingat di peramban) ---- */
+  const isHidden = () => root.dataset.sb === "closed";
+  function setHidden(h, focus) {
+    if (h) root.dataset.sb = "closed"; else delete root.dataset.sb;
+    store.set("cs-sb", h ? "closed" : "open");
+    openBtn.setAttribute("aria-expanded", String(!h));
+    if (focus) setTimeout(() => (h ? openBtn : closeBtn).focus({ preventScroll: true }), 60);
+    queueMeasure();
+  }
+
+  /* ---- mobile / tablet: laci geser ---- */
+  function setOpen(o) {
+    if (mq.matches) o = false;
+    if (o === sb.classList.contains("open")) return;
+    sb.classList.toggle("open", o); scrim.hidden = !o;
+    btn.setAttribute("aria-expanded", String(o)); btn.setAttribute("aria-label", o ? "Tutup menu" : "Buka menu");
+    document.body.classList.toggle("lock", o);
+    if (o) { back = document.activeElement; setTimeout(() => closeBtn.focus({ preventScroll: true }), 60); }
+    else if (back) { try { back.focus({ preventScroll: true }); } catch (e) { /* diabaikan */ } back = null; }
+  }
+  btn.addEventListener("click", () => setOpen(!sb.classList.contains("open")));
+  closeBtn.addEventListener("click", () => { if (mq.matches) setHidden(true, true); else setOpen(false); });
+  openBtn.addEventListener("click", () => setHidden(false, true));
+  scrim.addEventListener("click", () => setOpen(false));
+  sb.addEventListener("click", e => { if (e.target.closest("a")) setOpen(false); });
+  openBtn.setAttribute("aria-expanded", String(!isHidden()));
+  document.addEventListener("keydown", e => {
+    if (!sb.classList.contains("open")) return;
+    if (e.key === "Escape") { setOpen(false); return; }
+    if (e.key === "Tab") {                                    // jaga fokus tetap di dalam laci
+      const f = $$("a[href],button:not([disabled])", sb).filter(x => x.offsetParent !== null);
+      if (!f.length) return;
+      const a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    }
+  });
+  (mq.addEventListener ? mq.addEventListener.bind(mq, "change") : mq.addListener.bind(mq))(() => {
+    if (mq.matches) { sb.classList.remove("open"); scrim.hidden = true; document.body.classList.remove("lock"); btn.setAttribute("aria-expanded", "false"); }
+    queueMeasure();
+  });
+
+  /* ---- penanda bagian aktif + bilah progres ----
+     Posisi bagian disimpan (tidak dibaca ulang tiap scroll) supaya scroll tetap ringan. */
+  const links = $$(".sb-nav a").map(a => ({ a, el: document.getElementById(a.getAttribute("href").slice(1)) })).filter(x => x.el);
+  const bars = $$(".sb-prog i, .topbar .prog i");
+  let tops = [], docH = 1, vh = window.innerHeight, curIdx = -1, shown = false, lastP = -1, tick = false, mTimer = 0;
+
+  function measure() {
+    mTimer = 0;
+    const y = window.scrollY;
+    tops = links.map(s => s.el.getBoundingClientRect().top + y);
+    docH = document.documentElement.scrollHeight; vh = window.innerHeight;
+    onScroll();
+  }
+  function queueMeasure() { clearTimeout(mTimer); mTimer = setTimeout(measure, 460); }   // tunggu animasi sidebar selesai
+
+  function onScroll() {
+    tick = false;
+    const y = window.scrollY, max = Math.max(1, docH - vh);
+    const p = Math.min(1, y / max);
+    if (Math.abs(p - lastP) > 0.002) { lastP = p; const t = "scaleX(" + p.toFixed(3) + ")"; bars.forEach(b => { b.style.transform = t; }); }
+    const line = y + vh * 0.35;
+    let idx = 0;
+    for (let i = 0; i < tops.length; i++) if (tops[i] <= line) idx = i;
+    if (docH - vh - y < 4) idx = tops.length - 1;
+    if (idx !== curIdx) {
+      curIdx = idx;
+      links.forEach((s, i) => { if (i === idx) s.a.setAttribute("aria-current", "true"); else s.a.removeAttribute("aria-current"); });
+    }
+    const sh = y > vh * 0.8;
+    if (sh !== shown) { shown = sh; up.classList.toggle("show", sh); }
+  }
+  const queue = () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } };
+  window.addEventListener("scroll", queue, { passive: true });
+  window.addEventListener("resize", queueMeasure);
+  window.addEventListener("load", measure);
+  if ("ResizeObserver" in window) new ResizeObserver(queueMeasure).observe(document.querySelector("main"));
+  measure();
+  up.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
+
+  /* ---- tampil halus saat masuk layar ---- */
+  const rvs = $$(".rv");
+  if (!("IntersectionObserver" in window) || reduce) rvs.forEach(e => e.classList.add("in"));
+  else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: 0.04 });
+    rvs.forEach(e => io.observe(e));
+  }
 })();
 
 </script>
